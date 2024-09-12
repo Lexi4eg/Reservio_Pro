@@ -74,6 +74,9 @@ struct OrderView: View {
                 
                 Button(action: {
                     startPaymentProcess()
+                    
+                    //sendReservationRequest(requestBody: <#T##Reservation#>)
+                    
                 }) {
                     Text("Confirm Order")
                         .font(.headline)
@@ -88,7 +91,6 @@ struct OrderView: View {
         }
         .padding()
         .navigationBarTitle("Order Summary", displayMode: .inline)
-        //.navigationBarBackButtonHidden(true) // Hide the back button
     }
     
     private func formatDate(_ date: Date, time: String) -> String {

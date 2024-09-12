@@ -1,45 +1,60 @@
-//
-//  SendReservationAPI.swift
-//  Reservio-Swift
-//
-//  Created by Felix Prattes on 12.09.24.
-//
-
 import Foundation
 
-var modes = ["Dashboard", "WordClock", "MillionTimes", "MillionBW", "MillionWood", "MillionGlass", "SolarSystem", "FlipDot", ]
+// Define the Reservation struct to match your JSON structure
+struct Reservation: Identifiable, Codable {
+    let id: String
+    let firstName: String
+    let lastName: String
+    let date: Date
+    let peopleCount: Int
+    let email: String
+    let phoneNumber: String
+    let specialRequests: String
+    let highChair: Bool
 
-func sendReservationRequest(selectedMode: String) async {
-    let userData = UserData()
-    print("Sending Mode: " + selectedMode)
+    // Custom initializer for date conversion
+    init(id: String, firstName: String, lastName: String, date: String, peopleCount: Int, email: String, phoneNumber: String, specialRequests: String, highChair: Bool) {
+        self.id = id
+        self.firstName = firstName
+        self.lastName = lastName
+        self.date = ISO8601DateFormatter().date(from: date) ?? Date()
+        self.peopleCount = peopleCount
+        self.email = email
+        self.phoneNumber = phoneNumber
+        self.specialRequests = specialRequests
+        self.highChair = highChair
+    }
+}
 
-    guard let selectedModeIndex = modes.enumerated().filter({ $0.element == selectedMode }).first?.offset else {
-      print("Selected mode not found in colors array")
-      return
+// Function to send reservation request
+func sendReservationRequest(requestBody: Reservation) async {
+    print("Sending reservation for: \(requestBody.firstName) \(requestBody.lastName)")
+
+    // Define the server URL
+    guard let url = URL(string: "http://localhost:4567/sendReservation") else {
+        print("Error: Invalid URL")
+        return
     }
 
-    let body = ["mode": selectedModeIndex + 1]
- 
-     
+    // Create a URLRequest object
+    var request = URLRequest(url: url)
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.httpMethod = "POST"
 
-  guard let url = URL(string: "http://localhost:4567/sendMode") else {
-    print("Error: Invalid URL")
-    return
-  }
-
-  var request = URLRequest(url: url)
-  request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-  request.httpMethod = "POST"
-
-  do {
-    let jsonData = try JSONEncoder().encode(body)
-
-      let (_, _) = try await URLSession.shared.upload(for: request, from: jsonData)
-
-    
-
-    print("Mode sent successfully")
-  } catch {
-    print("Error sending mode: \(error)")
-  }
+    do {
+        // Encode the Reservation object to JSON data
+        let jsonData = try JSONEncoder().encode(requestBody)
+        
+        // Send the request using URLSession
+        let (data, response) = try await URLSession.shared.upload(for: request, from: jsonData)
+        
+        // Handle the response (optional)
+        if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+            print("Reservation sent successfully")
+        } else {
+            print("Error sending reservation: \(String(decoding: data, as: UTF8.self))")
+        }
+    } catch {
+        print("Error sending reservation: \(error)")
+    }
 }

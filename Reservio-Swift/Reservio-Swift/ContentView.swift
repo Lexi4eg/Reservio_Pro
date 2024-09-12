@@ -28,8 +28,6 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .accentColor(.white)
                 .tabViewStyle(.sidebarAdaptable)
-            
-        
     }
 
     private func addItem() {

@@ -20,8 +20,6 @@ public class UserData: ObservableObject {
     @AppStorage("rewardPoints") var rewardPoints: Double = 200.0
     @AppStorage("email") var email: String = ""
     @AppStorage("telefonNumber") var telefonNumber: String = ""
-
-
 }
 
 enum Language: String, CaseIterable, Identifiable {
