@@ -18,6 +18,13 @@ struct Edit_View: View {
             Section(header: Text("User Info")) {
                 TextField("Firstname", text: $userData.firstname)
                 TextField("Lastname", text: $userData.lastname)
+                TextField("Email Address", text: $userData.email)
+                    .keyboardType(.emailAddress)
+                    .autocapitalization(.none)
+          
+                TextField("Phone Number", text: $userData.telefonNumber)
+                    .keyboardType(.phonePad)
+                    .autocapitalization(.none)
 
                 Picker("Age", selection: $userData.age) {
                     ForEach(0..<100) { age in
@@ -42,27 +49,11 @@ struct Edit_View: View {
                 }
             }
 
-            Section(header: Text("Network")) {
-                TextField("IP", text: $userData.ip)
-                TextField("Hostname", text: $userData.hostname)
-            }
-
-            Section(header: Text("Accounts")) {
-                TextField("Google", text: $userData.google)
-                TextField("NYT", text: $userData.nyt)
-            }
-
             Section(header: Text("Language")) {
                 Picker("Select Language", selection: $userData.selectedLanguage) {
                     ForEach(Language.allCases) { language in
                         Text(language.rawValue.uppercased()).tag(language.rawValue)
                     }
-                }
-            }
-
-            Section(header: Text("General")) {
-                Toggle(isOn: $userData.kohliMode) {
-                    Text("KohliMode")
                 }
             }
         }

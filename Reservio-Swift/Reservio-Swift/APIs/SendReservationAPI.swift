@@ -22,7 +22,7 @@ func sendReservationRequest(selectedMode: String) async {
  
      
 
-  guard let url = URL(string: "http://\(userData.ip):3000/api/sendMode") else {
+  guard let url = URL(string: "http://localhost:4567/sendMode") else {
     print("Error: Invalid URL")
     return
   }

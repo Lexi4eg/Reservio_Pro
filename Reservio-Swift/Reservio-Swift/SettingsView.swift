@@ -16,13 +16,12 @@ public class UserData: ObservableObject {
     @AppStorage("lastname") var lastname: String = ""
     @AppStorage("age") var age: Int = 0
     @AppStorage("profilePicture") var profilePicture: Data = Data()
-    @AppStorage("ip") var ip = ""
-    @AppStorage("hostname") var hostname = ""
-    @AppStorage("google") var google = ""
-    @AppStorage("nyt") var nyt = ""
-    @AppStorage("kohliMode") var kohliMode = false
     @AppStorage("selectedLanguage") var selectedLanguage = "en"
     @AppStorage("rewardPoints") var rewardPoints: Double = 200.0
+    @AppStorage("email") var email: String = ""
+    @AppStorage("telefonNumber") var telefonNumber: String = ""
+
+
 }
 
 enum Language: String, CaseIterable, Identifiable {
