@@ -5,18 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.pbxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/xcuserdata/felixprattes.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/APIs/SendReservationAPI.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/Assets.xcassets/AccentColor.colorset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/Assets.xcassets/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/ContentView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/Item.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/Preview Content/Preview Assets.xcassets/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/Reservio_SwiftApp.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-SwiftTests/Reservio_SwiftTests.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-SwiftUITests/Reservio_SwiftUITests.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-SwiftUITests/Reservio_SwiftUITestsLaunchTests.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-dev.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaConsumerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/MessageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/MessageObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +179,7 @@
       <option name="presentableId" value="Default" />
       <updated>1726125346096</updated>
       <workItem from="1726125347283" duration="2780000" />
-      <workItem from="1726129033046" duration="1374000" />
+      <workItem from="1726129033046" duration="3106000" />
     </task>
     <servers />
   </component>

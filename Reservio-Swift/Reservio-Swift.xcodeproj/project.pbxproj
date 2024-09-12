@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE926EC32C92E1D80089FDDD /* Reservio_SwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EC22C92E1D80089FDDD /* Reservio_SwiftApp.swift */; };
+		EE926EC52C92E1D80089FDDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EC42C92E1D80089FDDD /* ContentView.swift */; };
+		EE926EC72C92E1D80089FDDD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EC62C92E1D80089FDDD /* Item.swift */; };
+		EE926EC92C92E1DA0089FDDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE926EC82C92E1DA0089FDDD /* Assets.xcassets */; };
+		EE926ECC2C92E1DA0089FDDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE926ECB2C92E1DA0089FDDD /* Preview Assets.xcassets */; };
+		EE926ED62C92E1DA0089FDDD /* Reservio_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926ED52C92E1DA0089FDDD /* Reservio_SwiftTests.swift */; };
+		EE926EE02C92E1DA0089FDDD /* Reservio_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EDF2C92E1DA0089FDDD /* Reservio_SwiftUITests.swift */; };
+		EE926EE22C92E1DA0089FDDD /* Reservio_SwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EE12C92E1DA0089FDDD /* Reservio_SwiftUITestsLaunchTests.swift */; };
+		EE926EF02C92F3190089FDDD /* SendReservationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EEF2C92F3190089FDDD /* SendReservationAPI.swift */; };
+		EE926EF22C92F36F0089FDDD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EF12C92F36F0089FDDD /* SettingsView.swift */; };
+		EE926EF42C92F8BD0089FDDD /* Edit_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EF32C92F8BD0089FDDD /* Edit_View.swift */; };
+		EE926EF62C92FDD70089FDDD /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EF52C92FDD70089FDDD /* OrderView.swift */; };
+		EE926EF92C9300D80089FDDD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EF82C9300D80089FDDD /* HomeView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE926ED22C92E1DA0089FDDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE926EB72C92E1D80089FDDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE926EBE2C92E1D80089FDDD;
+			remoteInfo = "Reservio-Swift";
+		};
+		EE926EDC2C92E1DA0089FDDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE926EB72C92E1D80089FDDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE926EBE2C92E1D80089FDDD;
+			remoteInfo = "Reservio-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE926EBF2C92E1D80089FDDD /* Reservio-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reservio-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE926EC22C92E1D80089FDDD /* Reservio_SwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservio_SwiftApp.swift; sourceTree = "<group>"; };
+		EE926EC42C92E1D80089FDDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EE926EC62C92E1D80089FDDD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		EE926EC82C92E1DA0089FDDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE926ECB2C92E1DA0089FDDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EE926ED12C92E1DA0089FDDD /* Reservio-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reservio-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE926ED52C92E1DA0089FDDD /* Reservio_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservio_SwiftTests.swift; sourceTree = "<group>"; };
+		EE926EDB2C92E1DA0089FDDD /* Reservio-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reservio-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE926EDF2C92E1DA0089FDDD /* Reservio_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservio_SwiftUITests.swift; sourceTree = "<group>"; };
+		EE926EE12C92E1DA0089FDDD /* Reservio_SwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservio_SwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE926EEF2C92F3190089FDDD /* SendReservationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendReservationAPI.swift; sourceTree = "<group>"; };
+		EE926EF12C92F36F0089FDDD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		EE926EF32C92F8BD0089FDDD /* Edit_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edit_View.swift; sourceTree = "<group>"; };
+		EE926EF52C92FDD70089FDDD /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		EE926EF82C9300D80089FDDD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE926EBC2C92E1D80089FDDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE926ECE2C92E1DA0089FDDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE926ED82C92E1DA0089FDDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE926EB62C92E1D80089FDDD = {
+			isa = PBXGroup;
+			children = (
+				EE926EC12C92E1D80089FDDD /* Reservio-Swift */,
+				EE926ED42C92E1DA0089FDDD /* Reservio-SwiftTests */,
+				EE926EDE2C92E1DA0089FDDD /* Reservio-SwiftUITests */,
+				EE926EC02C92E1D80089FDDD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE926EC02C92E1D80089FDDD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE926EBF2C92E1D80089FDDD /* Reservio-Swift.app */,
+				EE926ED12C92E1DA0089FDDD /* Reservio-SwiftTests.xctest */,
+				EE926EDB2C92E1DA0089FDDD /* Reservio-SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE926EC12C92E1D80089FDDD /* Reservio-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				EE926EF82C9300D80089FDDD /* HomeView.swift */,
+				EE926EF72C9300940089FDDD /* Images */,
+				EE926EEE2C92F3080089FDDD /* APIs */,
+				EE926EC22C92E1D80089FDDD /* Reservio_SwiftApp.swift */,
+				EE926EC42C92E1D80089FDDD /* ContentView.swift */,
+				EE926EF52C92FDD70089FDDD /* OrderView.swift */,
+				EE926EF12C92F36F0089FDDD /* SettingsView.swift */,
+				EE926EC62C92E1D80089FDDD /* Item.swift */,
+				EE926EC82C92E1DA0089FDDD /* Assets.xcassets */,
+				EE926ECA2C92E1DA0089FDDD /* Preview Content */,
+				EE926EF32C92F8BD0089FDDD /* Edit_View.swift */,
+			);
+			path = "Reservio-Swift";
+			sourceTree = "<group>";
+		};
+		EE926ECA2C92E1DA0089FDDD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EE926ECB2C92E1DA0089FDDD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EE926ED42C92E1DA0089FDDD /* Reservio-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE926ED52C92E1DA0089FDDD /* Reservio_SwiftTests.swift */,
+			);
+			path = "Reservio-SwiftTests";
+			sourceTree = "<group>";
+		};
+		EE926EDE2C92E1DA0089FDDD /* Reservio-SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE926EDF2C92E1DA0089FDDD /* Reservio_SwiftUITests.swift */,
+				EE926EE12C92E1DA0089FDDD /* Reservio_SwiftUITestsLaunchTests.swift */,
+			);
+			path = "Reservio-SwiftUITests";
+			sourceTree = "<group>";
+		};
+		EE926EEE2C92F3080089FDDD /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				EE926EEF2C92F3190089FDDD /* SendReservationAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		EE926EF72C9300940089FDDD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE926EBE2C92E1D80089FDDD /* Reservio-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE926EE52C92E1DA0089FDDD /* Build configuration list for PBXNativeTarget "Reservio-Swift" */;
+			buildPhases = (
+				EE926EBB2C92E1D80089FDDD /* Sources */,
+				EE926EBC2C92E1D80089FDDD /* Frameworks */,
+				EE926EBD2C92E1D80089FDDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Reservio-Swift";
+			productName = "Reservio-Swift";
+			productReference = EE926EBF2C92E1D80089FDDD /* Reservio-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE926ED02C92E1DA0089FDDD /* Reservio-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE926EE82C92E1DA0089FDDD /* Build configuration list for PBXNativeTarget "Reservio-SwiftTests" */;
+			buildPhases = (
+				EE926ECD2C92E1DA0089FDDD /* Sources */,
+				EE926ECE2C92E1DA0089FDDD /* Frameworks */,
+				EE926ECF2C92E1DA0089FDDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE926ED32C92E1DA0089FDDD /* PBXTargetDependency */,
+			);
+			name = "Reservio-SwiftTests";
+			productName = "Reservio-SwiftTests";
+			productReference = EE926ED12C92E1DA0089FDDD /* Reservio-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE926EDA2C92E1DA0089FDDD /* Reservio-SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE926EEB2C92E1DA0089FDDD /* Build configuration list for PBXNativeTarget "Reservio-SwiftUITests" */;
+			buildPhases = (
+				EE926ED72C92E1DA0089FDDD /* Sources */,
+				EE926ED82C92E1DA0089FDDD /* Frameworks */,
+				EE926ED92C92E1DA0089FDDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE926EDD2C92E1DA0089FDDD /* PBXTargetDependency */,
+			);
+			name = "Reservio-SwiftUITests";
+			productName = "Reservio-SwiftUITests";
+			productReference = EE926EDB2C92E1DA0089FDDD /* Reservio-SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE926EB72C92E1D80089FDDD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					EE926EBE2C92E1D80089FDDD = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					EE926ED02C92E1DA0089FDDD = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = EE926EBE2C92E1D80089FDDD;
+					};
+					EE926EDA2C92E1DA0089FDDD = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = EE926EBE2C92E1D80089FDDD;
+					};
+				};
+			};
+			buildConfigurationList = EE926EBA2C92E1D80089FDDD /* Build configuration list for PBXProject "Reservio-Swift" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE926EB62C92E1D80089FDDD;
+			productRefGroup = EE926EC02C92E1D80089FDDD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE926EBE2C92E1D80089FDDD /* Reservio-Swift */,
+				EE926ED02C92E1DA0089FDDD /* Reservio-SwiftTests */,
+				EE926EDA2C92E1DA0089FDDD /* Reservio-SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE926EBD2C92E1D80089FDDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE926ECC2C92E1DA0089FDDD /* Preview Assets.xcassets in Resources */,
+				EE926EC92C92E1DA0089FDDD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE926ECF2C92E1DA0089FDDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE926ED92C92E1DA0089FDDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE926EBB2C92E1D80089FDDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE926EF22C92F36F0089FDDD /* SettingsView.swift in Sources */,
+				EE926EC52C92E1D80089FDDD /* ContentView.swift in Sources */,
+				EE926EF42C92F8BD0089FDDD /* Edit_View.swift in Sources */,
+				EE926EF02C92F3190089FDDD /* SendReservationAPI.swift in Sources */,
+				EE926EF62C92FDD70089FDDD /* OrderView.swift in Sources */,
+				EE926EF92C9300D80089FDDD /* HomeView.swift in Sources */,
+				EE926EC72C92E1D80089FDDD /* Item.swift in Sources */,
+				EE926EC32C92E1D80089FDDD /* Reservio_SwiftApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE926ECD2C92E1DA0089FDDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE926ED62C92E1DA0089FDDD /* Reservio_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE926ED72C92E1DA0089FDDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE926EE02C92E1DA0089FDDD /* Reservio_SwiftUITests.swift in Sources */,
+				EE926EE22C92E1DA0089FDDD /* Reservio_SwiftUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE926ED32C92E1DA0089FDDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE926EBE2C92E1D80089FDDD /* Reservio-Swift */;
+			targetProxy = EE926ED22C92E1DA0089FDDD /* PBXContainerItemProxy */;
+		};
+		EE926EDD2C92E1DA0089FDDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE926EBE2C92E1D80089FDDD /* Reservio-Swift */;
+			targetProxy = EE926EDC2C92E1DA0089FDDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EE926EE32C92E1DA0089FDDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE926EE42C92E1DA0089FDDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE926EE62C92E1DA0089FDDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Reservio-Swift/Preview Content\"";
+				DEVELOPMENT_TEAM = 73R5LGR746;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Felix.Reservio-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE926EE72C92E1DA0089FDDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Reservio-Swift/Preview Content\"";
+				DEVELOPMENT_TEAM = 73R5LGR746;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Felix.Reservio-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE926EE92C92E1DA0089FDDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73R5LGR746;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Felix.Reservio-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reservio-Swift.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Reservio-Swift";
+			};
+			name = Debug;
+		};
+		EE926EEA2C92E1DA0089FDDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73R5LGR746;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Felix.Reservio-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reservio-Swift.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Reservio-Swift";
+			};
+			name = Release;
+		};
+		EE926EEC2C92E1DA0089FDDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73R5LGR746;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Felix.Reservio-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Reservio-Swift";
+			};
+			name = Debug;
+		};
+		EE926EED2C92E1DA0089FDDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73R5LGR746;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Felix.Reservio-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Reservio-Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE926EBA2C92E1D80089FDDD /* Build configuration list for PBXProject "Reservio-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE926EE32C92E1DA0089FDDD /* Debug */,
+				EE926EE42C92E1DA0089FDDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE926EE52C92E1DA0089FDDD /* Build configuration list for PBXNativeTarget "Reservio-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE926EE62C92E1DA0089FDDD /* Debug */,
+				EE926EE72C92E1DA0089FDDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE926EE82C92E1DA0089FDDD /* Build configuration list for PBXNativeTarget "Reservio-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE926EE92C92E1DA0089FDDD /* Debug */,
+				EE926EEA2C92E1DA0089FDDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE926EEB2C92E1DA0089FDDD /* Build configuration list for PBXNativeTarget "Reservio-SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE926EEC2C92E1DA0089FDDD /* Debug */,
+				EE926EED2C92E1DA0089FDDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE926EB72C92E1D80089FDDD /* Project object */;
+}
