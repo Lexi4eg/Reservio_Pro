@@ -1,5 +1,4 @@
 version: '3.9'
-
 services:
   db:
     image: postgres:latest
@@ -8,7 +7,7 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=smartmirror
+      - POSTGRES_DB=reservio
     ports:
       - '5432:5432'
     volumes:

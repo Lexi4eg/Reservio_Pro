@@ -5,25 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose-dev.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaConsumerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/MessageObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose-dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-dev.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaConsumerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/MessageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/MessageObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,13 +55,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Lexi4eg"
+  }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Lexi4eg/Reservio_Backend.git",
+    "accountId": "8b11da8e-36c2-4ffd-8903-1e062aaa37d0"
+  }
 }]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2lxcoPvU8tsaePvi9Le1nfduhFd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -80,6 +85,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Docker.docker-compose-dev.yaml: Compose Deployment Reservio_Backend.executor": "Run",
+    "Gradle.Reservio_Backend [:org.HttpClientEndpoint.Main.main()].executor": "Run",
     "Gradle.Reservio_Backend [:org.Kafka.Main.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -115,8 +121,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="org.HttpClientEndpoint.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.HttpClientEndpoint.Main" />
+      <module name="Reservio_Backend.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.HttpClientEndpoint.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="docker-compose-dev.yaml: Compose Deployment Reservio_Backend" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -130,8 +151,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.org.HttpClientEndpoint.Main" />
         <item itemvalue="Docker.docker-compose-dev.yaml: Compose Deployment Reservio_Backend" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -152,6 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1726125346096</updated>
       <workItem from="1726125347283" duration="2780000" />
+      <workItem from="1726129033046" duration="1374000" />
     </task>
     <servers />
   </component>

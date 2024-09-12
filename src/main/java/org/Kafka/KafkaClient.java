@@ -8,7 +8,7 @@ public class KafkaClient {
     public static void main(String[] args) {
         try {
             DatabaseService databaseService = new DatabaseService();
-            KafkaConsumerService consumerService = new KafkaConsumerService();
+            KafkaConsumerService consumerService = new KafkaConsumerService(databaseService);
             consumerService.consumeMessages("message");
         } catch (SQLException e) {
             e.printStackTrace();

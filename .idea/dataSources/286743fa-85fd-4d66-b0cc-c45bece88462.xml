@@ -3,17 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>732</IntrospectionStateNumber>
+      <IntrospectionStateNumber>746</IntrospectionStateNumber>
       <ServerVersion>16.1</ServerVersion>
-      <StartupTime>1726126391</StartupTime>
+      <StartupTime>1726129364</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -1408,7 +1400,7 @@ true posixrules
 13212||10|C|G
 13212||-9223372036854775808|U|G
 13212||10|U|G</Grants>
-      <IntrospectionStateNumber>732</IntrospectionStateNumber>
+      <IntrospectionStateNumber>746</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4831,11 +4823,111 @@ true posixrules
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>732</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-09-12.07:36:13</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>746</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-09-12.08:31:01</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
+    <sequence id="265" parent="264" name="messages_id_seq">
+      <ObjectId>24576</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>736</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="266" parent="264" name="messages">
+      <ObjectId>24577</ObjectId>
+      <StateNumber>736</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="267" parent="266" name="id">
+      <DefaultExpression>nextval(&apos;messages_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>736</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <SequenceId>24576</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="268" parent="266" name="key">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>736</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="269" parent="266" name="vorname">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>736</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="270" parent="266" name="nachname">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>736</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="271" parent="266" name="datum">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>736</StateNumber>
+      <StoredType>timestamp|0s</StoredType>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="272" parent="266" name="personen">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StateNumber>736</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="273" parent="266" name="email">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StateNumber>736</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="274" parent="266" name="telefonnummer">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StateNumber>736</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="275" parent="266" name="sonderwuensche">
+      <Position>9</Position>
+      <StateNumber>745</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="276" parent="266" name="kinderstuhl">
+      <Position>10</Position>
+      <StateNumber>736</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="277" parent="266" name="messages_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>24583</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>736</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="278" parent="266" name="messages_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>24584</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>736</StateNumber>
+      <UnderlyingIndexId>24583</UnderlyingIndexId>
+    </key>
   </database-model>
 </dataSource>

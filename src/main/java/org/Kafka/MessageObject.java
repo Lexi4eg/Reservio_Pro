@@ -1,40 +1,36 @@
 package org.Kafka;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
 public class MessageObject {
-    @JsonProperty("key")
     private String key;
-
-    @JsonProperty("vorname")
     private String vorname;
-
-    @JsonProperty("nachname")
     private String nachname;
-
-    @JsonProperty("datum")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
     private Date datum;
-
-    @JsonProperty("personen")
-    private Integer personen;
-
-    @JsonProperty("email")
+    private int personen;
     private String email;
-
-    @JsonProperty("telefonnummer")
     private String telefonnummer;
-
-    @JsonProperty("sonderWuensche")
     private String sonderWuensche;
+    private int kinderstuhl;
 
-    @JsonProperty("kinderstuhl")
-    private Integer kinderstuhl;
+    // Default constructor
+    public MessageObject() {}
 
-    public MessageObject(String key, String vorname, String nachname, Date datum, Integer personen, String email, String telefonnummer, String sonderWuensche, Integer kinderstuhl) {
+    // Parameterized constructor
+    @JsonCreator
+    public MessageObject(
+            @JsonProperty("key") String key,
+            @JsonProperty("vorname") String vorname,
+            @JsonProperty("nachname") String nachname,
+            @JsonProperty("datum") Date datum,
+            @JsonProperty("personen") int personen,
+            @JsonProperty("email") String email,
+            @JsonProperty("telefonnummer") String telefonnummer,
+            @JsonProperty("sonderWuensche") String sonderWuensche,
+            @JsonProperty("kinderstuhl") int kinderstuhl) {
         this.key = key;
         this.vorname = vorname;
         this.nachname = nachname;
@@ -46,76 +42,33 @@ public class MessageObject {
         this.kinderstuhl = kinderstuhl;
     }
 
-    // Getters and setters (optional, but recommended for serialization)
-    public String getKey() {
-        return key;
-    }
+    // Getters and setters
+    public String getKey() { return key; }
+    public void setKey(String key) { this.key = key; }
 
-    public void setKey(String key) {
-        this.key = key;
-    }
+    public String getVorname() { return vorname; }
+    public void setVorname(String vorname) { this.vorname = vorname; }
 
-    public String getVorname() {
-        return vorname;
-    }
+    public String getNachname() { return nachname; }
+    public void setNachname(String nachname) { this.nachname = nachname; }
 
-    public void setVorname(String vorname) {
-        this.vorname = vorname;
-    }
+    public Date getDatum() { return datum; }
+    public void setDatum(Date datum) { this.datum = datum; }
 
-    public String getNachname() {
-        return nachname;
-    }
+    public int getPersonen() { return personen; }
+    public void setPersonen(int personen) { this.personen = personen; }
 
-    public void setNachname(String nachname) {
-        this.nachname = nachname;
-    }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
 
-    public Date getDatum() {
-        return datum;
-    }
+    public String getTelefonnummer() { return telefonnummer; }
+    public void setTelefonnummer(String telefonnummer) { this.telefonnummer = telefonnummer; }
 
-    public void setDatum(Date datum) {
-        this.datum = datum;
-    }
+    public String getSonderWuensche() { return sonderWuensche; }
+    public void setSonderWuensche(String sonderWuensche) { this.sonderWuensche = sonderWuensche; }
 
-    public Integer getPersonen() {
-        return personen;
-    }
+    public int getKinderstuhl() { return kinderstuhl; }
+    public void setKinderstuhl(int kinderstuhl) { this.kinderstuhl = kinderstuhl; }
 
-    public void setPersonen(Integer personen) {
-        this.personen = personen;
-    }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getTelefonnummer() {
-        return telefonnummer;
-    }
-
-    public void setTelefonnummer(String telefonnummer) {
-        this.telefonnummer = telefonnummer;
-    }
-
-    public String getsonderWuensche() {
-        return sonderWuensche;
-    }
-
-    public void setsonderWuensche(String sonderWuensche) {
-        this.sonderWuensche = sonderWuensche;
-    }
-
-    public Integer getKinderstuhl() {
-        return kinderstuhl;
-    }
-
-    public void setKinderstuhl(Integer kinderstuhl) {
-        this.kinderstuhl = kinderstuhl;
-    }
 }
