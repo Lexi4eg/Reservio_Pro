@@ -20,6 +20,9 @@ public class UserData: ObservableObject {
     @AppStorage("rewardPoints") var rewardPoints: Double = 200.0
     @AppStorage("email") var email: String = ""
     @AppStorage("telefonNumber") var telefonNumber: String = ""
+    @AppStorage("reviewCount") var reviewCount: Int = 0
+    @AppStorage("reservationCount") var reservationCount: Int = 0
+    @AppStorage("visitCount") var visitCount: Int = 0
 }
 
 enum Language: String, CaseIterable, Identifiable {
@@ -81,19 +84,25 @@ struct SettingsView: View {
 
             HStack {
                 VStack {
-                    Text("4").font(.title).bold()
+                    Text("\(userData.reservationCount)")
+                        .font(.title)
+                        .bold()
                     Text("Reservations").font(.subheadline).foregroundColor(.gray)
                 }
                 .frame(maxWidth: .infinity)
 
                 VStack {
-                    Text("4").font(.title).bold()
+                    Text("\(userData.reviewCount)")
+                        .font(.title)
+                        .bold()
                     Text("Reviews").font(.subheadline).foregroundColor(.gray)
                 }
                 .frame(maxWidth: .infinity)
 
                 VStack {
-                    Text("4").font(.title).bold()
+                    Text("\(userData.visitCount)")
+                        .font(.title)
+                        .bold()
                     Text("Visits").font(.subheadline).foregroundColor(.gray)
                 }
                 .frame(maxWidth: .infinity)

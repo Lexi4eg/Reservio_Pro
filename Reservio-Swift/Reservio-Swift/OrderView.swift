@@ -73,9 +73,16 @@ struct OrderView: View {
                 .listStyle(InsetGroupedListStyle())
                 
                 Button(action: {
-                    startPaymentProcess()
-                    
-                    //sendReservationRequest(requestBody: <#T##Reservation#>)
+                    Task {
+                        startPaymentProcess()
+                        let res1 =  Reservation(id: "test", firstName: "Felix", lastName: "Prattes", date: "Test", peopleCount: 4,  email: "felix@prattes.com", phoneNumber: "+49123456789", specialRequests: "", highChair: true)
+                        userData.rewardPoints += 100;
+                        userData.reservationCount += 1;
+                        
+                        
+                        await sendReservationRequest(requestBody: res1)
+                        
+                    }
                     
                 }) {
                     Text("Confirm Order")
