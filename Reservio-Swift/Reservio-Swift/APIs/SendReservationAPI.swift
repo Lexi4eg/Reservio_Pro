@@ -11,9 +11,10 @@ struct Reservation: Identifiable, Codable {
     let phoneNumber: String
     let specialRequests: String
     let highChair: Bool
+    let tableID: String
 
     // Custom initializer for date conversion
-    init(id: String, firstName: String, lastName: String, date: String, peopleCount: Int, email: String, phoneNumber: String, specialRequests: String, highChair: Bool) {
+    init(id: String, firstName: String, lastName: String, date: String, peopleCount: Int, email: String, phoneNumber: String, specialRequests: String, highChair: Bool, tableID: String) {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
@@ -23,6 +24,7 @@ struct Reservation: Identifiable, Codable {
         self.phoneNumber = phoneNumber
         self.specialRequests = specialRequests
         self.highChair = highChair
+        self.tableID = tableID
     }
 }
 

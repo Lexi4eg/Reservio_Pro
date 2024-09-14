@@ -22,7 +22,8 @@ public class Main {
                 "john.doe@example.com",
                 "123-456-7890",
                 "None",
-                1
+                true,
+                "A1"
         );
 
         kafkaService.sendMessage("message", messageObject);

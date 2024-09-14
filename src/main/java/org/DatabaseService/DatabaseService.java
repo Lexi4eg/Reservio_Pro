@@ -20,15 +20,15 @@ public class DatabaseService {
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             // Assuming you have a method to parse the JSON message into a MessageObject
             MessageObject messageObject = parseMessage(message);
-            stmt.setString(1, messageObject.getKey());
-            stmt.setString(2, messageObject.getVorname());
-            stmt.setString(3, messageObject.getNachname());
-            stmt.setTimestamp(4, new java.sql.Timestamp(messageObject.getDatum().getTime()));
-            stmt.setInt(5, messageObject.getPersonen());
+            stmt.setString(1, messageObject.getId());
+            stmt.setString(2, messageObject.getFirstname());
+            stmt.setString(3, messageObject.getLastname());
+            stmt.setTimestamp(4, new java.sql.Timestamp(messageObject.getDate().getTime()));
+            stmt.setInt(5, messageObject.getPeopleCount());
             stmt.setString(6, messageObject.getEmail());
-            stmt.setString(7, messageObject.getTelefonnummer());
-            stmt.setString(8, messageObject.getSonderWuensche());
-            stmt.setInt(9, messageObject.getKinderstuhl());
+            stmt.setString(7, messageObject.getPhoneNumber());
+            stmt.setString(8, messageObject.getSpecialRequests());
+            stmt.setBoolean(9, messageObject.getHighChair());
             stmt.executeUpdate();
         }
     }

@@ -6,6 +6,8 @@ struct OrderView: View {
     let peopleCount: Int
     let specialRequests: String
     let kinderStuhl: Bool
+    let tableID: String
+    
 
     @ObservedObject var userData: UserData
     @Environment(\.presentationMode) var presentationMode
@@ -38,7 +40,14 @@ struct OrderView: View {
                     HStack {
                         Text("People")
                         Spacer()
-                        Text("\(peopleCount) people")
+                        Text("\(peopleCount) ")
+                            .foregroundColor(.gray)
+                    }
+                    
+                    HStack {
+                        Text("tableID")
+                        Spacer()
+                        Text("\(tableID)")
                             .foregroundColor(.gray)
                     }
                     
@@ -75,7 +84,7 @@ struct OrderView: View {
                 Button(action: {
                     Task {
                         startPaymentProcess()
-                        let res1 =  Reservation(id: "test", firstName: "Felix", lastName: "Prattes", date: "Test", peopleCount: 4,  email: "felix@prattes.com", phoneNumber: "+49123456789", specialRequests: "", highChair: true)
+                        let res1 =  Reservation(id: "test", firstName: "Felix", lastName: "Prattes", date: "Test", peopleCount: 4,  email: "felix@prattes.com", phoneNumber: "+49123456789", specialRequests: "", highChair: true, tableID: tableID)
                         userData.rewardPoints += 100;
                         userData.reservationCount += 1;
                         
@@ -148,7 +157,7 @@ struct OrderView_Previews: PreviewProvider {
             selectedTime: "19:00",
             peopleCount: 4,
             specialRequests: "Test request",
-            kinderStuhl: true,
+            kinderStuhl: true, tableID: "A1",
             userData: UserData()
         )
     }
