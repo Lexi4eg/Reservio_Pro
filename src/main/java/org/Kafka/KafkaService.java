@@ -24,9 +24,9 @@ public class KafkaService {
         producer = new KafkaProducer<>(props);
     }
 
-    public void sendMessage(String topic, MessageObject message) {
+    public void sendReservation(String topic, ReservationObject reservation) {
         try {
-            String jsonMessage = objectMapper.writeValueAsString(message);
+            String jsonMessage = objectMapper.writeValueAsString(reservation);
             producer.send(new ProducerRecord<>(topic, jsonMessage));
             producer.flush();
         } catch (JsonProcessingException e) {

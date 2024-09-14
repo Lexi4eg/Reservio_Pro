@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
 
-public class MessageObject {
+public class ReservationObject {
     private String id;
     private String firstname;
     private String lastname;
@@ -102,7 +102,7 @@ public class MessageObject {
 
     // Parameterized constructor
     @JsonCreator
-    public MessageObject(
+    public ReservationObject(
             @JsonProperty("key") String key,
             @JsonProperty("firstname") String firstname,
             @JsonProperty("lastname") String lastname,

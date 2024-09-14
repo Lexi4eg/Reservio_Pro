@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="New Construktor for the new Scema">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/APIs/SendReservationAPI.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/APIs/SendReservationAPI.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/HomeView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/HomeView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/OrderView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/OrderView.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaConsumerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/MessageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/MessageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/MessageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/ReservationObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,8 +152,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.org.HttpClientEndpoint.Main" />
         <item itemvalue="Docker.docker-compose-dev.yaml: Compose Deployment Reservio_Backend" />
+        <item itemvalue="Application.org.HttpClientEndpoint.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -176,11 +176,24 @@
       <updated>1726125346096</updated>
       <workItem from="1726125347283" duration="2780000" />
       <workItem from="1726129033046" duration="4553000" />
-      <workItem from="1726311055822" duration="2086000" />
+      <workItem from="1726311055822" duration="3747000" />
     </task>
+    <task id="LOCAL-00001" summary="New Construktor for the new Scema">
+      <option name="closed" value="true" />
+      <created>1726328809201</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726328809201</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="New Construktor for the new Scema" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Construktor for the new Scema" />
   </component>
 </project>

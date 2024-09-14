@@ -13,7 +13,7 @@ public class Main {
         KafkaService kafkaService = new KafkaService(objectMapper);
 
         String key = UUID.randomUUID().toString();
-        MessageObject messageObject = new MessageObject(
+        ReservationObject messageObject = new ReservationObject(
                 key,
                 "John",
                 "Doe",
@@ -26,7 +26,7 @@ public class Main {
                 "A1"
         );
 
-        kafkaService.sendMessage("message", messageObject);
+        kafkaService.sendReservation("message", messageObject);
         kafkaService.close();
 
         System.out.println("Message sent to Kafka topic");

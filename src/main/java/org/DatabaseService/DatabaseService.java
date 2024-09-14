@@ -1,7 +1,7 @@
 package org.DatabaseService;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.Kafka.MessageObject;
+import org.Kafka.ReservationObject;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,30 +15,29 @@ public class DatabaseService {
         this.connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "password");
     }
 
-    public void saveMessage(String message) throws SQLException {
-        String query = "INSERT INTO messages (key, vorname, nachname, datum, personen, email, telefonnummer, sonderWuensche, kinderstuhl) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    public void saveReservation(String reservation) throws SQLException {
+        String query = "INSERT INTO reservations (id, vorname, nachname, datum, personen, email, telefonnummer, sonderWuensche, kinderstuh, tableidl) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
-            // Assuming you have a method to parse the JSON message into a MessageObject
-            MessageObject messageObject = parseMessage(message);
-            stmt.setString(1, messageObject.getId());
-            stmt.setString(2, messageObject.getFirstname());
-            stmt.setString(3, messageObject.getLastname());
-            stmt.setTimestamp(4, new java.sql.Timestamp(messageObject.getDate().getTime()));
-            stmt.setInt(5, messageObject.getPeopleCount());
-            stmt.setString(6, messageObject.getEmail());
-            stmt.setString(7, messageObject.getPhoneNumber());
-            stmt.setString(8, messageObject.getSpecialRequests());
-            stmt.setBoolean(9, messageObject.getHighChair());
+            ReservationObject reservationObject = parseMessage(reservation);
+            stmt.setString(1, reservationObject.getId());
+            stmt.setString(2, reservationObject.getFirstname());
+            stmt.setString(3, reservationObject.getLastname());
+            stmt.setTimestamp(4, new java.sql.Timestamp(reservationObject.getDate().getTime()));
+            stmt.setInt(5, reservationObject.getPeopleCount());
+            stmt.setString(6, reservationObject.getEmail());
+            stmt.setString(7, reservationObject.getPhoneNumber());
+            stmt.setString(8, reservationObject.getSpecialRequests());
+            stmt.setBoolean(9, reservationObject.getHighChair());
             stmt.executeUpdate();
         }
     }
 
-    private MessageObject parseMessage(String message) {
+    private ReservationObject parseMessage(String reservation) {
         // Implement JSON parsing logic here
         // For example, using Jackson ObjectMapper
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            return objectMapper.readValue(message, MessageObject.class);
+            return objectMapper.readValue(reservation, ReservationObject.class);
         } catch (Exception e) {
             throw new RuntimeException("Failed to parse message", e);
         }

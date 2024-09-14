@@ -35,8 +35,8 @@ public class KafkaConsumerService {
         while (true) {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
             for (ConsumerRecord<String, String> record : records) {
-                System.out.printf("Consumed message: %s%n", record.value());
-                databaseService.saveMessage(record.value());
+                System.out.printf("Consumed reservation: %s%n", record.value());
+                databaseService.saveReservation(record.value());
             }
         }
     }

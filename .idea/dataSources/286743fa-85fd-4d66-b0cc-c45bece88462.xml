@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>746</IntrospectionStateNumber>
+      <IntrospectionStateNumber>734</IntrospectionStateNumber>
       <ServerVersion>16.1</ServerVersion>
-      <StartupTime>1726129364</StartupTime>
+      <StartupTime>1726329263</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -1400,11 +1400,11 @@ true posixrules
 13212||10|C|G
 13212||-9223372036854775808|U|G
 13212||10|U|G</Grants>
-      <IntrospectionStateNumber>746</IntrospectionStateNumber>
+      <IntrospectionStateNumber>734</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
-    <database id="3" parent="1" name="smartmirror">
+    <database id="3" parent="1" name="reservio">
       <ObjectId>16384</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4823,111 +4823,97 @@ true posixrules
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>746</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-09-12.08:31:01</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>734</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-09-14.15:56:56</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <sequence id="265" parent="264" name="messages_id_seq">
+    <table id="265" parent="264" name="reservations">
       <ObjectId>24576</ObjectId>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StartValue>1</StartValue>
-      <StateNumber>736</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <OwnerName>postgres</OwnerName>
-    </sequence>
-    <table id="266" parent="264" name="messages">
-      <ObjectId>24577</ObjectId>
-      <StateNumber>736</StateNumber>
+      <StateNumber>733</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="267" parent="266" name="id">
-      <DefaultExpression>nextval(&apos;messages_id_seq&apos;::regclass)</DefaultExpression>
+    <column id="266" parent="265" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>736</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <SequenceId>24576</SequenceId>
-      <TypeId>23</TypeId>
+      <StateNumber>733</StateNumber>
+      <StoredType>varchar(36)|0s</StoredType>
+      <TypeId>1043</TypeId>
     </column>
-    <column id="268" parent="266" name="key">
-      <NotNull>1</NotNull>
+    <column id="267" parent="265" name="firstname">
       <Position>2</Position>
-      <StateNumber>736</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
+      <StateNumber>733</StateNumber>
+      <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="269" parent="266" name="vorname">
-      <NotNull>1</NotNull>
+    <column id="268" parent="265" name="lastname">
       <Position>3</Position>
-      <StateNumber>736</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
+      <StateNumber>733</StateNumber>
+      <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="270" parent="266" name="nachname">
-      <NotNull>1</NotNull>
+    <column id="269" parent="265" name="date">
       <Position>4</Position>
-      <StateNumber>736</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="271" parent="266" name="datum">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StateNumber>736</StateNumber>
+      <StateNumber>733</StateNumber>
       <StoredType>timestamp|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="272" parent="266" name="personen">
-      <NotNull>1</NotNull>
+    <column id="270" parent="265" name="peoplecount">
+      <Position>5</Position>
+      <StateNumber>733</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="271" parent="265" name="email">
       <Position>6</Position>
-      <StateNumber>736</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <TypeId>23</TypeId>
+      <StateNumber>733</StateNumber>
+      <StoredType>varchar(100)|0s</StoredType>
+      <TypeId>1043</TypeId>
     </column>
-    <column id="273" parent="266" name="email">
-      <NotNull>1</NotNull>
+    <column id="272" parent="265" name="phonenumber">
       <Position>7</Position>
-      <StateNumber>736</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
+      <StateNumber>733</StateNumber>
+      <StoredType>varchar(20)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="274" parent="266" name="telefonnummer">
-      <NotNull>1</NotNull>
+    <column id="273" parent="265" name="specialrequests">
       <Position>8</Position>
-      <StateNumber>736</StateNumber>
+      <StateNumber>733</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="275" parent="266" name="sonderwuensche">
+    <column id="274" parent="265" name="highchair">
       <Position>9</Position>
-      <StateNumber>745</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
+      <StateNumber>733</StateNumber>
+      <StoredType>boolean|0s</StoredType>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="275" parent="265" name="tableid">
+      <Position>10</Position>
+      <StateNumber>733</StateNumber>
+      <StoredType>varchar(10)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="276" parent="266" name="kinderstuhl">
-      <Position>10</Position>
-      <StateNumber>736</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <TypeId>23</TypeId>
-    </column>
-    <index id="277" parent="266" name="messages_pkey">
+    <index id="276" parent="265" name="reservations_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>24583</ObjectId>
+      <ObjectId>24581</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>736</StateNumber>
+      <StateNumber>733</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="278" parent="266" name="messages_pkey">
+    <key id="277" parent="265" name="reservations_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>24584</ObjectId>
+      <ObjectId>24582</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>736</StateNumber>
-      <UnderlyingIndexId>24583</UnderlyingIndexId>
+      <StateNumber>733</StateNumber>
+      <UnderlyingIndexId>24581</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

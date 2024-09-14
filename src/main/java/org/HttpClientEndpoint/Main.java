@@ -2,7 +2,8 @@ package org.HttpClientEndpoint;
 
 import static spark.Spark.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.Kafka.MessageObject;
+import org.Kafka.ReservationObject;
+import org.Kafka.ReservationObject;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -14,10 +15,10 @@ public class Main {
     public static void main(String[] args) {
         port(4567);
 
-        post("/sendMessage", (request, response) -> {
+        post("/sendReservation", (request, response) -> {
             String body = request.body();
             ObjectMapper objectMapper = new ObjectMapper();
-            MessageObject messageObject = objectMapper.readValue(body, MessageObject.class);
+            ReservationObject messageObject = objectMapper.readValue(body, ReservationObject.class);
 
             Properties props = new Properties();
             props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
@@ -25,7 +26,7 @@ public class Main {
             props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 
             KafkaProducer<String, String> producer = new KafkaProducer<>(props);
-            ProducerRecord<String, String> record = new ProducerRecord<>("message", messageObject.getKey(), objectMapper.writeValueAsString(messageObject));
+            ProducerRecord<String, String> record = new ProducerRecord<>("reservations", messageObject.getId(), objectMapper.writeValueAsString(messageObject));
             producer.send(record);
             producer.close();
 
