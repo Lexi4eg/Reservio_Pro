@@ -5,7 +5,7 @@ struct Reservation: Identifiable, Codable {
     let id: String
     let firstName: String
     let lastName: String
-    let date: Date
+    let date: String // Change to String to ensure correct format
     let peopleCount: Int
     let email: String
     let phoneNumber: String
@@ -14,11 +14,13 @@ struct Reservation: Identifiable, Codable {
     let tableID: String
 
     // Custom initializer for date conversion
-    init(id: String, firstName: String, lastName: String, date: String, peopleCount: Int, email: String, phoneNumber: String, specialRequests: String, highChair: Bool, tableID: String) {
+    init(id: String, firstName: String, lastName: String, date: Date, peopleCount: Int, email: String, phoneNumber: String, specialRequests: String, highChair: Bool, tableID: String) {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
-        self.date = ISO8601DateFormatter().date(from: date) ?? Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        self.date = dateFormatter.string(from: date) // Format date to string
         self.peopleCount = peopleCount
         self.email = email
         self.phoneNumber = phoneNumber
@@ -46,10 +48,10 @@ func sendReservationRequest(requestBody: Reservation) async {
     do {
         // Encode the Reservation object to JSON data
         let jsonData = try JSONEncoder().encode(requestBody)
-        
+
         // Send the request using URLSession
         let (data, response) = try await URLSession.shared.upload(for: request, from: jsonData)
-        
+
         // Handle the response (optional)
         if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
             print("Reservation sent successfully")

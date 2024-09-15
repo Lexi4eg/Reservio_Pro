@@ -3,7 +3,6 @@ package org.HttpClientEndpoint;
 import static spark.Spark.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.Kafka.ReservationObject;
-import org.Kafka.ReservationObject;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;

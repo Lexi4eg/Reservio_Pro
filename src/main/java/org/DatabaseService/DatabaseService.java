@@ -1,6 +1,5 @@
 package org.DatabaseService;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.Kafka.ReservationObject;
 
 import java.sql.Connection;
@@ -15,31 +14,20 @@ public class DatabaseService {
         this.connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "password");
     }
 
-    public void saveReservation(String reservation) throws SQLException {
-        String query = "INSERT INTO reservations (id, vorname, nachname, datum, personen, email, telefonnummer, sonderWuensche, kinderstuh, tableidl) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    public void saveReservation(ReservationObject reservation) throws SQLException {
+        String query = "INSERT INTO reservations (id, firstname, lastname, date, peoplecount, email, phonenumber, specialrequests, highchair, tableid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
-            ReservationObject reservationObject = parseMessage(reservation);
-            stmt.setString(1, reservationObject.getId());
-            stmt.setString(2, reservationObject.getFirstname());
-            stmt.setString(3, reservationObject.getLastname());
-            stmt.setTimestamp(4, new java.sql.Timestamp(reservationObject.getDate().getTime()));
-            stmt.setInt(5, reservationObject.getPeopleCount());
-            stmt.setString(6, reservationObject.getEmail());
-            stmt.setString(7, reservationObject.getPhoneNumber());
-            stmt.setString(8, reservationObject.getSpecialRequests());
-            stmt.setBoolean(9, reservationObject.getHighChair());
+            stmt.setString(1, reservation.getId());
+            stmt.setString(2, reservation.getFirstname());
+            stmt.setString(3, reservation.getLastname());
+            stmt.setTimestamp(4, new java.sql.Timestamp(reservation.getDate().getTime()));
+            stmt.setInt(5, reservation.getPeopleCount());
+            stmt.setString(6, reservation.getEmail());
+            stmt.setString(7, reservation.getPhoneNumber());
+            stmt.setString(8, reservation.getSpecialRequests());
+            stmt.setBoolean(9, reservation.getHighChair());
+            stmt.setString(10, reservation.getTableID());
             stmt.executeUpdate();
-        }
-    }
-
-    private ReservationObject parseMessage(String reservation) {
-        // Implement JSON parsing logic here
-        // For example, using Jackson ObjectMapper
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            return objectMapper.readValue(reservation, ReservationObject.class);
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to parse message", e);
         }
     }
 }

@@ -1,5 +1,6 @@
 package org.Kafka;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.DatabaseService.DatabaseService;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -16,8 +17,9 @@ import java.util.Properties;
 public class KafkaConsumerService {
     private final Consumer<String, String> consumer;
     private final DatabaseService databaseService;
+    private final ObjectMapper objectMapper;
 
-    public KafkaConsumerService(DatabaseService databaseService) {
+    public KafkaConsumerService(DatabaseService databaseService, ObjectMapper objectMapper) {
         Properties props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "consumer-group");
@@ -27,16 +29,22 @@ public class KafkaConsumerService {
 
         this.consumer = new KafkaConsumer<>(props);
         this.databaseService = databaseService;
+        this.objectMapper = objectMapper;
     }
 
-    public void consumeMessages(String topic) throws SQLException {
+    public void consumeReservations(String topic) throws SQLException {
         consumer.subscribe(Collections.singletonList(topic));
 
         while (true) {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
             for (ConsumerRecord<String, String> record : records) {
                 System.out.printf("Consumed reservation: %s%n", record.value());
-                databaseService.saveReservation(record.value());
+                try {
+                    ReservationObject reservation = objectMapper.readValue(record.value(), ReservationObject.class);
+                    databaseService.saveReservation(reservation);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
