@@ -3,8 +3,8 @@ import Foundation
 // Define the Reservation struct to match your JSON structure
 struct Reservation: Identifiable, Codable {
     let id: String
-    let firstName: String
-    let lastName: String
+    let firstname: String
+    let lastname: String
     let date: String // Change to String to ensure correct format
     let peopleCount: Int
     let email: String
@@ -14,10 +14,10 @@ struct Reservation: Identifiable, Codable {
     let tableID: String
 
     // Custom initializer for date conversion
-    init(id: String, firstName: String, lastName: String, date: Date, peopleCount: Int, email: String, phoneNumber: String, specialRequests: String, highChair: Bool, tableID: String) {
+    init(id: String, firstname: String, lastname: String, date: Date, peopleCount: Int, email: String, phoneNumber: String, specialRequests: String, highChair: Bool, tableID: String) {
         self.id = id
-        self.firstName = firstName
-        self.lastName = lastName
+        self.firstname = firstname
+        self.lastname = lastname
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         self.date = dateFormatter.string(from: date) // Format date to string
@@ -32,7 +32,7 @@ struct Reservation: Identifiable, Codable {
 
 // Function to send reservation request
 func sendReservationRequest(requestBody: Reservation) async {
-    print("Sending reservation for: \(requestBody.firstName) \(requestBody.lastName)")
+    print("Sending reservation for: \(requestBody.firstname) \(requestBody.lastname)")
 
     // Define the server URL
     guard let url = URL(string: "http://localhost:4567/sendReservation") else {

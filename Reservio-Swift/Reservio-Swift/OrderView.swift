@@ -84,7 +84,7 @@ struct OrderView: View {
                 Button(action: {
                     Task {
                         startPaymentProcess()
-                        let res1 =  Reservation(id: "test", firstName: "Felix", lastName: "Prattes", date: Date(), peopleCount: 4,  email: "felix@prattes.com", phoneNumber: "+49123456789", specialRequests: "", highChair: true, tableID: tableID)
+                        let res1 =  Reservation(id: UUID().uuidString , firstname: "Felix", lastname: "Prattes", date: Date(), peopleCount: 4,  email: "felix@prattes.com", phoneNumber: "+49123456789", specialRequests: specialRequests, highChair: true, tableID: tableID)
                         userData.rewardPoints += 100;
                         userData.reservationCount += 1;
                         
