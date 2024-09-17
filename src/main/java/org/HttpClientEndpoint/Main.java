@@ -40,6 +40,8 @@ public class Main {
             ProducerRecord<String, String> record = new ProducerRecord<>("reservations", messageObject.getId(), objectMapper.writeValueAsString(messageObject));
             producer.send(record);
             producer.close();
+            System.out.println("Message sent to Kafka");
+            System.out.println("Reservation: " + messageObject.getDate());
 
             response.status(200);
             return "Message sent to Kafka";

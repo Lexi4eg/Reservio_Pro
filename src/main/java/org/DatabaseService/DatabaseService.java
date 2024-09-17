@@ -17,21 +17,23 @@ public class DatabaseService {
     }
 
     public void saveReservation(ReservationObject reservation) throws SQLException {
-        String query = "INSERT INTO reservations (id, firstname, lastname, date, peoplecount, email, phonenumber, specialrequests, highchair, tableid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        try (PreparedStatement stmt = connection.prepareStatement(query)) {
-            stmt.setString(1, reservation.getId());
-            stmt.setString(2, reservation.getFirstname());
-            stmt.setString(3, reservation.getLastname());
-            stmt.setTimestamp(4, new java.sql.Timestamp(reservation.getDate().getTime()));
-            stmt.setInt(5, reservation.getPeopleCount());
-            stmt.setString(6, reservation.getEmail());
-            stmt.setString(7, reservation.getPhoneNumber());
-            stmt.setString(8, reservation.getSpecialRequests());
-            stmt.setBoolean(9, reservation.getHighChair());
-            stmt.setString(10, reservation.getTableID());
-            stmt.executeUpdate();
+        String sql = "INSERT INTO reservations (id, firstname, lastname, date, peopleCount, email, phoneNumber, specialRequests, highChair, tableID, numberChairs) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, reservation.getId());
+            statement.setString(2, reservation.getFirstname());
+            statement.setString(3, reservation.getLastname());
+            statement.setTimestamp(4, reservation.getDate());
+            statement.setInt(5, reservation.getPeopleCount());
+            statement.setString(6, reservation.getEmail());
+            statement.setString(7, reservation.getPhoneNumber());
+            statement.setString(8, reservation.getSpecialRequests());
+            statement.setBoolean(9, reservation.getHighChair());
+            statement.setString(10, reservation.getTableID());
+            statement.setInt(11, reservation.getNumberChairs());
+            statement.executeUpdate();
         }
     }
+
 
     public List<String> getTableIdsByTime(String date) throws SQLException {
         List<String> tableIds = new ArrayList<>();
@@ -47,8 +49,9 @@ public class DatabaseService {
                     tableIds.add(rs.getString("tableid"));
                 }
             }
+
+            System.out.println("Table IDs: " + tableIds);
+            return tableIds;
         }
-        System.out.println("Table IDs: " + tableIds);
-        return tableIds;
     }
 }

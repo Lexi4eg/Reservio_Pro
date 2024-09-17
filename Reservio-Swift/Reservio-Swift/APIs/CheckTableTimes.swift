@@ -1,51 +1,48 @@
-//
-//  CheckTableTimes.swift
-//  Reservio-Swift
-//
-//  Created by Felix Prattes on 17.09.24.
-//
-
 import Foundation
 
-// Function to check available times for a table reservation
-func checkTableTimes(tableId: String, reservationDate: Date) async {
-    print("Checking available times for Table ID: \(tableId) on \(reservationDate)")
+func checkTableTimes(reservationDate: Date) async -> [String] {
+    let dateFormatter = ISO8601DateFormatter()
+    dateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+    let formattedDate = dateFormatter.string(from: reservationDate)
+    
+    print("Checking available times on \(formattedDate)")
 
-    // Define the server URL for checking table times
-    guard let url = URL(string: "http://localhost:4567/checkTableTimes") else {
+    // Define the server URL for checking table times with query parameters
+    guard var urlComponents = URLComponents(string: "http://localhost:4567/getTablesByTime") else {
         print("Error: Invalid URL")
-        return
+        return []
     }
-
-    // Create the request body with tableId and formatted reservation date
-    let requestBody: [String: Any] = [
-        "tableId": tableId,
-        "reservationDate": ISO8601DateFormatter().string(from: reservationDate)
+    
+    urlComponents.queryItems = [
+        URLQueryItem(name: "date", value: formattedDate)
     ]
+    
+    guard let url = urlComponents.url else {
+        print("Error: Invalid URL components")
+        return []
+    }
 
     // Create a URLRequest object
     var request = URLRequest(url: url)
-    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    request.httpMethod = "POST"
+    request.httpMethod = "GET"
 
     do {
-        // Encode the request body to JSON data
-        let jsonData = try JSONSerialization.data(withJSONObject: requestBody, options: [])
+        let (data, response) = try await URLSession.shared.data(for: request)
 
-        // Send the request using URLSession
-        let (data, response) = try await URLSession.shared.upload(for: request, from: jsonData)
-
-        // Handle the response
         if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
             print("Available times received successfully")
-            // Process the response data if needed
-            if let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: []) {
-                print("Response: \(jsonResponse)")
+            if let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: []) as? [String] {
+                return jsonResponse
+            } else {
+                print("Error parsing JSON response")
+                return []
             }
         } else {
             print("Error checking table times: \(String(decoding: data, as: UTF8.self))")
+            return []
         }
     } catch {
         print("Error sending request: \(error)")
+        return []
     }
 }

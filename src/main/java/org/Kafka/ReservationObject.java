@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class ReservationObject {
@@ -18,7 +19,7 @@ public class ReservationObject {
 
     @JsonProperty("date")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
-    private Date date;
+    private  Timestamp date;
 
     @JsonProperty("peopleCount")
     private int peopleCount;
@@ -39,7 +40,7 @@ public class ReservationObject {
     private String tableID;
 
     @JsonProperty("numberChairs")
-    private String numberChairs;
+    private Integer numberChairs;
 
     // Default constructor
     public ReservationObject() {
@@ -51,14 +52,14 @@ public class ReservationObject {
             @JsonProperty("id") String id,
             @JsonProperty("firstname") String firstname,
             @JsonProperty("lastname") String lastname,
-            @JsonProperty("date") Date date,
+            @JsonProperty("date")  Timestamp date,
             @JsonProperty("peopleCount") int peopleCount,
             @JsonProperty("email") String email,
             @JsonProperty("phoneNumber") String phoneNumber,
             @JsonProperty("specialRequests") String specialRequests,
             @JsonProperty("highChair") Boolean highChair,
             @JsonProperty("tableID") String tableID,
-            @JsonProperty("numberChairs") String numberChairs
+            @JsonProperty("numberChairs") Integer numberChairs
     ) {
         this.id = id;
         this.firstname = firstname;
@@ -100,11 +101,11 @@ public class ReservationObject {
         this.lastname = lastname;
     }
 
-    public Date getDate() {
-        return date;
+    public Timestamp getDate() {
+        return (Timestamp)  date;
     }
 
-    public void setDate(Date date) {
+    public void setDate( Timestamp date) {
         this.date = date;
     }
 
@@ -152,11 +153,11 @@ public class ReservationObject {
         return tableID;
     }
 
-    public String getNumberChairs() {
+    public Integer getNumberChairs() {
         return numberChairs;
     }
 
-    public void setNumberChairs(String numberChairs) {
+    public void setNumberChairs(Integer numberChairs) {
         this.numberChairs = numberChairs;
     }
 
