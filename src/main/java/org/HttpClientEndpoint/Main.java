@@ -2,12 +2,24 @@ package org.HttpClientEndpoint;
 
 import static spark.Spark.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.DatabaseService.DatabaseService;
 import org.Kafka.ReservationObject;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.Date;
+import java.util.List;
 import java.util.Properties;
 
 public class Main {
@@ -33,6 +45,47 @@ public class Main {
             return "Message sent to Kafka";
         });
 
-        System.out.println("HTTP server started on port 4567");
+        get("/getTablesByTime", (request, response) -> {
+            String dateString = request.queryParams("date");
+
+            // Print the date
+            System.out.println("Date: " + dateString);
+            if (dateString == null || dateString.isEmpty()) {
+                response.status(400);
+                return "Date parameter is missing or empty";
+            }
+
+            dateString = dateString.replace(" ", "+");
+
+            ZonedDateTime date;
+            try {
+                date = ZonedDateTime.parse(dateString, DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSXX"));
+            } catch (DateTimeParseException e) {
+                response.status(400);
+                return "Invalid date format";
+            }
+
+            // Convert to ISO time format
+            String isoDate = date.format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
+
+            System.out.println("ISO Date: " + isoDate);
+
+            DatabaseService dbService = new DatabaseService();
+            List<String> tableIds;
+            try {
+                tableIds = dbService.getTableIdsByTime(isoDate);
+            } catch (SQLException e) {
+                e.printStackTrace();
+                response.status(500);
+                return "Database error";
+            }
+
+            ObjectMapper objectMapper = new ObjectMapper();
+            String jsonResponse = objectMapper.writeValueAsString(tableIds);
+
+            response.type("application/json");
+            response.status(200);
+            return jsonResponse;
+        });
     }
 }

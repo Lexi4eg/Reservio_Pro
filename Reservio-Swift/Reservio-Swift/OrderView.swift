@@ -7,6 +7,7 @@ struct OrderView: View {
     let specialRequests: String
     let kinderStuhl: Bool
     let tableID: String
+    let numberChais: Int
     
 
     @ObservedObject var userData: UserData
@@ -84,7 +85,7 @@ struct OrderView: View {
                 Button(action: {
                     Task {
                         startPaymentProcess()
-                        let res1 =  Reservation(id: UUID().uuidString , firstname: "Felix", lastname: "Prattes", date: Date(), peopleCount: 4,  email: "felix@prattes.com", phoneNumber: "+49123456789", specialRequests: specialRequests, highChair: true, tableID: tableID)
+                        let res1 =  Reservation(id: UUID().uuidString , firstname: "Felix", lastname: "Prattes", date: Date(), peopleCount: 4,  email: "felix@prattes.com", phoneNumber: "+49123456789", specialRequests: specialRequests, highChair: true, tableID: tableID, numberChairs: numberChais)
                         userData.rewardPoints += 100;
                         userData.reservationCount += 1;
                         
@@ -158,7 +159,7 @@ struct OrderView_Previews: PreviewProvider {
             peopleCount: 4,
             specialRequests: "Test request",
             kinderStuhl: true, tableID: "A1",
-            userData: UserData()
+            numberChais : 0, userData: UserData()
         )
     }
 }

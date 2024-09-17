@@ -2,10 +2,12 @@ package org.DatabaseService;
 
 import org.Kafka.ReservationObject;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.io.Console;
+import java.sql.*;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class DatabaseService {
     private final Connection connection;
@@ -29,5 +31,24 @@ public class DatabaseService {
             stmt.setString(10, reservation.getTableID());
             stmt.executeUpdate();
         }
+    }
+
+    public List<String> getTableIdsByTime(String date) throws SQLException {
+        List<String> tableIds = new ArrayList<>();
+        System.out.println("Date2: " + date);
+        String query = "SELECT tableid FROM reservations WHERE date = ?";
+
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
+            // Parse the date string into a Timestamp object
+            Timestamp timestamp = Timestamp.valueOf(date.replace("T", " ").replace("Z", ""));
+            stmt.setTimestamp(1, timestamp);
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    tableIds.add(rs.getString("tableid"));
+                }
+            }
+        }
+        System.out.println("Table IDs: " + tableIds);
+        return tableIds;
     }
 }

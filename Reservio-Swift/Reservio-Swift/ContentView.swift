@@ -18,7 +18,7 @@ struct ContentView: View {
     var body: some View {
                 TabView {
                     Tab("Home", systemImage: "house"){
-                        HomeView(tableName: "test")
+                        HomeView()
                     }
                    
                     Tab("Profile", systemImage: "gear"){

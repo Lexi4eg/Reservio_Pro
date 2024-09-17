@@ -38,6 +38,9 @@ public class ReservationObject {
     @JsonProperty("tableID")
     private String tableID;
 
+    @JsonProperty("numberChairs")
+    private String numberChairs;
+
     // Default constructor
     public ReservationObject() {
     }
@@ -54,7 +57,8 @@ public class ReservationObject {
             @JsonProperty("phoneNumber") String phoneNumber,
             @JsonProperty("specialRequests") String specialRequests,
             @JsonProperty("highChair") Boolean highChair,
-            @JsonProperty("tableID") String tableID
+            @JsonProperty("tableID") String tableID,
+            @JsonProperty("numberChairs") String numberChairs
     ) {
         this.id = id;
         this.firstname = firstname;
@@ -66,6 +70,10 @@ public class ReservationObject {
         this.specialRequests = specialRequests;
         this.highChair = highChair;
         this.tableID = tableID;
+        this.numberChairs = numberChairs;
+    }
+
+    public ReservationObject(String key, String john, String doe, Date date, int i, String mail, String s, String none, boolean b, String a1) {
     }
 
     public String getId() {
@@ -142,6 +150,14 @@ public class ReservationObject {
 
     public String getTableID() {
         return tableID;
+    }
+
+    public String getNumberChairs() {
+        return numberChairs;
+    }
+
+    public void setNumberChairs(String numberChairs) {
+        this.numberChairs = numberChairs;
     }
 
     public void setTableID(String tableID) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE2043E72C996B8F000DF3D0 /* CheckTableTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2043E62C996B8F000DF3D0 /* CheckTableTimes.swift */; };
 		EE926EC32C92E1D80089FDDD /* Reservio_SwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EC22C92E1D80089FDDD /* Reservio_SwiftApp.swift */; };
 		EE926EC52C92E1D80089FDDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EC42C92E1D80089FDDD /* ContentView.swift */; };
 		EE926EC72C92E1D80089FDDD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EC62C92E1D80089FDDD /* Item.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE2043E62C996B8F000DF3D0 /* CheckTableTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTableTimes.swift; sourceTree = "<group>"; };
 		EE926EBF2C92E1D80089FDDD /* Reservio-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reservio-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE926EC22C92E1D80089FDDD /* Reservio_SwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservio_SwiftApp.swift; sourceTree = "<group>"; };
 		EE926EC42C92E1D80089FDDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				EE926EEF2C92F3190089FDDD /* SendReservationAPI.swift */,
+				EE2043E62C996B8F000DF3D0 /* CheckTableTimes.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				EE926EF02C92F3190089FDDD /* SendReservationAPI.swift in Sources */,
 				EE926EF62C92FDD70089FDDD /* OrderView.swift in Sources */,
 				EE926EF92C9300D80089FDDD /* HomeView.swift in Sources */,
+				EE2043E72C996B8F000DF3D0 /* CheckTableTimes.swift in Sources */,
 				EE926EC72C92E1D80089FDDD /* Item.swift in Sources */,
 				EE926EC32C92E1D80089FDDD /* Reservio_SwiftApp.swift in Sources */,
 			);

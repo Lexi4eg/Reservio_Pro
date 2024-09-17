@@ -11,9 +11,9 @@
 4||10|c|G
 4||10|C|G
 4||10|T|G</Grants>
-      <IntrospectionStateNumber>736</IntrospectionStateNumber>
+      <IntrospectionStateNumber>758</IntrospectionStateNumber>
       <ServerVersion>16.1</ServerVersion>
-      <StartupTime>1726425134</StartupTime>
+      <StartupTime>1726489130</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -1408,7 +1408,7 @@ true posixrules
 13212||10|C|G
 13212||-9223372036854775808|U|G
 13212||10|U|G</Grants>
-      <IntrospectionStateNumber>736</IntrospectionStateNumber>
+      <IntrospectionStateNumber>758</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4831,15 +4831,15 @@ true posixrules
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>736</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-09-15.18:32:40</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>758</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-09-16.13:30:04</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <table id="265" parent="264" name="reservations">
       <ObjectId>24576</ObjectId>
-      <StateNumber>733</StateNumber>
+      <StateNumber>757</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4904,7 +4904,13 @@ true posixrules
       <StoredType>varchar(10)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="276" parent="265" name="reservations_pkey">
+    <column id="276" parent="265" name="numberchais">
+      <Position>11</Position>
+      <StateNumber>757</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="277" parent="265" name="reservations_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>24581</ObjectId>
@@ -4916,7 +4922,7 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="277" parent="265" name="reservations_pkey">
+    <key id="278" parent="265" name="reservations_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>24582</ObjectId>
       <Primary>1</Primary>
