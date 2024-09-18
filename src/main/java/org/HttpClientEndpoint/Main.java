@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Properties;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         port(4567);
 
         post("/sendReservation", (request, response) -> {
@@ -47,6 +47,19 @@ public class Main {
             return "Message sent to Kafka";
         });
 
+        get("/getAllReservations", (request, response) -> {
+            DatabaseService dbService = new DatabaseService();
+            List<ReservationObject> reservations;
+
+            reservations = dbService.getAllReservations();
+            ObjectMapper objectMapper = new ObjectMapper();
+            String jsonResponse = objectMapper.writeValueAsString(reservations);
+            response.type("application/json");
+            response.status(200);
+            return jsonResponse;
+        });
+
+
         get("/getTablesByTime", (request, response) -> {
             String dateString = request.queryParams("date");
 
@@ -67,7 +80,6 @@ public class Main {
                 return "Invalid date format";
             }
 
-            // Convert to ISO time format
             String isoDate = date.format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
 
             System.out.println("ISO Date: " + isoDate);

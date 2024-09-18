@@ -34,7 +34,34 @@ public class DatabaseService {
         }
     }
 
-
+ public List<ReservationObject> getAllReservations(){
+        List<ReservationObject> reservations = new ArrayList<>();
+        String query = "SELECT * FROM reservations";
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    ReservationObject reservation = new ReservationObject(
+                            rs.getString("id"),
+                            rs.getString("firstname"),
+                            rs.getString("lastname"),
+                            rs.getTimestamp("date"),
+                            rs.getInt("peopleCount"),
+                            rs.getString("email"),
+                            rs.getString("phoneNumber"),
+                            rs.getString("specialRequests"),
+                            rs.getBoolean("highChair"),
+                            rs.getString("tableID"),
+                            rs.getInt("numberChairs")
+                    );
+                    reservations.add(reservation);
+                }
+            }
+            return reservations;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+ }
     public List<String> getTableIdsByTime(String date) throws SQLException {
         List<String> tableIds = new ArrayList<>();
         System.out.println("Date2: " + date);

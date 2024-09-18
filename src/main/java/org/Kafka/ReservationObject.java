@@ -102,7 +102,7 @@ public class ReservationObject {
     }
 
     public Timestamp getDate() {
-        return (Timestamp)  date;
+        return  date;
     }
 
     public void setDate( Timestamp date) {
