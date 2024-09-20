@@ -2,11 +2,8 @@ package org.DatabaseService;
 
 import org.Kafka.ReservationObject;
 
-import java.io.Console;
 import java.sql.*;
-
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class DatabaseService {

@@ -2,9 +2,6 @@ package org.Kafka;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.DatabaseService.DatabaseService;
-
-import java.util.Date;
-import java.util.UUID;
 import java.sql.SQLException;
 
 public class Main {
