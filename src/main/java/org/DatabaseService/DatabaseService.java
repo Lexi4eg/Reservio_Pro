@@ -31,6 +31,32 @@ public class DatabaseService {
         }
     }
 
+    public void deleteReservation(String id) throws SQLException {
+        String sql = "DELETE FROM reservations WHERE id = ?";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, id);
+            statement.executeUpdate();
+        }
+    }
+
+    public void updateResrvation(ReservationObject reservation) throws SQLException {
+        String sql = "UPDATE reservations SET firstname = ?, lastname = ?, date = ?, peopleCount = ?, email = ?, phoneNumber = ?, specialRequests = ?, highChair = ?, tableID = ?, numberChairs = ? WHERE id = ?";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, reservation.getFirstname());
+            statement.setString(2, reservation.getLastname());
+            statement.setTimestamp(3, reservation.getDate());
+            statement.setInt(4, reservation.getPeopleCount());
+            statement.setString(5, reservation.getEmail());
+            statement.setString(6, reservation.getPhoneNumber());
+            statement.setString(7, reservation.getSpecialRequests());
+            statement.setBoolean(8, reservation.getHighChair());
+            statement.setString(9, reservation.getTableID());
+            statement.setInt(10, reservation.getNumberChairs());
+            statement.setString(11, reservation.getId());
+            statement.executeUpdate();
+        }
+    }
+
  public List<ReservationObject> getAllReservations(){
         List<ReservationObject> reservations = new ArrayList<>();
         String query = "SELECT * FROM reservations";

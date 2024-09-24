@@ -14,12 +14,13 @@ services:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
   zookeeper:
-    image: arm64v8/zookeeper:latest
+    image: bitnami/zookeeper:latest
     platform: linux/amd64
     container_name: zookeeper-dev
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
+      ALLOW_ANONYMOUS_LOGIN: "yes"
 
   broker:
     image: bitnami/kafka:latest
