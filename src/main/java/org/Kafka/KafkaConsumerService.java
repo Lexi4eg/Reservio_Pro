@@ -1,6 +1,8 @@
 package org.Kafka;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.ConfirmationService.ConfirmationObject;
+import org.ConfirmationService.ConfirmationService;
 import org.DatabaseService.DatabaseService;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -10,9 +12,12 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.time.Duration;
 import java.util.Collections;
+import java.util.Date;
 import java.util.Properties;
+import java.util.UUID;
 
 public class KafkaConsumerService {
     private final Consumer<String, String> consumer;
@@ -41,7 +46,12 @@ public class KafkaConsumerService {
                 System.out.printf("Consumed reservation: %s%n", record.value());
                 try {
                     ReservationObject reservation = objectMapper.readValue(record.value(), ReservationObject.class);
+                    ConfirmationService confirmationService = new ConfirmationService();
+                    System.out.println("Reservation: " + reservation.getDate());
                     databaseService.saveReservation(reservation);
+
+                    confirmationService.sendConfirmation(new ConfirmationObject(UUID.randomUUID().toString(), new Timestamp(new Date().getTime()), UUID.randomUUID().toString(), reservation));
+                    System.out.println("Confirmation sent with ID: " + reservation.getId());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

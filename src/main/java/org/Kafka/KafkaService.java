@@ -1,6 +1,7 @@
 package org.Kafka;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import org.ConfirmationService.ConfirmationObject;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -13,8 +14,8 @@ public class KafkaService {
     private final Producer<String, String> producer;
     private final ObjectMapper objectMapper;
 
-    public KafkaService(ObjectMapper objectMapper) {
-        this.objectMapper = objectMapper;
+    public KafkaService() {
+        this.objectMapper = new ObjectMapper();
         Properties props = new Properties();
         props.put("bootstrap.servers", "localhost:9092");
         props.put("acks", "all");
@@ -33,7 +34,15 @@ public class KafkaService {
             e.printStackTrace();
         }
     }
-
+    public void sendConfirmation(ConfirmationObject confirmation) {
+        try {
+            String jsonMessage = objectMapper.writeValueAsString(confirmation);
+            producer.send(new ProducerRecord<>("confirmations", jsonMessage));
+            producer.flush();
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+    }
     public void close() {
         producer.close();
     }
