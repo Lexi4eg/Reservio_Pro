@@ -56,6 +56,19 @@ public class Main {
             return jsonResponse;
         });
 
+        get("/getConfirmationDB",  (request, response) -> {
+            String id = request.queryParams("id");
+            DatabaseService dbService = new DatabaseService();
+            List<ConfirmationObject> confirmations;
+
+            confirmations = dbService.getAllConfirmations(id);
+            ObjectMapper objectMapper = new ObjectMapper();
+            String jsonResponse = objectMapper.writeValueAsString(confirmations);
+            response.type("application/json");
+            response.status(200);
+            return jsonResponse;
+        });
+
         post("/sendConfirmation", (request, response) -> {
             String body = request.body();
             ObjectMapper objectMapper = new ObjectMapper();

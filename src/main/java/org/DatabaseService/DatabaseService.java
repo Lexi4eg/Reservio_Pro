@@ -1,5 +1,6 @@
 package org.DatabaseService;
 
+import org.ConfirmationService.ConfirmationObject;
 import org.Kafka.ReservationObject;
 
 import java.sql.*;
@@ -102,6 +103,29 @@ public class DatabaseService {
 
             System.out.println("Table IDs: " + tableIds);
             return tableIds;
+        }
+    }
+
+    public List<ReservationObject> getAllConfirmations(String id) {
+        List<ReservationObject> confirmations = new ArrayList<>();
+        String query = "SELECT * FROM reservations WHERE id = ?";
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
+            stmt.setString(1, id);
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    ConfirmationObject confirmation = new ConfirmationObject(
+                            rs.getString("id"),
+                            rs.getTimestamp("confirmationDate"),
+                            rs.getString("confirmationNumber"),
+                            null
+                    );
+                    confirmations.add(confirmation);
+                }
+            }
+            return confirmations;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
         }
     }
 }
