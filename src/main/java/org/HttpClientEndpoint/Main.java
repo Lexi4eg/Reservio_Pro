@@ -2,6 +2,7 @@ package org.HttpClientEndpoint;
 
 import static spark.Spark.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.ConfirmationService.ConfirmationObject;
 import org.DatabaseService.DatabaseService;
 import org.Kafka.ReservationObject;
 import org.apache.kafka.clients.producer.KafkaProducer;
@@ -18,6 +19,18 @@ import java.util.Properties;
 public class Main {
     public static void main(String[] args) throws SQLException {
         port(4567);
+
+        post("/sendConfirmation", (request, response) -> {
+            String body = request.body();
+            ObjectMapper objectMapper = new ObjectMapper();
+            ConfirmationObject confirmation = objectMapper.readValue(body, ConfirmationObject.class);
+
+            System.out.println("Received confirmation: " + confirmation.getId());
+
+            response.status(200);
+            response.type("application/json");
+            return objectMapper.writeValueAsString(confirmation);
+        });
 
         post("/sendReservation", (request, response) -> {
             String body = request.body();

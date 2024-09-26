@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="Libary import optimization">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ConfirmationService/ConfirmationObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ConfirmationService/ConfirmationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/286743fa-85fd-4d66-b0cc-c45bece88462/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="New Confirmation Backend Service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaConsumerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaConsumerServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,12 +62,12 @@
     &quot;assignee&quot;: &quot;Lexi4eg&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Lexi4eg/Reservio_Backend.git",
-    "accountId": "8b11da8e-36c2-4ffd-8903-1e062aaa37d0"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lexi4eg/Reservio_Backend.git&quot;,
+    &quot;accountId&quot;: &quot;8b11da8e-36c2-4ffd-8903-1e062aaa37d0&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/9.4.31.v20200723/328e4562e0f30e01efea63efe4fc24b2b860d852/jetty-io-9.4.31.v20200723.jar!/org/eclipse/jetty/io/ManagedSelector.class" root0="SKIP_INSPECTION" />
   </component>
@@ -236,7 +228,8 @@
       <workItem from="1727205565195" duration="115000" />
       <workItem from="1727205688788" duration="95000" />
       <workItem from="1727205792029" duration="3596000" />
-      <workItem from="1727248377727" duration="1982000" />
+      <workItem from="1727248377727" duration="3413000" />
+      <workItem from="1727338690442" duration="416000" />
     </task>
     <task id="LOCAL-00001" summary="New Construktor for the new Scema">
       <option name="closed" value="true" />
@@ -254,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726659755881</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="New Confirmation Backend Service">
+      <option name="closed" value="true" />
+      <created>1727252758072</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727252758072</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +275,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New Construktor for the new Scema" />
     <MESSAGE value="Added new api to getAllReservations for the C# Frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new api to getAllReservations for the C# Frontend" />
+    <MESSAGE value="New Confirmation Backend Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Confirmation Backend Service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
