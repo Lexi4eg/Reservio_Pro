@@ -38,7 +38,7 @@ public class Main {
             KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
             consumer.subscribe(Collections.singletonList("confirmations"));
 
-            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(5000)); // Increased polling duration
+            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(5000));
             consumer.close();
 
             if (records.isEmpty()) {
