@@ -2,6 +2,7 @@ package org.DatabaseService;
 
 import org.ConfirmationService.ConfirmationObject;
 import org.Kafka.ReservationObject;
+import org.apache.kafka.common.config.ConfigResource;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -115,6 +116,49 @@ public class DatabaseService {
                 "FROM confirmations c JOIN reservations r ON c.reservationId = r.id WHERE r.id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, id);
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    ReservationObject reservation = new ReservationObject(
+                            rs.getString("r_id"),
+                            rs.getString("r_firstname"),
+                            rs.getString("r_lastname"),
+                            rs.getTimestamp("r_date"),
+                            rs.getInt("r_peopleCount"),
+                            rs.getString("r_email"),
+                            rs.getString("r_phoneNumber"),
+                            rs.getString("r_specialRequests"),
+                            rs.getBoolean("r_highChair"),
+                            rs.getString("r_tableID"),
+                            rs.getInt("r_numberChairs")
+                    );
+
+                    ConfirmationObject confirmation = new ConfirmationObject(
+                            rs.getString("c_id"),
+                            rs.getTimestamp("c_confirmationDate"),
+                            rs.getString("c_confirmationNumber"),
+                            reservation
+                    );
+                    confirmations.add(confirmation);
+                }
+            }
+            return confirmations;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
+    public List<ConfirmationObject> getlConfirmationsByName(String firstname, String lastname) {
+        List<ConfirmationObject> confirmations = new ArrayList<>();
+        String query = "SELECT c.id AS c_id, c.confirmationDate AS c_confirmationDate, c.confirmationNumber AS c_confirmationNumber, " +
+                "r.id AS r_id, r.firstname AS r_firstname, r.lastname AS r_lastname, r.date AS r_date, r.peopleCount AS r_peopleCount, " +
+                "r.email AS r_email, r.phoneNumber AS r_phoneNumber, r.specialRequests AS r_specialRequests, r.highChair AS r_highChair, " +
+                "r.tableID AS r_tableID, r.numberChairs AS r_numberChairs " +
+                "FROM confirmations c JOIN reservations r ON c.reservationId = r.id WHERE r.firstname = ? AND r.lastname = ?";
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
+            stmt.setString(1, firstname);
+            stmt.setString(2, lastname);
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {
                     ReservationObject reservation = new ReservationObject(

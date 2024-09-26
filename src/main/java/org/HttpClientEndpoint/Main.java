@@ -69,6 +69,20 @@ public class Main {
             return jsonResponse;
         });
 
+        get("/getReservationByName",  (request, response) -> {
+            String firstname = request.queryParams("firstname");
+            String lastname = request.queryParams("lastname");
+            DatabaseService dbService = new DatabaseService();
+            List<ConfirmationObject> reservations;
+
+            reservations = dbService.getlConfirmationsByName(firstname, lastname);
+            ObjectMapper objectMapper = new ObjectMapper();
+            String jsonResponse = objectMapper.writeValueAsString(reservations);
+            response.type("application/json");
+            response.status(200);
+            return jsonResponse;
+        });
+
         post("/sendConfirmation", (request, response) -> {
             String body = request.body();
             ObjectMapper objectMapper = new ObjectMapper();
