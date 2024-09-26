@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EE2043E72C996B8F000DF3D0 /* CheckTableTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2043E62C996B8F000DF3D0 /* CheckTableTimes.swift */; };
+		EE7423932CA5533200D2270F /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7423922CA5533200D2270F /* ConfirmationView.swift */; };
 		EE926EC32C92E1D80089FDDD /* Reservio_SwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EC22C92E1D80089FDDD /* Reservio_SwiftApp.swift */; };
 		EE926EC52C92E1D80089FDDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EC42C92E1D80089FDDD /* ContentView.swift */; };
 		EE926EC72C92E1D80089FDDD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE926EC62C92E1D80089FDDD /* Item.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		EE2043E62C996B8F000DF3D0 /* CheckTableTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTableTimes.swift; sourceTree = "<group>"; };
+		EE7423922CA5533200D2270F /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		EE926EBF2C92E1D80089FDDD /* Reservio-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reservio-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE926EC22C92E1D80089FDDD /* Reservio_SwiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservio_SwiftApp.swift; sourceTree = "<group>"; };
 		EE926EC42C92E1D80089FDDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		EE926EC12C92E1D80089FDDD /* Reservio-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				EE7423922CA5533200D2270F /* ConfirmationView.swift */,
 				EE926EF82C9300D80089FDDD /* HomeView.swift */,
 				EE926EF72C9300940089FDDD /* Images */,
 				EE926EEE2C92F3080089FDDD /* APIs */,
@@ -299,6 +302,7 @@
 				EE926EF42C92F8BD0089FDDD /* Edit_View.swift in Sources */,
 				EE926EF02C92F3190089FDDD /* SendReservationAPI.swift in Sources */,
 				EE926EF62C92FDD70089FDDD /* OrderView.swift in Sources */,
+				EE7423932CA5533200D2270F /* ConfirmationView.swift in Sources */,
 				EE926EF92C9300D80089FDDD /* HomeView.swift in Sources */,
 				EE2043E72C996B8F000DF3D0 /* CheckTableTimes.swift in Sources */,
 				EE926EC72C92E1D80089FDDD /* Item.swift in Sources */,

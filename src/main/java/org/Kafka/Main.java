@@ -12,7 +12,6 @@ public class Main {
             DatabaseService databaseService = new DatabaseService();
             KafkaConsumerService kafkaConsumerService = new KafkaConsumerService(databaseService, objectMapper);
             kafkaConsumerService.consumeReservations("reservations");
-            kafkaConsumerService.consumeConfirmations("confirmations");
         } catch (SQLException e) {
             e.printStackTrace();
         }

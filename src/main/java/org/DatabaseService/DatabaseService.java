@@ -26,7 +26,7 @@ public class DatabaseService {
             statement.setString(8, reservation.getSpecialRequests());
             statement.setBoolean(9, reservation.getHighChair());
             statement.setString(10, reservation.getTableID());
-            statement.setInt(11, reservation.getNumberChairs());
+            statement.setInt(11, reservation.getNumberChairs() != null ? reservation.getNumberChairs() : 0);
             statement.executeUpdate();
         }
     }

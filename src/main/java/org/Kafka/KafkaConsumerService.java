@@ -40,23 +40,7 @@ public class KafkaConsumerService {
         this.objectMapper = objectMapper;
     }
 
-    public void consumeConfirmations(String topic) {
-        consumer.subscribe(Collections.singletonList(topic));
 
-        while (true) {
-            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
-            for (ConsumerRecord<String, String> record : records) {
-                System.out.printf("Consumed confirmation: %s%n", record.value());
-
-                try {
-                    ConfirmationObject confirmation = objectMapper.readValue(record.value(), ConfirmationObject.class);
-                    sendConfirmationToFrontend(confirmation);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
 
     private void sendConfirmationToFrontend(ConfirmationObject confirmation) {
         try {

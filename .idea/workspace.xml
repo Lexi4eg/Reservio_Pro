@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="New Confirmation Backend Service">
+    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="Updated Confirmation Backend Logic with new http service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/APIs/SendReservationAPI.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/APIs/SendReservationAPI.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/ContentView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/ContentView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ConfirmationService/ConfirmationObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ConfirmationService/ConfirmationObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaConsumerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/Main.java" afterDir="false" />
@@ -229,7 +235,7 @@
       <workItem from="1727205688788" duration="95000" />
       <workItem from="1727205792029" duration="3596000" />
       <workItem from="1727248377727" duration="3413000" />
-      <workItem from="1727338690442" duration="416000" />
+      <workItem from="1727338690442" duration="3007000" />
     </task>
     <task id="LOCAL-00001" summary="New Construktor for the new Scema">
       <option name="closed" value="true" />
@@ -255,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727252758072</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated Confirmation Backend Logic with new http service">
+      <option name="closed" value="true" />
+      <created>1727339343106</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727339343106</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +290,8 @@
     <MESSAGE value="New Construktor for the new Scema" />
     <MESSAGE value="Added new api to getAllReservations for the C# Frontend" />
     <MESSAGE value="New Confirmation Backend Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Confirmation Backend Service" />
+    <MESSAGE value="Updated Confirmation Backend Logic with new http service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Confirmation Backend Logic with new http service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

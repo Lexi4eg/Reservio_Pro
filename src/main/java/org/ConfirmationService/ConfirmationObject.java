@@ -1,23 +1,36 @@
 package org.ConfirmationService;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.Kafka.ReservationObject;
 
+import java.sql.Time;
 import java.sql.Timestamp;
 
 public class ConfirmationObject {
-    public String id;
-    public Timestamp ConfirmationDate;
-    public String confirmationNumber;
-    public ReservationObject reservation;
+    private String id;
+    private Timestamp confirmationDate;
+    private String confirmationNumber;
+    private ReservationObject reservation;
 
+    // Default constructor
+    public ConfirmationObject() {}
 
-    public ConfirmationObject(String id, Timestamp confirmationDate, String confirmationNumber, ReservationObject reservation) {
+    // Constructor with parameters
+    @JsonCreator
+    public ConfirmationObject(
+            @JsonProperty("id") String id,
+            @JsonProperty("confirmationDate") Timestamp confirmationDate,
+            @JsonProperty("confirmationNumber") String confirmationNumber,
+            @JsonProperty("reservation") ReservationObject reservation
+    ) {
         this.id = id;
-        ConfirmationDate = confirmationDate;
+        this.confirmationDate = confirmationDate;
         this.confirmationNumber = confirmationNumber;
         this.reservation = reservation;
     }
 
+    // Getters and setters
     public String getId() {
         return id;
     }
@@ -27,11 +40,11 @@ public class ConfirmationObject {
     }
 
     public Timestamp getConfirmationDate() {
-        return ConfirmationDate;
+        return confirmationDate;
     }
 
     public void setConfirmationDate(Timestamp confirmationDate) {
-        ConfirmationDate = confirmationDate;
+        this.confirmationDate = confirmationDate;
     }
 
     public String getConfirmationNumber() {
@@ -50,4 +63,3 @@ public class ConfirmationObject {
         this.reservation = reservation;
     }
 }
-

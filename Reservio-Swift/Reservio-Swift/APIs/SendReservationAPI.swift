@@ -5,7 +5,7 @@ struct Reservation: Identifiable, Codable {
     let id: String
     let firstname: String
     let lastname: String
-    let date: String // Change to String to ensure correct format
+    let date: String
     let peopleCount: Int
     let email: String
     let phoneNumber: String

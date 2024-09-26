@@ -4,21 +4,57 @@ import static spark.Spark.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.ConfirmationService.ConfirmationObject;
 import org.DatabaseService.DatabaseService;
+import org.Kafka.KafkaService;
 import org.Kafka.ReservationObject;
+import org.apache.kafka.clients.consumer.ConsumerConfig;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.clients.consumer.ConsumerRecords;
+import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.common.serialization.StringSerializer;
 import java.sql.SQLException;
+import java.time.Duration;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
         port(4567);
+        get("/getConfirmation", (request, response) -> {
+            Properties props = new Properties();
+            props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+            props.put(ConsumerConfig.GROUP_ID_CONFIG, "consumer-group");
+            props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+            props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+            props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
+
+            KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
+            consumer.subscribe(Collections.singletonList("confirmations"));
+
+            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(5000)); // Increased polling duration
+            consumer.close();
+
+            if (records.isEmpty()) {
+                response.status(404);
+                return "No confirmation messages found";
+            }
+
+            ConsumerRecord<String, String> latestRecord = records.iterator().next();
+            ObjectMapper objectMapper = new ObjectMapper();
+            ConfirmationObject confirmation = objectMapper.readValue(latestRecord.value(), ConfirmationObject.class);
+
+            String jsonResponse = objectMapper.writeValueAsString(confirmation);
+            response.type("application/json");
+            response.status(200);
+            return jsonResponse;
+        });
 
         post("/sendConfirmation", (request, response) -> {
             String body = request.body();

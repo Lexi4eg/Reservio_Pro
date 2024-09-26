@@ -24,6 +24,9 @@ struct ContentView: View {
                     Tab("Profile", systemImage: "gear"){
                         SettingsView()
                     }
+                    Tab("Confirmation", systemImage: "gear"){
+                        ConfirmationView()
+                    }
                 }
                 .foregroundColor(.white)
                 .accentColor(.white)
