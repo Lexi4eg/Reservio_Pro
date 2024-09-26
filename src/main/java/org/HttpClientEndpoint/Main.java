@@ -61,7 +61,7 @@ public class Main {
             DatabaseService dbService = new DatabaseService();
             List<ConfirmationObject> confirmations;
 
-            confirmations = dbService.getAllConfirmations(id);
+            confirmations = dbService.getlConfirmationsById(id);
             ObjectMapper objectMapper = new ObjectMapper();
             String jsonResponse = objectMapper.writeValueAsString(confirmations);
             response.type("application/json");

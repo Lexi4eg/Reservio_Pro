@@ -58,7 +58,7 @@ public class DatabaseService {
         }
     }
 
- public List<ReservationObject> getAllReservations(){
+    public List<ReservationObject> getAllReservations() {
         List<ReservationObject> reservations = new ArrayList<>();
         String query = "SELECT * FROM reservations";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
@@ -85,14 +85,14 @@ public class DatabaseService {
             e.printStackTrace();
             return null;
         }
- }
+    }
+
     public List<String> getTableIdsByTime(String date) throws SQLException {
         List<String> tableIds = new ArrayList<>();
         System.out.println("Date2: " + date);
         String query = "SELECT tableid FROM reservations WHERE date = ?";
 
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
-            // Parse the date string into a Timestamp object
             Timestamp timestamp = Timestamp.valueOf(date.replace("T", " ").replace("Z", ""));
             stmt.setTimestamp(1, timestamp);
             try (ResultSet rs = stmt.executeQuery()) {
@@ -106,18 +106,36 @@ public class DatabaseService {
         }
     }
 
-    public List<ReservationObject> getAllConfirmations(String id) {
-        List<ReservationObject> confirmations = new ArrayList<>();
-        String query = "SELECT * FROM reservations WHERE id = ?";
+    public List<ConfirmationObject> getlConfirmationsById(String id) {
+        List<ConfirmationObject> confirmations = new ArrayList<>();
+        String query = "SELECT c.id AS c_id, c.confirmationDate AS c_confirmationDate, c.confirmationNumber AS c_confirmationNumber, " +
+                "r.id AS r_id, r.firstname AS r_firstname, r.lastname AS r_lastname, r.date AS r_date, r.peopleCount AS r_peopleCount, " +
+                "r.email AS r_email, r.phoneNumber AS r_phoneNumber, r.specialRequests AS r_specialRequests, r.highChair AS r_highChair, " +
+                "r.tableID AS r_tableID, r.numberChairs AS r_numberChairs " +
+                "FROM confirmations c JOIN reservations r ON c.reservationId = r.id WHERE r.id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, id);
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {
+                    ReservationObject reservation = new ReservationObject(
+                            rs.getString("r_id"),
+                            rs.getString("r_firstname"),
+                            rs.getString("r_lastname"),
+                            rs.getTimestamp("r_date"),
+                            rs.getInt("r_peopleCount"),
+                            rs.getString("r_email"),
+                            rs.getString("r_phoneNumber"),
+                            rs.getString("r_specialRequests"),
+                            rs.getBoolean("r_highChair"),
+                            rs.getString("r_tableID"),
+                            rs.getInt("r_numberChairs")
+                    );
+
                     ConfirmationObject confirmation = new ConfirmationObject(
-                            rs.getString("id"),
-                            rs.getTimestamp("confirmationDate"),
-                            rs.getString("confirmationNumber"),
-                            null
+                            rs.getString("c_id"),
+                            rs.getTimestamp("c_confirmationDate"),
+                            rs.getString("c_confirmationNumber"),
+                            reservation
                     );
                     confirmations.add(confirmation);
                 }
@@ -126,6 +144,20 @@ public class DatabaseService {
         } catch (SQLException e) {
             e.printStackTrace();
             return null;
+        }
+    }
+
+    public void saveConfirmation(ConfirmationObject confirmation) {
+        String sql = "INSERT INTO confirmations (id, confirmationdate, confirmationnumber, reservationId) VALUES (?, ?, ?, ?)";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, confirmation.getId());
+            statement.setTimestamp(2, confirmation.getConfirmationDate());
+            statement.setString(3, confirmation.getConfirmationNumber());
+            statement.setString(4, confirmation.getReservation().getId());
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Error saving confirmation");
+            e.printStackTrace();
         }
     }
 }

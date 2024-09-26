@@ -11,7 +11,6 @@ public class KafkaClient {
             DatabaseService databaseService = new DatabaseService();
             ObjectMapper objectMapper = new ObjectMapper();
             KafkaConsumerService consumerService = new KafkaConsumerService(databaseService, objectMapper);
-            consumerService.consumeReservations("reservations");
         } catch (SQLException e) {
             e.printStackTrace();
         }

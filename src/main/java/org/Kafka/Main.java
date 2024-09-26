@@ -11,7 +11,7 @@ public class Main {
         try {
             DatabaseService databaseService = new DatabaseService();
             KafkaConsumerService kafkaConsumerService = new KafkaConsumerService(databaseService, objectMapper);
-            kafkaConsumerService.consumeReservations("reservations");
+            kafkaConsumerService.consumeMessages("confirmations", "reservations");
         } catch (SQLException e) {
             e.printStackTrace();
         }

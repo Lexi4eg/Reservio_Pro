@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.Kafka.ReservationObject;
 
-import java.sql.Time;
 import java.sql.Timestamp;
 
 public class ConfirmationObject {

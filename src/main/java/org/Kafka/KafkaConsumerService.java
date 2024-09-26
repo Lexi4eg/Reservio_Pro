@@ -10,14 +10,10 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.common.serialization.StringDeserializer;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.time.Duration;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Properties;
 import java.util.UUID;
@@ -40,48 +36,33 @@ public class KafkaConsumerService {
         this.objectMapper = objectMapper;
     }
 
-
-
-    private void sendConfirmationToFrontend(ConfirmationObject confirmation) {
-        try {
-            URL url = new URL("http://localhost:4567/sendConfirmation");
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("POST");
-            conn.setRequestProperty("Content-Type", "application/json; utf-8");
-            conn.setRequestProperty("Accept", "application/json");
-            conn.setDoOutput(true);
-
-            String jsonInputString = objectMapper.writeValueAsString(confirmation);
-            try (OutputStream os = conn.getOutputStream()) {
-                byte[] input = jsonInputString.getBytes(StandardCharsets.UTF_8);
-                os.write(input, 0, input.length);
-            }
-
-            int code = conn.getResponseCode();
-            System.out.println("Response Code: " + code);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void consumeReservations(String topic) throws SQLException {
-        consumer.subscribe(Collections.singletonList(topic));
+    public void consumeMessages(String... topics) throws SQLException {
+        consumer.subscribe(Arrays.asList(topics));
 
         while (true) {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
             for (ConsumerRecord<String, String> record : records) {
-                System.out.printf("Consumed reservation: %s%n", record.value());
+                System.out.printf("Consumed message from topic %s: %s%n", record.topic(), record.value());
                 try {
-                    ReservationObject reservation = objectMapper.readValue(record.value(), ReservationObject.class);
-                    ConfirmationService confirmationService = new ConfirmationService();
-                    System.out.println("Reservation: " + reservation.getDate());
-                    databaseService.saveReservation(reservation);
-                    confirmationService.sendConfirmation(new ConfirmationObject(UUID.randomUUID().toString(), new Timestamp(new Date().getTime()), UUID.randomUUID().toString(), reservation));
-                    System.out.println("Confirmation sent with ID: " + reservation.getId());
+                    if (record.topic().equals("reservations")) {
+                        ReservationObject reservation = objectMapper.readValue(record.value(), ReservationObject.class);
+                        ConfirmationService confirmationService = new ConfirmationService();
+                        System.out.println("Reservation: " + reservation.getDate());
+                        databaseService.saveReservation(reservation);
+                        confirmationService.sendConfirmation(new ConfirmationObject(UUID.randomUUID().toString(), new Timestamp(new Date().getTime()), UUID.randomUUID().toString(), reservation));
+                        System.out.println("Confirmation sent with ID: " + reservation.getId());
+                    } else if (record.topic().equals("confirmations")) {
+                        ConfirmationObject confirmation = objectMapper.readValue(record.value(), ConfirmationObject.class);
+                        databaseService.saveConfirmation(confirmation);
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         }
+    }
+
+    public void close() {
+        consumer.close();
     }
 }
