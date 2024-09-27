@@ -69,7 +69,7 @@ public class Main {
             return jsonResponse;
         });
 
-        get("/getReservationByName",  (request, response) -> {
+        get("/getConfirmationsByName",  (request, response) -> {
             String firstname = request.queryParams("firstname");
             String lastname = request.queryParams("lastname");
             DatabaseService dbService = new DatabaseService();
