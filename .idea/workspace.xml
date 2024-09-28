@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="Working ConfirmationSystem">
+    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="Fixed bug where the confirmations did not show up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/APIs/CheckTableTimes.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/APIs/CheckTableTimes.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/APIs/SendReservationAPI.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/APIs/SendReservationAPI.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/APIs/fetchConfirmations.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/APIs/fetchConfirmations.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/ConfirmationView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/ConfirmationView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/ContentView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/ContentView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/Edit_View.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/Edit_View.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/HomeView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/HomeView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/OrderView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/OrderView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/SettingsView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/SettingsView.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +230,9 @@
       <workItem from="1727338690442" duration="4226000" />
       <workItem from="1727353688478" duration="4688000" />
       <workItem from="1727456534189" duration="11899000" />
-      <workItem from="1727508586728" duration="4856000" />
+      <workItem from="1727508586728" duration="5412000" />
+      <workItem from="1727521406947" duration="49000" />
+      <workItem from="1727521645039" duration="577000" />
     </task>
     <task id="LOCAL-00001" summary="New Construktor for the new Scema">
       <option name="closed" value="true" />
@@ -329,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727512731258</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed bug where the confirmations did not show up">
+      <option name="closed" value="true" />
+      <created>1727514032211</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1727514032211</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +359,8 @@
     <MESSAGE value="New http route for fetching confirmations by name" />
     <MESSAGE value="Fetching  reservations in the swift ui frontend" />
     <MESSAGE value="Working ConfirmationSystem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working ConfirmationSystem" />
+    <MESSAGE value="Fixed bug where the confirmations did not show up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug where the confirmations did not show up" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
