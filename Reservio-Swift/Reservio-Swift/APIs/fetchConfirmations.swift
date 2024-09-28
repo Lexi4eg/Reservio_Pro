@@ -7,27 +7,25 @@
 
 import Foundation
 
-func fetchConfirmations(firstname: String, lastname: String) async -> [Confirmation] {
-    
-    
 
+func fetchConfirmations(firstname: String, lastname: String) async -> [Confirmation] {
     guard var urlComponents = URLComponents(string: "http://localhost:4567/getConfirmationsByName") else {
         print("Error: Invalid URL")
         return []
     }
-    
+
     urlComponents.queryItems = [
         URLQueryItem(name: "firstname", value: firstname),
         URLQueryItem(name: "lastname", value: lastname)
-
     ]
-    
+
     guard let url = urlComponents.url else {
         print("Error: Invalid URL components")
         return []
     }
 
     var request = URLRequest(url: url)
+    print("Request url", url)
     request.httpMethod = "GET"
 
     do {
@@ -35,8 +33,9 @@ func fetchConfirmations(firstname: String, lastname: String) async -> [Confirmat
 
         if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
             print("Available Confirmations received successfully")
-            if let jsonResponse = try? JSONSerialization.jsonObject(with: data, options: []) as? [Confirmation] {
-                return jsonResponse
+            let decoder = JSONDecoder()
+            if let confirmations = try? decoder.decode([Confirmation].self, from: data) {
+                return confirmations
             } else {
                 print("Error parsing JSON response")
                 return []

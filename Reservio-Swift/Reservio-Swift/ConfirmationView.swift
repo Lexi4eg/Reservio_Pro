@@ -7,55 +7,71 @@
 
 import SwiftUI
 
-struct Confirmation: Codable {
+struct Confirmation: Codable, Identifiable {
     var id: String
-    var confirmationDate: String
+    var confirmationDate: Date
     var confirmationNumber: String
     var reservation: Reservation
 }
 
 struct ConfirmationView: View {
-    @State private var confirmation: Confirmation?
-    @State private var firstname: String = ""
-    @State private var lastname: String = ""
+    @State private var confirmations: [Confirmation] = []
+    @ObservedObject var userData: UserData
 
     var body: some View {
         VStack {
-        
+            TextField("First Name", text: $userData.firstname)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
 
-            Button("Fetch Confirmation"){
-                 fetchConfirmations(firstname: firstname, lastname: lastname)
+            TextField("Last Name", text: $userData.lastname)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+
+            Button("Fetch Confirmations") {
+                Task {
+                    confirmations = await fetchConfirmations(firstname: userData.firstname, lastname: userData.lastname)
+                }
             }
             .padding()
 
-            if let confirmation = confirmation {
-                Text("Confirmation Received")
-                Text("ID: \(confirmation.id)")
-                Text("Confirmation Number: \(confirmation.confirmationNumber)")
-                Text("Reservation ID: \(confirmation.reservation.id)")
+            if confirmations.isEmpty {
+                Text("No Confirmations")
             } else {
-                Text("No Confirmation")
+                List($confirmations) { $confirmation in
+                    VStack(alignment: .leading) {
+                        Text("Confirmation Number: \(confirmation.confirmationNumber)")
+                            .font(.headline)
+                        Text("ID: \(confirmation.id)")
+                        Text("Date: \(formatDate(confirmation.confirmationDate))")
+                            .foregroundColor(.gray)
+                        Text("Reservation ID: \(confirmation.reservation.id)")
+                        Text("Name: \(confirmation.reservation.firstname) \(confirmation.reservation.lastname)")
+                        Text("People Count: \(confirmation.reservation.peopleCount)")
+                        Text("Email: \(confirmation.reservation.email)")
+                        Text("Phone: \(confirmation.reservation.phoneNumber)")
+                        if !confirmation.reservation.specialRequests.isEmpty {
+                            Text("Special Requests: \(confirmation.reservation.specialRequests)")
+                        }
+                        Text("High Chair: \(confirmation.reservation.highChair ? "Yes" : "No")")
+                        Text("Table ID: \(confirmation.reservation.tableID)")
+                        Text("Number of Chairs: \(confirmation.reservation.numberChairs)")
+                    }
+                    .padding()
+                }
             }
         }
         .padding()
     }
-    
-    private func triggerAPICallIfNeeded() {
-        Task {
-            do {
-                let confirmationsRaw = try await fetchConfirmations(firstname: "Felix", lastname: "Test123")
-                confirmation = confirmationsRaw
-            } catch {
-                errorMessage = "Failed to fetch available tables"
-            }
-            isFetchingTimes = false
-        }
-        
-    }
-    
 
+    private func formatDate(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        return dateFormatter.string(from: date)
+    }
 }
 
 #Preview {
-    ConfirmationView()
+    ConfirmationView(userData: UserData())
 }

@@ -25,7 +25,7 @@ struct ContentView: View {
                         SettingsView()
                     }
                     Tab("Confirmation", systemImage: "gear"){
-                        ConfirmationView()
+                        ConfirmationView(userData: userData)
                     }
                 }
                 .foregroundColor(.white)

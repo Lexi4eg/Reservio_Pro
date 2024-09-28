@@ -180,12 +180,9 @@ struct HomeView: View {
 
         isFetchingTimes = true
         Task {
-            do {
-                let bookedTables = try await checkTableTimes(reservationDate: combineDateAndTime(date: selectedDate, time: selectedTime ?? ""))
-                bookedTableIDs = bookedTables
-            } catch {
-                errorMessage = "Failed to fetch available tables"
-            }
+          
+            let bookedTables =  await checkTableTimes(reservationDate:combineDateAndTime(date: selectedDate, time: selectedTime ?? ""))
+            bookedTableIDs = bookedTables
             isFetchingTimes = false
         }
     }
