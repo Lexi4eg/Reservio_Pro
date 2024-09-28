@@ -1,6 +1,6 @@
 import Foundation
 
-func checkTableTimes(reservationDate: Date) async -> [String] {
+func checkTableTimes(reservationDate: Date, ip:String) async -> [String] {
     let dateFormatter = ISO8601DateFormatter()
     dateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
     let formattedDate = dateFormatter.string(from: reservationDate)
@@ -8,7 +8,7 @@ func checkTableTimes(reservationDate: Date) async -> [String] {
     print("Checking available times on \(formattedDate)")
 
     // Define the server URL for checking table times with query parameters
-    guard var urlComponents = URLComponents(string: "http://localhost:4567/getTablesByTime") else {
+    guard var urlComponents = URLComponents(string: "http://\(ip):4567/getTablesByTime") else {
         print("Error: Invalid URL")
         return []
     }

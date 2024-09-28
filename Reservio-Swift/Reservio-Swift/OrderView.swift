@@ -89,7 +89,7 @@ struct OrderView: View {
                         userData.rewardPoints += 100;
                         userData.reservationCount += 1;
                         
-                        await sendReservationRequest(requestBody: res1)
+                        await sendReservationRequest(requestBody: res1, ip: userData.ip)
                         
                     }
                     

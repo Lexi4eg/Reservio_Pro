@@ -33,11 +33,11 @@ struct Reservation: Identifiable, Codable {
 }
 
 // Function to send reservation request
-func sendReservationRequest(requestBody: Reservation) async {
+func sendReservationRequest(requestBody: Reservation, ip: String) async {
     print("Sending reservation for: \(requestBody.firstname) \(requestBody.lastname)")
 
     // Define the server URL
-    guard let url = URL(string: "http://localhost:4567/sendReservation") else {
+    guard let url = URL(string: "http://\(ip):4567/sendReservation") else {
         print("Error: Invalid URL")
         return
     }

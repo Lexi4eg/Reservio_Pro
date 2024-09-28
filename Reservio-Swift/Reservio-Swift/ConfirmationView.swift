@@ -1,10 +1,3 @@
-//
-//  ConfirmationView.swift
-//  Reservio-Swift
-//
-//  Created by Felix Prattes on 26.09.24.
-//
-
 import SwiftUI
 
 struct Confirmation: Codable, Identifiable {
@@ -19,13 +12,9 @@ struct ConfirmationView: View {
     @ObservedObject var userData: UserData
 
     var body: some View {
-        
-        HStack{
+        VStack {
             Text("Your Reservations")
                 .font(.title)
-        }
-        .padding(.horizontal)
-        VStack {
 
             if confirmations.isEmpty {
                 Text("No Confirmations")
@@ -35,7 +24,7 @@ struct ConfirmationView: View {
                         HStack {
                             Text("Reservation ID:")
                             Spacer()
-                            Text(confirmation.reservation.id)
+                            Text(confirmation.reservation.id.prefix(8))
                         }
                         HStack {
                             Text("Date:")
@@ -89,16 +78,21 @@ struct ConfirmationView: View {
                 }
                 .listStyle(InsetGroupedListStyle())
                 .refreshable {
-                    confirmations = await fetchConfirmations(firstname: userData.firstname, lastname: userData.lastname)
+                    await loadConfirmations()
                 }
             }
         }
         .padding()
         .onAppear {
             Task {
-                confirmations = await fetchConfirmations(firstname: userData.firstname, lastname: userData.lastname)
+                await loadConfirmations()
             }
         }
+    }
+
+    private func loadConfirmations() async {
+        confirmations = await fetchConfirmations(firstname: userData.firstname, lastname: userData.lastname, ip: userData.ip)
+        print("Confirmations loaded: \(confirmations)")
     }
 
     private func formatDate(_ date: Date) -> String {

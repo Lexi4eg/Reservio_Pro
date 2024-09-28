@@ -23,6 +23,8 @@ public class UserData: ObservableObject {
     @AppStorage("reviewCount") var reviewCount: Int = 0
     @AppStorage("reservationCount") var reservationCount: Int = 0
     @AppStorage("visitCount") var visitCount: Int = 0
+    @AppStorage("ip") var ip: String = ""
+
 }
 
 enum Language: String, CaseIterable, Identifiable {

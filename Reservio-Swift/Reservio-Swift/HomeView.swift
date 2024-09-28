@@ -20,6 +20,8 @@ struct HomeView: View {
     @State private var bookedTableIDs: [String] = []
     @State private var isFetchingTimes = false
     @State private var errorMessage = ""
+    @ObservedObject var userData: UserData
+
 
     var body: some View {
         NavigationStack {
@@ -181,7 +183,7 @@ struct HomeView: View {
         isFetchingTimes = true
         Task {
           
-            let bookedTables =  await checkTableTimes(reservationDate:combineDateAndTime(date: selectedDate, time: selectedTime ?? ""))
+            let bookedTables =  await checkTableTimes(reservationDate:combineDateAndTime(date: selectedDate, time: selectedTime ?? ""), ip: userData.ip)
             bookedTableIDs = bookedTables
             isFetchingTimes = false
         }
@@ -198,5 +200,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(userData: UserData())
 }

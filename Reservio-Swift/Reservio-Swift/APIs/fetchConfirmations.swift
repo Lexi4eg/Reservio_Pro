@@ -8,8 +8,8 @@
 import Foundation
 
 
-func fetchConfirmations(firstname: String, lastname: String) async -> [Confirmation] {
-    guard var urlComponents = URLComponents(string: "http://localhost:4567/getConfirmationsByName") else {
+func fetchConfirmations(firstname: String, lastname: String, ip:String) async -> [Confirmation] {
+    guard var urlComponents = URLComponents(string: "http://\(ip):4567/getConfirmationsByName") else {
         print("Error: Invalid URL")
         return []
     }

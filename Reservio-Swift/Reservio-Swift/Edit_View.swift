@@ -31,6 +31,7 @@ struct Edit_View: View {
                         Text("\(age)").tag(age)
                     }
                 }
+                TextField("ip", text: $userData.ip)
 
                 Button(action: {
                     isImagePickerDisplayed = true
