@@ -19,49 +19,86 @@ struct ConfirmationView: View {
     @ObservedObject var userData: UserData
 
     var body: some View {
+        
+        HStack{
+            Text("Your Reservations")
+                .font(.title)
+        }
+        .padding(.horizontal)
         VStack {
-            TextField("First Name", text: $userData.firstname)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-
-            TextField("Last Name", text: $userData.lastname)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-
-            Button("Fetch Confirmations") {
-                Task {
-                    confirmations = await fetchConfirmations(firstname: userData.firstname, lastname: userData.lastname)
-                }
-            }
-            .padding()
 
             if confirmations.isEmpty {
                 Text("No Confirmations")
             } else {
                 List($confirmations) { $confirmation in
-                    VStack(alignment: .leading) {
-                        Text("Confirmation Number: \(confirmation.confirmationNumber)")
-                            .font(.headline)
-                        Text("ID: \(confirmation.id)")
-                        Text("Date: \(formatDate(confirmation.confirmationDate))")
-                            .foregroundColor(.gray)
-                        Text("Reservation ID: \(confirmation.reservation.id)")
-                        Text("Name: \(confirmation.reservation.firstname) \(confirmation.reservation.lastname)")
-                        Text("People Count: \(confirmation.reservation.peopleCount)")
-                        Text("Email: \(confirmation.reservation.email)")
-                        Text("Phone: \(confirmation.reservation.phoneNumber)")
-                        if !confirmation.reservation.specialRequests.isEmpty {
-                            Text("Special Requests: \(confirmation.reservation.specialRequests)")
+                    Section {
+                        HStack {
+                            Text("Reservation ID:")
+                            Spacer()
+                            Text(confirmation.reservation.id)
                         }
-                        Text("High Chair: \(confirmation.reservation.highChair ? "Yes" : "No")")
-                        Text("Table ID: \(confirmation.reservation.tableID)")
-                        Text("Number of Chairs: \(confirmation.reservation.numberChairs)")
+                        HStack {
+                            Text("Date:")
+                            Spacer()
+                            Text(formatDate(confirmation.confirmationDate))
+                                .foregroundColor(.gray)
+                        }
+                        HStack {
+                            Text("Name:")
+                            Spacer()
+                            Text("\(confirmation.reservation.firstname) \(confirmation.reservation.lastname)")
+                        }
+                        HStack {
+                            Text("People Count:")
+                            Spacer()
+                            Text("\(confirmation.reservation.peopleCount)")
+                        }
+                        HStack {
+                            Text("Email:")
+                            Spacer()
+                            Text(confirmation.reservation.email)
+                        }
+                        HStack {
+                            Text("Phone:")
+                            Spacer()
+                            Text(confirmation.reservation.phoneNumber)
+                        }
+                        if !confirmation.reservation.specialRequests.isEmpty {
+                            HStack {
+                                Text("Special Requests:")
+                                Spacer()
+                                Text(confirmation.reservation.specialRequests)
+                            }
+                        }
+                        HStack {
+                            Text("High Chair:")
+                            Spacer()
+                            Text(confirmation.reservation.highChair ? "Yes" : "No")
+                        }
+                        HStack {
+                            Text("Table ID:")
+                            Spacer()
+                            Text(confirmation.reservation.tableID)
+                        }
+                        HStack {
+                            Text("Number of Chairs:")
+                            Spacer()
+                            Text("\(confirmation.reservation.numberChairs)")
+                        }
                     }
-                    .padding()
+                }
+                .listStyle(InsetGroupedListStyle())
+                .refreshable {
+                    confirmations = await fetchConfirmations(firstname: userData.firstname, lastname: userData.lastname)
                 }
             }
         }
         .padding()
+        .onAppear {
+            Task {
+                confirmations = await fetchConfirmations(firstname: userData.firstname, lastname: userData.lastname)
+            }
+        }
     }
 
     private func formatDate(_ date: Date) -> String {
