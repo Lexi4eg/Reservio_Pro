@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="Fixed bug where the confirmations did not show up">
+    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="time stamp error fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/HomeView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/HomeView.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +132,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.org.HttpClientEndpoint.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.Kafka.Main" />
       <module name="Reservio_Backend.main" />
@@ -232,7 +233,7 @@
       <workItem from="1727456534189" duration="11899000" />
       <workItem from="1727508586728" duration="5412000" />
       <workItem from="1727521406947" duration="49000" />
-      <workItem from="1727521645039" duration="577000" />
+      <workItem from="1727521645039" duration="1340000" />
     </task>
     <task id="LOCAL-00001" summary="New Construktor for the new Scema">
       <option name="closed" value="true" />
@@ -330,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727514032211</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="time stamp error fixed">
+      <option name="closed" value="true" />
+      <created>1727527665017</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1727527665017</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +369,8 @@
     <MESSAGE value="Fetching  reservations in the swift ui frontend" />
     <MESSAGE value="Working ConfirmationSystem" />
     <MESSAGE value="Fixed bug where the confirmations did not show up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug where the confirmations did not show up" />
+    <MESSAGE value="time stamp error fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="time stamp error fixed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

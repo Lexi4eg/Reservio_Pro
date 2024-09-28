@@ -46,7 +46,7 @@ struct HomeView: View {
                         ForEach(availableTimes, id: \.self) { time in
                             Button(action: {
                                 selectedTime = time
-                                triggerAPICallIfNeeded() // Check for both time and date
+                                triggerAPICallIfNeeded()
                             }) {
                                 Text(time)
                                     .font(.subheadline)
@@ -182,9 +182,13 @@ struct HomeView: View {
 
         isFetchingTimes = true
         Task {
-          
-            let bookedTables =  await checkTableTimes(reservationDate:combineDateAndTime(date: selectedDate, time: selectedTime ?? ""), ip: userData.ip)
+            let combinedDate = combineDateAndTime(date: selectedDate, time: selectedTime ?? "")
+            let adjustedDate = Calendar.current.date(byAdding: .hour, value: +2, to: combinedDate) ?? combinedDate
+            
+            let bookedTables = await checkTableTimes(reservationDate: adjustedDate, ip: userData.ip)
             bookedTableIDs = bookedTables
+            print("booked times")
+            print(bookedTableIDs)
             isFetchingTimes = false
         }
     }
