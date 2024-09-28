@@ -2,17 +2,22 @@ package org.DatabaseService;
 
 import org.ConfirmationService.ConfirmationObject;
 import org.Kafka.ReservationObject;
-import org.apache.kafka.common.config.ConfigResource;
+import org.Logging.LoggingService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseService {
+    private static final Logger log = LoggerFactory.getLogger(DatabaseService.class);
     private final Connection connection;
+    private final LoggingService loggingService;
 
     public DatabaseService() throws SQLException {
         this.connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "password");
+        this.loggingService = new LoggingService();
     }
 
     public void saveReservation(ReservationObject reservation) throws SQLException {
@@ -31,6 +36,7 @@ public class DatabaseService {
             statement.setInt(11, reservation.getNumberChairs() != null ? reservation.getNumberChairs() : 0);
             statement.executeUpdate();
         }
+        loggingService.log("Reservation saved with ID: " + reservation.getId());
     }
 
     public void deleteReservation(String id) throws SQLException {
@@ -39,9 +45,10 @@ public class DatabaseService {
             statement.setString(1, id);
             statement.executeUpdate();
         }
+        loggingService.log("Reservation deleted with ID: " + id);
     }
 
-    public void updateResrvation(ReservationObject reservation) throws SQLException {
+    public void updateReservation(ReservationObject reservation) throws SQLException {
         String sql = "UPDATE reservations SET firstname = ?, lastname = ?, date = ?, peopleCount = ?, email = ?, phoneNumber = ?, specialRequests = ?, highChair = ?, tableID = ?, numberChairs = ? WHERE id = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, reservation.getFirstname());
@@ -56,36 +63,39 @@ public class DatabaseService {
             statement.setInt(10, reservation.getNumberChairs());
             statement.setString(11, reservation.getId());
             statement.executeUpdate();
+        } catch (SQLException e) {
+            loggingService.log("Error updating reservation with ID: " + reservation.getId());
+            throw e;
         }
+        loggingService.log("Reservation updated with ID: " + reservation.getId());
     }
 
     public List<ReservationObject> getAllReservations() {
         List<ReservationObject> reservations = new ArrayList<>();
         String query = "SELECT * FROM reservations";
-        try (PreparedStatement stmt = connection.prepareStatement(query)) {
-            try (ResultSet rs = stmt.executeQuery()) {
-                while (rs.next()) {
-                    ReservationObject reservation = new ReservationObject(
-                            rs.getString("id"),
-                            rs.getString("firstname"),
-                            rs.getString("lastname"),
-                            rs.getTimestamp("date"),
-                            rs.getInt("peopleCount"),
-                            rs.getString("email"),
-                            rs.getString("phoneNumber"),
-                            rs.getString("specialRequests"),
-                            rs.getBoolean("highChair"),
-                            rs.getString("tableID"),
-                            rs.getInt("numberChairs")
-                    );
-                    reservations.add(reservation);
-                }
+        try (PreparedStatement stmt = connection.prepareStatement(query);
+             ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                ReservationObject reservation = new ReservationObject(
+                        rs.getString("id"),
+                        rs.getString("firstname"),
+                        rs.getString("lastname"),
+                        rs.getTimestamp("date"),
+                        rs.getInt("peopleCount"),
+                        rs.getString("email"),
+                        rs.getString("phoneNumber"),
+                        rs.getString("specialRequests"),
+                        rs.getBoolean("highChair"),
+                        rs.getString("tableID"),
+                        rs.getInt("numberChairs")
+                );
+                reservations.add(reservation);
             }
-            return reservations;
         } catch (SQLException e) {
-            e.printStackTrace();
-            return null;
+            loggingService.log("Error getting all reservations");
         }
+        loggingService.log("All reservations retrieved with count: " + reservations.size());
+        return reservations;
     }
 
     public List<String> getTableIdsByTime(String date) throws SQLException {
@@ -101,13 +111,14 @@ public class DatabaseService {
                     tableIds.add(rs.getString("tableid"));
                 }
             }
-
-            System.out.println("Table IDs: " + tableIds);
-            return tableIds;
         }
+        loggingService.log("Table IDs retrieved by time with count: " + tableIds.size());
+        loggingService.log("Table IDs: " + tableIds);
+
+        return tableIds;
     }
 
-    public List<ConfirmationObject> getlConfirmationsById(String id) {
+    public List<ConfirmationObject> getConfirmationsById(String id) {
         List<ConfirmationObject> confirmations = new ArrayList<>();
         String query = "SELECT c.id AS c_id, c.confirmationDate AS c_confirmationDate, c.confirmationNumber AS c_confirmationNumber, " +
                 "r.id AS r_id, r.firstname AS r_firstname, r.lastname AS r_lastname, r.date AS r_date, r.peopleCount AS r_peopleCount, " +
@@ -141,15 +152,14 @@ public class DatabaseService {
                     confirmations.add(confirmation);
                 }
             }
-            return confirmations;
         } catch (SQLException e) {
-            e.printStackTrace();
-            return null;
+           loggingService.log("Error getting confirmations by ID");
         }
+        loggingService.log("Confirmations retrieved by ID with count: " + confirmations.size());
+        return confirmations;
     }
 
-
-    public List<ConfirmationObject> getlConfirmationsByName(String firstname, String lastname) {
+    public List<ConfirmationObject> getConfirmationsByName(String firstname, String lastname) {
         List<ConfirmationObject> confirmations = new ArrayList<>();
         String query = "SELECT c.id AS c_id, c.confirmationDate AS c_confirmationDate, c.confirmationNumber AS c_confirmationNumber, " +
                 "r.id AS r_id, r.firstname AS r_firstname, r.lastname AS r_lastname, r.date AS r_date, r.peopleCount AS r_peopleCount, " +
@@ -184,11 +194,12 @@ public class DatabaseService {
                     confirmations.add(confirmation);
                 }
             }
-            return confirmations;
         } catch (SQLException e) {
-            e.printStackTrace();
-            return null;
+            loggingService.log("Error getting confirmations by name");
         }
+        loggingService.log("Confirmations retrieved by name with count: " + confirmations.size());
+        loggingService.log("Confirmations: " + confirmations);
+        return confirmations;
     }
 
     public void saveConfirmation(ConfirmationObject confirmation) {
@@ -200,8 +211,7 @@ public class DatabaseService {
             statement.setString(4, confirmation.getReservation().getId());
             statement.executeUpdate();
         } catch (SQLException e) {
-            System.out.println("Error saving confirmation");
-            e.printStackTrace();
+            loggingService.log("Error saving confirmation");
         }
     }
 }

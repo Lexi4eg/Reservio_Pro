@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="time stamp error fixed">
+    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="changed reservation behaviour">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Logging/LogConsumerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Logging/LoggingOutputService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/Logging/LoggingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/HomeView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/HomeView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ConfirmationService/ConfirmationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ConfirmationService/ConfirmationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +136,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.org.HttpClientEndpoint.Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.Kafka.Main" />
       <module name="Reservio_Backend.main" />
@@ -233,7 +237,10 @@
       <workItem from="1727456534189" duration="11899000" />
       <workItem from="1727508586728" duration="5412000" />
       <workItem from="1727521406947" duration="49000" />
-      <workItem from="1727521645039" duration="1340000" />
+      <workItem from="1727521645039" duration="1729000" />
+      <workItem from="1727528711020" duration="1783000" />
+      <workItem from="1727531035884" duration="127000" />
+      <workItem from="1727546453109" duration="1079000" />
     </task>
     <task id="LOCAL-00001" summary="New Construktor for the new Scema">
       <option name="closed" value="true" />
@@ -339,7 +346,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727527665017</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="changed reservation behaviour">
+      <option name="closed" value="true" />
+      <created>1727528645032</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1727528645032</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +385,8 @@
     <MESSAGE value="Working ConfirmationSystem" />
     <MESSAGE value="Fixed bug where the confirmations did not show up" />
     <MESSAGE value="time stamp error fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="time stamp error fixed" />
+    <MESSAGE value="changed reservation behaviour" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed reservation behaviour" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
