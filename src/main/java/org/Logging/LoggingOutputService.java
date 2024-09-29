@@ -1,4 +1,4 @@
-package org.Application;
+package org.Logging;
 
 import org.Logging.LogConsumerService;
 

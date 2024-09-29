@@ -9,6 +9,6 @@ public class ConfirmationService {
     public void sendConfirmation( ConfirmationObject confirmation) {
         KafkaService kafkaService = new KafkaService();
         kafkaService.sendConfirmation(confirmation);
-        loggingService.log(STR."Confirmation sent with confirmation number: \{confirmation.getConfirmationNumber()}");
+        loggingService.log("1", "Confirmation sent: " + confirmation);
     }
 }

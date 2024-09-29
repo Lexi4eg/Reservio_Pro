@@ -16,8 +16,10 @@ public class LoggingService {
         ));
     }
 
-    public void log(String message) {
-        producer.send(new ProducerRecord<>("log", message));
+    public void log(String level, String message) {
+        if (!"DEBUG".equalsIgnoreCase(level)) {
+            producer.send(new ProducerRecord<>("log", level + ": " + message));
+        }
     }
 
     public void close() {

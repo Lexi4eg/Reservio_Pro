@@ -61,7 +61,7 @@ public class Main {
             DatabaseService dbService = new DatabaseService();
             List<ConfirmationObject> confirmations;
 
-            confirmations = dbService.getlConfirmationsById(id);
+            confirmations = dbService.getConfirmationsById(id);
             ObjectMapper objectMapper = new ObjectMapper();
             String jsonResponse = objectMapper.writeValueAsString(confirmations);
             response.type("application/json");
@@ -75,7 +75,7 @@ public class Main {
             DatabaseService dbService = new DatabaseService();
             List<ConfirmationObject> reservations;
 
-            reservations = dbService.getlConfirmationsByName(firstname, lastname);
+            reservations = dbService.getConfirmationsByName(firstname, lastname);
             ObjectMapper objectMapper = new ObjectMapper();
             String jsonResponse = objectMapper.writeValueAsString(reservations);
             response.type("application/json");
