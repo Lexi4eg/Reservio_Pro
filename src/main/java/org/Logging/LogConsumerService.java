@@ -29,9 +29,17 @@ public class LogConsumerService {
         while (true) {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
             for (ConsumerRecord<String, String> record : records) {
-                System.out.printf("Consumed log message: %s%n", record.value());
+                String logMessage = record.value();
+                if (isUselessLog(logMessage)) {
+                    continue;
+                }
+                System.out.printf("Consumed log message: %s%n", logMessage);
             }
         }
+    }
+
+    private boolean isUselessLog(String logMessage) {
+        return logMessage.contains("DEBUG");
     }
 
     public void close() {

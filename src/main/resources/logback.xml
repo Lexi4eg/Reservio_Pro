@@ -1,0 +1,16 @@
+<configuration>
+    <!-- Set the root logger level to INFO and its only appender to console. -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- Kafka logging level -->
+    <logger name="org.apache.kafka" level="WARN" />
+
+    <!-- Console appender configuration -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{ISO8601} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+</configuration>

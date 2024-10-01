@@ -12,6 +12,8 @@ repositories {
 dependencies {
     implementation("org.apache.kafka:kafka-clients:3.5.1")
     implementation("ch.qos.logback:logback-classic:1.4.11")
+    implementation("ch.qos.logback:logback-classic:1.4.11")
+    implementation("org.apache.kafka:kafka-clients:3.5.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
     testImplementation("org.mockito:mockito-core:3.12.4")
     testImplementation("org.mockito:mockito-junit-jupiter:3.12.4")
