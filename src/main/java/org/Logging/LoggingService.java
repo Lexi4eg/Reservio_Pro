@@ -3,17 +3,22 @@ package org.Logging;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class LoggingService {
     private KafkaProducer<String, String> producer;
 
     public LoggingService() {
-        producer = new KafkaProducer<>(Map.of(
-                "bootstrap.servers", "localhost:9092",
-                "key.serializer", "org.apache.kafka.common.serialization.StringSerializer",
-                "value.serializer", "org.apache.kafka.common.serialization.StringSerializer"
-        ));
+        Map<String, Object> config = new HashMap<>();
+        config.put("bootstrap.servers", "localhost:9092");
+        config.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        config.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        config.put("acks", "all");
+        config.put("retries", "0");
+        config.put("linger.ms", "1");
+
+        producer = new KafkaProducer<>(config);
     }
 
     public void log(String level, String message) {

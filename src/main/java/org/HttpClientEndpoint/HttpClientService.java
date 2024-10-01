@@ -4,7 +4,6 @@ import static spark.Spark.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.ConfirmationService.ConfirmationObject;
 import org.DatabaseService.DatabaseService;
-import org.Kafka.KafkaService;
 import org.Kafka.ReservationObject;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -24,7 +23,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
 
-public class Main {
+public class HttpClientService{
     public static void main(String[] args) throws SQLException {
         port(4567);
         get("/getConfirmation", (request, response) -> {

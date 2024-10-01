@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.DatabaseService.DatabaseService;
 import java.sql.SQLException;
 
-public class Main {
+public class KafkaMain {
     public static void main(String[] args) {
         ObjectMapper objectMapper = new ObjectMapper();
 

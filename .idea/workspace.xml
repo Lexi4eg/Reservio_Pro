@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="Custom logging service for better observability">
-      <change afterPath="$PROJECT_DIR$/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Logging/LogsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8374a47d-845d-4253-8eb0-3023e9389a9e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8374a47d-845d-4253-8eb0-3023e9389a9e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8374a47d-845d-4253-8eb0-3023e9389a9e/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8374a47d-845d-4253-8eb0-3023e9389a9e/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="Fixed Logging System">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/startup.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose-dev-linux.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-dev-linux.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Logging/DebugCleanerApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Logging/DebugMessageCleaner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Logging/LogConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Logging/LogConsumerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/HttpClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Logging/LoggingOutputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Logging/LoggingOutputService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Logging/LoggingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Logging/LoggingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +53,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -106,6 +103,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.Dockerfile.executor": "Run",
     "Docker.docker-compose-dev-linux.yaml: Compose Deployment.executor": "Run",
     "Docker.docker-compose-dev.yaml: Compose Deployment Reservio_Backend.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
@@ -120,6 +118,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Shell Script.startup.sh.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/felixprattes/Developer/Reservio_Backend",
@@ -143,10 +142,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LogsTest">
+  <component name="RunManager" selected="Shell Script.startup.sh">
     <configuration name="LoggingOutputService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.Logging.LoggingOutputService" />
       <module name="Reservio_Backend.main" />
@@ -173,31 +173,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.HttpClientEndpoint.Main" />
-      <module name="Reservio_Backend.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.HttpClientEndpoint.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="startup.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/startup.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
     </configuration>
-    <configuration name="org.Kafka.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.Kafka.Main" />
-      <module name="Reservio_Backend.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.Kafka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
@@ -215,11 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Shell Script.startup.sh" />
+        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.docker-compose-dev-linux.yaml: Compose Deployment" />
         <item itemvalue="Application.LogsTest" />
         <item itemvalue="Application.LoggingOutputService" />
-        <item itemvalue="Application.org.Kafka.Main" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -272,7 +269,7 @@
       <workItem from="1727606849218" duration="650000" />
       <workItem from="1727702178453" duration="2682000" />
       <workItem from="1727765453569" duration="427000" />
-      <workItem from="1727765950751" duration="2068000" />
+      <workItem from="1727765950751" duration="5595000" />
     </task>
     <task id="LOCAL-00001" summary="New Construktor for the new Scema">
       <option name="closed" value="true" />
@@ -394,7 +391,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727547577645</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fixed Logging System">
+      <option name="closed" value="true" />
+      <created>1727768215381</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1727768215381</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,7 +432,8 @@
     <MESSAGE value="time stamp error fixed" />
     <MESSAGE value="changed reservation behaviour" />
     <MESSAGE value="Custom logging service for better observability" />
-    <option name="LAST_COMMIT_MESSAGE" value="Custom logging service for better observability" />
+    <MESSAGE value="Fixed Logging System" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Logging System" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
