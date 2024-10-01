@@ -5,7 +5,7 @@ import org.DatabaseService.DatabaseService;
 import java.sql.SQLException;
 
 public class KafkaMain {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         ObjectMapper objectMapper = new ObjectMapper();
 
         try {

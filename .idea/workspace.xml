@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="Fixed Logging System">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/startup.sh" afterDir="false" />
+    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="Dockerizing the backend">
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/HttpClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Logging/LoggingOutputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Logging/LoggingOutputService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Logging/LoggingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Logging/LoggingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/startup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/startup.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +39,12 @@
                 <item name="Reservio_Backend" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Reservio_Backend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -54,6 +57,7 @@
       <list>
         <option value="Class" />
         <option value="Dockerfile" />
+        <option value="UML Sequence" />
       </list>
     </option>
   </component>
@@ -103,6 +107,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultPlantUmlFileTemplate": "UML Sequence",
     "Docker.Dockerfile.executor": "Run",
     "Docker.docker-compose-dev-linux.yaml: Compose Deployment.executor": "Run",
     "Docker.docker-compose-dev.yaml: Compose Deployment Reservio_Backend.executor": "Run",
@@ -110,9 +115,13 @@
     "Gradle.Reservio_Backend [:org.Application.DebugCleanerApp.main()].executor": "Run",
     "Gradle.Reservio_Backend [:org.HttpClientEndpoint.Main.main()].executor": "Run",
     "Gradle.Reservio_Backend [:org.Kafka.Main.main()].executor": "Run",
+    "Gradle.Reservio_Backend [:org.Kafka.main.main()].executor": "Run",
     "Gradle.Reservio_Backend [:org.Logging.DebugCleanerApp.main()].executor": "Run",
     "Gradle.Reservio_Backend [:org.Logging.LoggingOutputService.main()].executor": "Run",
     "Gradle.Reservio_Backend [:org.Logging.LogsTest.main()].executor": "Run",
+    "Gradle.Reservio_Backend [build].executor": "Run",
+    "Gradle.Reservio_Backend [clean].executor": "Run",
+    "Gradle.Reservio_Backend [jar].executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -130,7 +139,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2045977",
-    "settings.editor.selected.configurable": "tms.main",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -146,13 +155,13 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.startup.sh">
-    <configuration name="LoggingOutputService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.Logging.LoggingOutputService" />
+  <component name="RunManager" selected="Gradle.Reservio_Backend [build]">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.Kafka.main" />
       <module name="Reservio_Backend.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.Logging.*" />
+          <option name="PATTERN" value="org.Kafka.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -160,18 +169,71 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.Logging.LogsTest" />
-      <module name="Reservio_Backend.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.Logging.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Reservio_Backend [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Reservio_Backend [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Reservio_Backend [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="startup.sh" type="ShConfigurationType" temporary="true">
       <option name="SCRIPT_TEXT" value="" />
@@ -188,35 +250,19 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="sourceFilePath" value="Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose-dev-linux.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose-dev-linux.yaml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Reservio_Backend [build]" />
+        <item itemvalue="Gradle.Reservio_Backend [clean]" />
         <item itemvalue="Shell Script.startup.sh" />
-        <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Docker.docker-compose-dev-linux.yaml: Compose Deployment" />
-        <item itemvalue="Application.LogsTest" />
-        <item itemvalue="Application.LoggingOutputService" />
+        <item itemvalue="Gradle.Reservio_Backend [jar]" />
+        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>
@@ -269,7 +315,11 @@
       <workItem from="1727606849218" duration="650000" />
       <workItem from="1727702178453" duration="2682000" />
       <workItem from="1727765453569" duration="427000" />
-      <workItem from="1727765950751" duration="5595000" />
+      <workItem from="1727765950751" duration="6221000" />
+      <workItem from="1727779873695" duration="1018000" />
+      <workItem from="1727791062876" duration="24000" />
+      <workItem from="1727791093801" duration="804000" />
+      <workItem from="1727801565606" duration="3870000" />
     </task>
     <task id="LOCAL-00001" summary="New Construktor for the new Scema">
       <option name="closed" value="true" />
@@ -399,7 +449,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727768215381</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Dockerizing the backend">
+      <option name="closed" value="true" />
+      <created>1727773965891</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1727773965891</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +491,8 @@
     <MESSAGE value="changed reservation behaviour" />
     <MESSAGE value="Custom logging service for better observability" />
     <MESSAGE value="Fixed Logging System" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Logging System" />
+    <MESSAGE value="Dockerizing the backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dockerizing the backend" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
