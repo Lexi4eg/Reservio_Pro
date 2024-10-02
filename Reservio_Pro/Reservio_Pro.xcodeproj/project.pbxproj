@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		EE19AA272CADB52800F58164 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE19AA0B2CADB52700F58164 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE19AA122CADB52700F58164;
+			remoteInfo = Reservio_Pro;
+		};
+		EE19AA312CADB52800F58164 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE19AA0B2CADB52700F58164 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE19AA122CADB52700F58164;
+			remoteInfo = Reservio_Pro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE19AA132CADB52700F58164 /* Reservio_Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reservio_Pro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE19AA262CADB52800F58164 /* Reservio_ProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Reservio_ProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE19AA302CADB52800F58164 /* Reservio_ProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Reservio_ProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EE19AA152CADB52700F58164 /* Reservio_Pro */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Reservio_Pro;
+			sourceTree = "<group>";
+		};
+		EE19AA292CADB52800F58164 /* Reservio_ProTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Reservio_ProTests;
+			sourceTree = "<group>";
+		};
+		EE19AA332CADB52800F58164 /* Reservio_ProUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Reservio_ProUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE19AA102CADB52700F58164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE19AA232CADB52800F58164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE19AA2D2CADB52800F58164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE19AA0A2CADB52700F58164 = {
+			isa = PBXGroup;
+			children = (
+				EE19AA152CADB52700F58164 /* Reservio_Pro */,
+				EE19AA292CADB52800F58164 /* Reservio_ProTests */,
+				EE19AA332CADB52800F58164 /* Reservio_ProUITests */,
+				EE19AA142CADB52700F58164 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE19AA142CADB52700F58164 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE19AA132CADB52700F58164 /* Reservio_Pro.app */,
+				EE19AA262CADB52800F58164 /* Reservio_ProTests.xctest */,
+				EE19AA302CADB52800F58164 /* Reservio_ProUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE19AA122CADB52700F58164 /* Reservio_Pro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE19AA3A2CADB52800F58164 /* Build configuration list for PBXNativeTarget "Reservio_Pro" */;
+			buildPhases = (
+				EE19AA0F2CADB52700F58164 /* Sources */,
+				EE19AA102CADB52700F58164 /* Frameworks */,
+				EE19AA112CADB52700F58164 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EE19AA152CADB52700F58164 /* Reservio_Pro */,
+			);
+			name = Reservio_Pro;
+			packageProductDependencies = (
+			);
+			productName = Reservio_Pro;
+			productReference = EE19AA132CADB52700F58164 /* Reservio_Pro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE19AA252CADB52800F58164 /* Reservio_ProTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE19AA3D2CADB52800F58164 /* Build configuration list for PBXNativeTarget "Reservio_ProTests" */;
+			buildPhases = (
+				EE19AA222CADB52800F58164 /* Sources */,
+				EE19AA232CADB52800F58164 /* Frameworks */,
+				EE19AA242CADB52800F58164 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE19AA282CADB52800F58164 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EE19AA292CADB52800F58164 /* Reservio_ProTests */,
+			);
+			name = Reservio_ProTests;
+			packageProductDependencies = (
+			);
+			productName = Reservio_ProTests;
+			productReference = EE19AA262CADB52800F58164 /* Reservio_ProTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE19AA2F2CADB52800F58164 /* Reservio_ProUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE19AA402CADB52800F58164 /* Build configuration list for PBXNativeTarget "Reservio_ProUITests" */;
+			buildPhases = (
+				EE19AA2C2CADB52800F58164 /* Sources */,
+				EE19AA2D2CADB52800F58164 /* Frameworks */,
+				EE19AA2E2CADB52800F58164 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE19AA322CADB52800F58164 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EE19AA332CADB52800F58164 /* Reservio_ProUITests */,
+			);
+			name = Reservio_ProUITests;
+			packageProductDependencies = (
+			);
+			productName = Reservio_ProUITests;
+			productReference = EE19AA302CADB52800F58164 /* Reservio_ProUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE19AA0B2CADB52700F58164 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					EE19AA122CADB52700F58164 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					EE19AA252CADB52800F58164 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = EE19AA122CADB52700F58164;
+					};
+					EE19AA2F2CADB52800F58164 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = EE19AA122CADB52700F58164;
+					};
+				};
+			};
+			buildConfigurationList = EE19AA0E2CADB52700F58164 /* Build configuration list for PBXProject "Reservio_Pro" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE19AA0A2CADB52700F58164;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EE19AA142CADB52700F58164 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE19AA122CADB52700F58164 /* Reservio_Pro */,
+				EE19AA252CADB52800F58164 /* Reservio_ProTests */,
+				EE19AA2F2CADB52800F58164 /* Reservio_ProUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE19AA112CADB52700F58164 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE19AA242CADB52800F58164 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE19AA2E2CADB52800F58164 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE19AA0F2CADB52700F58164 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE19AA222CADB52800F58164 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE19AA2C2CADB52800F58164 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE19AA282CADB52800F58164 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE19AA122CADB52700F58164 /* Reservio_Pro */;
+			targetProxy = EE19AA272CADB52800F58164 /* PBXContainerItemProxy */;
+		};
+		EE19AA322CADB52800F58164 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE19AA122CADB52700F58164 /* Reservio_Pro */;
+			targetProxy = EE19AA312CADB52800F58164 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EE19AA382CADB52800F58164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE19AA392CADB52800F58164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		EE19AA3B2CADB52800F58164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Reservio_Pro/Reservio_Pro.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Reservio_Pro/Preview Content\"";
+				DEVELOPMENT_TEAM = 73R5LGR746;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Felix.Reservio-Pro";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EE19AA3C2CADB52800F58164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Reservio_Pro/Reservio_Pro.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Reservio_Pro/Preview Content\"";
+				DEVELOPMENT_TEAM = 73R5LGR746;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Felix.Reservio-Pro";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EE19AA3E2CADB52800F58164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73R5LGR746;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Felix.Reservio-ProTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reservio_Pro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Reservio_Pro";
+			};
+			name = Debug;
+		};
+		EE19AA3F2CADB52800F58164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73R5LGR746;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Felix.Reservio-ProTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reservio_Pro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Reservio_Pro";
+			};
+			name = Release;
+		};
+		EE19AA412CADB52800F58164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73R5LGR746;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Felix.Reservio-ProUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Reservio_Pro;
+			};
+			name = Debug;
+		};
+		EE19AA422CADB52800F58164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73R5LGR746;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Felix.Reservio-ProUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Reservio_Pro;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE19AA0E2CADB52700F58164 /* Build configuration list for PBXProject "Reservio_Pro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE19AA382CADB52800F58164 /* Debug */,
+				EE19AA392CADB52800F58164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE19AA3A2CADB52800F58164 /* Build configuration list for PBXNativeTarget "Reservio_Pro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE19AA3B2CADB52800F58164 /* Debug */,
+				EE19AA3C2CADB52800F58164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE19AA3D2CADB52800F58164 /* Build configuration list for PBXNativeTarget "Reservio_ProTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE19AA3E2CADB52800F58164 /* Debug */,
+				EE19AA3F2CADB52800F58164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE19AA402CADB52800F58164 /* Build configuration list for PBXNativeTarget "Reservio_ProUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE19AA412CADB52800F58164 /* Debug */,
+				EE19AA422CADB52800F58164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE19AA0B2CADB52700F58164 /* Project object */;
+}
