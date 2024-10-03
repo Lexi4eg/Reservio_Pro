@@ -17,17 +17,20 @@ class DataCleaning:
 
     def clean_data(self, data):
         data_dict = json.loads(data)
-        self.df = pd.DataFrame([data_dict])
+        new_df = pd.DataFrame([data_dict])
+        new_df['date'] = pd.to_datetime(new_df['date'])
+        self.df = pd.concat([self.df, new_df], ignore_index=True)
         return self.df
 
     def plot_data(self):
-        if not self.df.empty:
-            self.df.set_index('date', inplace=True)
-            self.df['peopleCount'].plot(kind='line')
-            plt.title('People Count Over Time')
-            plt.xlabel('Date')
-            plt.ylabel('People Count')
-            plt.show()
+        print("Plotting data")
+        print(self.df[['date', 'peopleCount']])
+
+        plt.plot(self.df['date'], self.df['peopleCount'])
+        plt.xlabel('Date')
+        plt.ylabel('People Count')
+        plt.title('People Count Over Time')
+        plt.show()
 
 class KafkaConsumer:
 
@@ -59,7 +62,7 @@ class KafkaConsumer:
                 with self.lock:
                     self.raw_data.append(msg.value().decode('utf-8'))
                     print(f"Consumed message: {msg.value().decode('utf-8')}")
-                    if len(self.raw_data) >= 2:
+                    if len(self.raw_data) >= 20:
                         threading.Thread(target=self.process_data).start()
 
                 self.c.commit(msg)
@@ -75,7 +78,7 @@ class KafkaConsumer:
 
         data_cleaning = DataCleaning()
         for data in data_to_process:
-            cleaned_data = data_cleaning.clean_data(data)
+            data_cleaning.clean_data(data)
             data_cleaning.plot_data()
 
 if __name__ == '__main__':

@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="New Mac App">
-      <change afterPath="$PROJECT_DIR$/DataAnalyticsPipeline/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAnalyticsPipeline/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataAnalyticsPipeline/main.py" afterDir="false" />
     </list>
@@ -313,7 +312,7 @@
       <workItem from="1727801565606" duration="4489000" />
       <workItem from="1727889190394" duration="499000" />
       <workItem from="1727953729522" duration="4811000" />
-      <workItem from="1727966023934" duration="1608000" />
+      <workItem from="1727966023934" duration="3010000" />
     </task>
     <task id="LOCAL-00001" summary="New Construktor for the new Scema">
       <option name="closed" value="true" />
