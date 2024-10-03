@@ -1,42 +1,84 @@
-import sys
+import threading
 
-from confluent_kafka import Consumer, KafkaException, KafkaError
+from confluent_kafka import Consumer, KafkaException
 
-conf = {
-    'bootstrap.servers': 'localhost:9092',
-    'group.id': 'consumer-group',
-    'auto.offset.reset': 'earliest'
-}
+import logging
+import pandas as pd
+import json
+import matplotlib.pyplot as plt
 
-consumer = Consumer(conf)
-consumer.subscribe(['confirmations'])
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-print("Starting consumer")
-running = True
+class DataCleaning:
 
-def basic_consume_loop(consumer, topics):
-    try:
-        consumer.subscribe(topics)
+    def __init__(self):
+        self.df = pd.DataFrame()
 
-        while running:
-            msg = consumer.poll(timeout=1.0)
-            if msg is None: continue
+    def clean_data(self, data):
+        data_dict = json.loads(data)
+        self.df = pd.DataFrame([data_dict])
+        return self.df
 
-            if msg.error():
-                if msg.error().code() == KafkaError._PARTITION_EOF:
-                    # End of partition event
-                    sys.stderr.write('%% %s [%d] reached end at offset %d\n' %
-                                     (msg.topic(), msg.partition(), msg.offset()))
-                elif msg.error():
+    def plot_data(self):
+        if not self.df.empty:
+            self.df.set_index('date', inplace=True)
+            self.df['peopleCount'].plot(kind='line')
+            plt.title('People Count Over Time')
+            plt.xlabel('Date')
+            plt.ylabel('People Count')
+            plt.show()
+
+class KafkaConsumer:
+
+    def __init__(self):
+        self.c = Consumer({
+            'bootstrap.servers': 'localhost:9092',
+            'group.id': 'mygroup',
+            'auto.offset.reset': 'earliest',
+            'enable.auto.commit': False  # Disable auto commit
+        })
+        self.topics = []
+        self.raw_data = []
+        self.lock = threading.Lock()
+
+    def subscribe(self, topics):
+        self.topics = topics
+        self.c.subscribe(topics)
+
+    def consume(self):
+        try:
+            while True:
+                msg = self.c.poll(1.0)
+
+                if msg is None:
+                    continue
+                if msg.error():
                     raise KafkaException(msg.error())
-            else:
-                print("test")
-    finally:
-        # Close down consumer to commit final offsets.
-        consumer.close()
 
-def shutdown():
-    running = False
+                with self.lock:
+                    self.raw_data.append(msg.value().decode('utf-8'))
+                    print(f"Consumed message: {msg.value().decode('utf-8')}")
+                    if len(self.raw_data) >= 2:
+                        threading.Thread(target=self.process_data).start()
 
+                self.c.commit(msg)
+        except KeyboardInterrupt:
+            pass
+        finally:
+            self.c.close()
 
-basic_consume_loop(consumer, ['confirmations'])
+    def process_data(self):
+        with self.lock:
+            data_to_process = self.raw_data[:2]
+            self.raw_data = self.raw_data[2:]
+
+        data_cleaning = DataCleaning()
+        for data in data_to_process:
+            cleaned_data = data_cleaning.clean_data(data)
+            data_cleaning.plot_data()
+
+if __name__ == '__main__':
+    consumer = KafkaConsumer()
+    consumer.subscribe(['reservations'])
+    consumer.consume()

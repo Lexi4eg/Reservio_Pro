@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="New Mac App">
+      <change afterPath="$PROJECT_DIR$/DataAnalyticsPipeline/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAnalyticsPipeline/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataAnalyticsPipeline/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,59 +103,59 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultPlantUmlFileTemplate": "UML Sequence",
-    "Docker.Dockerfile.executor": "Run",
-    "Docker.docker-compose-dev-linux.yaml: Compose Deployment.executor": "Run",
-    "Docker.docker-compose-dev.yaml: Compose Deployment Reservio_Backend.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.Reservio_Backend [:org.Application.DebugCleanerApp.main()].executor": "Run",
-    "Gradle.Reservio_Backend [:org.HttpClientEndpoint.HttpClientService.main()].executor": "Run",
-    "Gradle.Reservio_Backend [:org.HttpClientEndpoint.Main.main()].executor": "Run",
-    "Gradle.Reservio_Backend [:org.Kafka.KafkaMain.main()].executor": "Run",
-    "Gradle.Reservio_Backend [:org.Kafka.Main.main()].executor": "Run",
-    "Gradle.Reservio_Backend [:org.Kafka.main.main()].executor": "Run",
-    "Gradle.Reservio_Backend [:org.Logging.DebugCleanerApp.main()].executor": "Run",
-    "Gradle.Reservio_Backend [:org.Logging.LoggingOutputService.main()].executor": "Run",
-    "Gradle.Reservio_Backend [:org.Logging.LogsTest.main()].executor": "Run",
-    "Gradle.Reservio_Backend [build].executor": "Run",
-    "Gradle.Reservio_Backend [clean].executor": "Run",
-    "Gradle.Reservio_Backend [jar].executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Shell Script.startup.sh.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/felixprattes/Developer/Reservio_Backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2045977",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Sequence&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose-dev-linux.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose-dev.yaml: Compose Deployment Reservio_Backend.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Reservio_Backend [:org.Application.DebugCleanerApp.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Reservio_Backend [:org.HttpClientEndpoint.HttpClientService.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Reservio_Backend [:org.HttpClientEndpoint.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Reservio_Backend [:org.Kafka.KafkaMain.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Reservio_Backend [:org.Kafka.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Reservio_Backend [:org.Kafka.main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Reservio_Backend [:org.Logging.DebugCleanerApp.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Reservio_Backend [:org.Logging.LoggingOutputService.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Reservio_Backend [:org.Logging.LogsTest.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Reservio_Backend [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Reservio_Backend [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Reservio_Backend [jar].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Shell Script.startup.sh.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/felixprattes/Developer/Reservio_Backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2045977&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": []
+    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: []
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.KafkaMain">
+  <component name="RunManager" selected="Application.HttpClientService">
     <configuration name="HttpClientService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.HttpClientEndpoint.HttpClientService" />
       <module name="Reservio_Backend.main" />
@@ -314,7 +312,8 @@
       <workItem from="1727791093801" duration="804000" />
       <workItem from="1727801565606" duration="4489000" />
       <workItem from="1727889190394" duration="499000" />
-      <workItem from="1727953729522" duration="3367000" />
+      <workItem from="1727953729522" duration="4811000" />
+      <workItem from="1727966023934" duration="1608000" />
     </task>
     <task id="LOCAL-00001" summary="New Construktor for the new Scema">
       <option name="closed" value="true" />
