@@ -36,7 +36,7 @@ public class DatabaseService {
             statement.setInt(11, reservation.getNumberChairs() != null ? reservation.getNumberChairs() : 0);
             statement.executeUpdate();
         }
-        loggingService.log("1" , "Reservation saved with ID: " + reservation.getId());
+        loggingService.log("1", "Reservation saved with ID: " + reservation.getId());
     }
 
     public void deleteReservation(String id) throws SQLException {
@@ -67,7 +67,7 @@ public class DatabaseService {
             loggingService.log("1", "Error updating reservation with ID: " + reservation.getId());
             throw e;
         }
-        loggingService.log("1","Reservation updated with ID: " + reservation.getId());
+        loggingService.log("1", "Reservation updated with ID: " + reservation.getId());
     }
 
     public List<ReservationObject> getAllReservations() {
@@ -92,17 +92,15 @@ public class DatabaseService {
                 reservations.add(reservation);
             }
         } catch (SQLException e) {
-            loggingService.log("1","Error getting all reservations");
+            loggingService.log("1", "Error getting all reservations");
         }
-        loggingService.log("1","All reservations retrieved with count: " + reservations.size());
+        loggingService.log("1", "All reservations retrieved with count: " + reservations.size());
         return reservations;
     }
 
     public List<String> getTableIdsByTime(String date) throws SQLException {
         List<String> tableIds = new ArrayList<>();
-        System.out.println("Date2: " + date);
         String query = "SELECT tableid FROM reservations WHERE date = ?";
-
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             Timestamp timestamp = Timestamp.valueOf(date.replace("T", " ").replace("Z", ""));
             stmt.setTimestamp(1, timestamp);
@@ -112,9 +110,8 @@ public class DatabaseService {
                 }
             }
         }
-        loggingService.log("1","Table IDs retrieved by time with count: " + tableIds.size());
-        loggingService.log("1","Table IDs: " + tableIds);
-
+        loggingService.log("1", "Table IDs retrieved by time with count: " + tableIds.size());
+        loggingService.log("1", "Table IDs: " + tableIds);
         return tableIds;
     }
 
@@ -153,9 +150,9 @@ public class DatabaseService {
                 }
             }
         } catch (SQLException e) {
-           loggingService.log("1","Error getting confirmations by ID");
+            loggingService.log("1", "Error getting confirmations by ID");
         }
-        loggingService.log("1","Confirmations retrieved by ID with count: " + confirmations.size());
+        loggingService.log("1", "Confirmations retrieved by ID with count: " + confirmations.size());
         return confirmations;
     }
 
@@ -195,9 +192,9 @@ public class DatabaseService {
                 }
             }
         } catch (SQLException e) {
-            loggingService.log("1","Error getting confirmations by name");
+            loggingService.log("1", "Error getting confirmations by name");
         }
-        loggingService.log("1" ,"Confirmations retrieved by name with count: " + confirmations.size());
+        loggingService.log("1", "Confirmations retrieved by name with count: " + confirmations.size());
         loggingService.log("1", "Confirmations: " + confirmations);
         return confirmations;
     }
@@ -211,7 +208,7 @@ public class DatabaseService {
             statement.setString(4, confirmation.getReservation().getId());
             statement.executeUpdate();
         } catch (SQLException e) {
-            loggingService.log("1","Error saving confirmation");
+            loggingService.log("1", "Error saving confirmation");
         }
     }
 }

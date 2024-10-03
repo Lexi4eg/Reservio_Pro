@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="gralde config change">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8374a47d-845d-4253-8eb0-3023e9389a9e/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro.xcodeproj/project.pbxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro.xcodeproj/xcuserdata/felixprattes.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro/Assets.xcassets/AccentColor.colorset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro/Assets.xcassets/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro/ContentView.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro/Item.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro/Preview Content/Preview Assets.xcassets/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro/Reservio_Pro.entitlements" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro/Reservio_ProApp.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_ProTests/Reservio_ProTests.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_ProUITests/Reservio_ProUITests.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_ProUITests/Reservio_ProUITestsLaunchTests.swift" afterDir="false" />
+    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="New Mac App">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio_Pro/Reservio_Pro.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/KafkaMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,59 +105,74 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Sequence&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose-dev-linux.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose-dev.yaml: Compose Deployment Reservio_Backend.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.Reservio_Backend [:org.Application.DebugCleanerApp.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Reservio_Backend [:org.HttpClientEndpoint.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Reservio_Backend [:org.Kafka.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Reservio_Backend [:org.Kafka.main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Reservio_Backend [:org.Logging.DebugCleanerApp.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Reservio_Backend [:org.Logging.LoggingOutputService.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Reservio_Backend [:org.Logging.LogsTest.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Reservio_Backend [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Reservio_Backend [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Reservio_Backend [jar].executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Shell Script.startup.sh.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/felixprattes/Developer/Reservio_Backend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2045977&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultPlantUmlFileTemplate": "UML Sequence",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.docker-compose-dev-linux.yaml: Compose Deployment.executor": "Run",
+    "Docker.docker-compose-dev.yaml: Compose Deployment Reservio_Backend.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Reservio_Backend [:org.Application.DebugCleanerApp.main()].executor": "Run",
+    "Gradle.Reservio_Backend [:org.HttpClientEndpoint.HttpClientService.main()].executor": "Run",
+    "Gradle.Reservio_Backend [:org.HttpClientEndpoint.Main.main()].executor": "Run",
+    "Gradle.Reservio_Backend [:org.Kafka.KafkaMain.main()].executor": "Run",
+    "Gradle.Reservio_Backend [:org.Kafka.Main.main()].executor": "Run",
+    "Gradle.Reservio_Backend [:org.Kafka.main.main()].executor": "Run",
+    "Gradle.Reservio_Backend [:org.Logging.DebugCleanerApp.main()].executor": "Run",
+    "Gradle.Reservio_Backend [:org.Logging.LoggingOutputService.main()].executor": "Run",
+    "Gradle.Reservio_Backend [:org.Logging.LogsTest.main()].executor": "Run",
+    "Gradle.Reservio_Backend [build].executor": "Run",
+    "Gradle.Reservio_Backend [clean].executor": "Run",
+    "Gradle.Reservio_Backend [jar].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Shell Script.startup.sh.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/felixprattes/Developer/Reservio_Backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2045977",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: []
+    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": []
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Reservio_Backend [build]">
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.Kafka.main" />
+  <component name="RunManager" selected="Application.KafkaMain">
+    <configuration name="HttpClientService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.HttpClientEndpoint.HttpClientService" />
+      <module name="Reservio_Backend.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.HttpClientEndpoint.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KafkaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.Kafka.KafkaMain" />
       <module name="Reservio_Backend.main" />
       <extension name="coverage">
         <pattern>
@@ -226,28 +228,6 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Reservio_Backend [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="startup.sh" type="ShConfigurationType" temporary="true">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -271,11 +251,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HttpClientService" />
+        <item itemvalue="Application.KafkaMain" />
         <item itemvalue="Gradle.Reservio_Backend [build]" />
         <item itemvalue="Gradle.Reservio_Backend [clean]" />
         <item itemvalue="Shell Script.startup.sh" />
-        <item itemvalue="Gradle.Reservio_Backend [jar]" />
-        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>
@@ -333,7 +313,8 @@
       <workItem from="1727791062876" duration="24000" />
       <workItem from="1727791093801" duration="804000" />
       <workItem from="1727801565606" duration="4489000" />
-      <workItem from="1727889190394" duration="406000" />
+      <workItem from="1727889190394" duration="499000" />
+      <workItem from="1727953729522" duration="3367000" />
     </task>
     <task id="LOCAL-00001" summary="New Construktor for the new Scema">
       <option name="closed" value="true" />
@@ -479,7 +460,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727808121637</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="New Mac App">
+      <option name="closed" value="true" />
+      <created>1727889689942</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1727889689943</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +504,8 @@
     <MESSAGE value="Fixed Logging System" />
     <MESSAGE value="Dockerizing the backend" />
     <MESSAGE value="gralde config change" />
-    <option name="LAST_COMMIT_MESSAGE" value="gralde config change" />
+    <MESSAGE value="New Mac App" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Mac App" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
