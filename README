@@ -1,1 +1,4 @@
-## Reservio The Easy Table Reservation Platform
+Reservio: The Easy Table Reservation Platform
+
+
+Reservio_Pro includes an iOS application developed with SwiftUI, designed to allow users to reserve a table at a venue. Users can input various details for their reservation, and the system handles the reservation process through integrations with a backend microservice architecture and a PostgreSQL database.
