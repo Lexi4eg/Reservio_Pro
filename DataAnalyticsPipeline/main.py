@@ -1,7 +1,5 @@
 import threading
-
 from confluent_kafka import Consumer, KafkaException
-
 import logging
 import pandas as pd
 import json
@@ -62,24 +60,23 @@ class KafkaConsumer:
                 with self.lock:
                     self.raw_data.append(msg.value().decode('utf-8'))
                     print(f"Consumed message: {msg.value().decode('utf-8')}")
-                    if len(self.raw_data) >= 20:
-                        threading.Thread(target=self.process_data).start()
 
                 self.c.commit(msg)
         except KeyboardInterrupt:
             pass
         finally:
             self.c.close()
+            self.process_data()  # Process all data after consuming
 
     def process_data(self):
         with self.lock:
-            data_to_process = self.raw_data[:2]
-            self.raw_data = self.raw_data[2:]
+            data_to_process = self.raw_data
+            self.raw_data = []
 
         data_cleaning = DataCleaning()
         for data in data_to_process:
             data_cleaning.clean_data(data)
-            data_cleaning.plot_data()
+        data_cleaning.plot_data()
 
 if __name__ == '__main__':
     consumer = KafkaConsumer()

@@ -61,17 +61,7 @@ public class ReservationObject {
             @JsonProperty("tableID") String tableID,
             @JsonProperty("numberChairs") Integer numberChairs
     ) {
-        this.id = id;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.date = date;
-        this.peopleCount = peopleCount;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.specialRequests = specialRequests;
-        this.highChair = highChair;
-        this.tableID = tableID;
-        this.numberChairs = numberChairs;
+      
     }
 
     public ReservationObject(String key, String john, String doe, Date date, int i, String mail, String s, String none, boolean b, String a1) {
