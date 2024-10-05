@@ -60,6 +60,23 @@ def shwoPeopleByReservations(df1) :
     plt.xticks(rotation=90)
     plt.show()
 
+def boxplotAnalasys(df1):
+    q1 = df1['peoplecount'].quantile(0.25)
+    median = df1['peoplecount'].median()
+    q3 = df1['peoplecount'].quantile(0.75)
+    iqr = q3 - q1
+    lower_bound = q1 - 1.5 * iqr
+    upper_bound = q3 + 1.5 * iqr
 
-showReservationsByDates(df)
-shwoPeopleByReservations(df)
+    plt.boxplot(df1['peoplecount'])
+    plt.axhline(q1, color='r', linestyle='--')
+    plt.axhline(median, color='g', linestyle='-')
+    plt.axhline(q3, color='b', linestyle='--')
+    plt.axhline(lower_bound, color='black', linestyle=':')
+    plt.axhline(upper_bound, color='black', linestyle=':')
+    plt.show()
+
+
+boxplotAnalasys(df)
+#showReservationsByDates(df)
+#shwoPeopleByReservations(df)
