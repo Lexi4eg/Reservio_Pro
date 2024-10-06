@@ -57,6 +57,7 @@ func sendReservationRequest(requestBody: Reservation, ip: String) async {
         // Handle the response (optional)
         if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
             print("Reservation sent successfully")
+            print(requestBody)
         } else {
             print("Error sending reservation: \(String(decoding: data, as: UTF8.self))")
         }

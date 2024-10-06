@@ -1,9 +1,9 @@
 import time
 import matplotlib.pyplot as plt
 import pandas as pd
+from kafka import KafkaProducer
 from sqlalchemy import create_engine
-
-
+from kafka import KafkaProducer
 engine = create_engine('postgresql+psycopg2://postgres:password@localhost/postgres')
 
 
@@ -42,6 +42,9 @@ class PatchProcessingService ():
             self.plot_data()
             print(self.df)
             time.sleep(60)
+            kafkaProducer = KafkaProducer(bootstrap_servers='localhost:9092')
+            kafkaProducer.send('patchProcesses', value=self.df.to_json())
+            kafkaProducer.flush()
             return self.df
 
 

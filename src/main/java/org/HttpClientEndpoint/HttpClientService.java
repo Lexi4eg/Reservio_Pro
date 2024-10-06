@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.ConfirmationService.ConfirmationObject;
 import org.DatabaseService.DatabaseService;
 import org.Kafka.ReservationObject;
+import org.Logging.LoggingService;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -14,6 +15,8 @@ import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.common.serialization.StringSerializer;
+
+
 import java.sql.SQLException;
 import java.time.Duration;
 import java.time.ZonedDateTime;
@@ -25,6 +28,8 @@ import java.util.Properties;
 
 public class HttpClientService{
     public static void main(String[] args) throws SQLException {
+        LoggingService logger = new LoggingService();
+
         port(4567);
         get("/getConfirmation", (request, response) -> {
             Properties props = new Properties();
@@ -96,8 +101,20 @@ public class HttpClientService{
 
         post("/sendReservation", (request, response) -> {
             String body = request.body();
+            System.out.println("Received body: " + body);
+            logger.log("1","Received body: " + body);
+
+
             ObjectMapper objectMapper = new ObjectMapper();
-            ReservationObject messageObject = objectMapper.readValue(body, ReservationObject.class);
+            ReservationObject messageObject;
+            try {
+                messageObject = objectMapper.readValue(body, ReservationObject.class);
+            } catch (Exception e) {
+                response.status(400);
+                return "Invalid JSON format";
+            }
+
+            System.out.println("Deserialized ReservationObject: " + messageObject);
 
             Properties props = new Properties();
             props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
@@ -109,7 +126,6 @@ public class HttpClientService{
             producer.send(record);
             producer.close();
             System.out.println("Message sent to Kafka");
-            System.out.println("Reservation: " + messageObject.getDate());
 
             response.status(200);
             return "Message sent to Kafka";
