@@ -162,12 +162,26 @@ public class DatabaseService {
                 "r.id AS r_id, r.firstname AS r_firstname, r.lastname AS r_lastname, r.date AS r_date, r.peopleCount AS r_peopleCount, " +
                 "r.email AS r_email, r.phoneNumber AS r_phoneNumber, r.specialRequests AS r_specialRequests, r.highChair AS r_highChair, " +
                 "r.tableID AS r_tableID, r.numberChairs AS r_numberChairs " +
-                "FROM confirmations c JOIN reservations r ON c.reservationId = r.id WHERE r.firstname = ? AND r.lastname = ?";
+                "FROM confirmations c JOIN reservations r ON c.reservationId = r.id WHERE r.firstname ILIKE ? AND r.lastname ILIKE ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, firstname);
             stmt.setString(2, lastname);
+            loggingService.log("1", "Executing query with firstname: " + firstname + ", lastname: " + lastname);
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {
+                    loggingService.log("1", "ResultSet row: " +
+                            "r_id=" + rs.getString("r_id") + ", " +
+                            "r_firstname=" + rs.getString("r_firstname") + ", " +
+                            "r_lastname=" + rs.getString("r_lastname") + ", " +
+                            "r_date=" + rs.getTimestamp("r_date") + ", " +
+                            "r_peopleCount=" + rs.getInt("r_peopleCount") + ", " +
+                            "r_email=" + rs.getString("r_email") + ", " +
+                            "r_phoneNumber=" + rs.getString("r_phoneNumber") + ", " +
+                            "r_specialRequests=" + rs.getString("r_specialRequests") + ", " +
+                            "r_highChair=" + rs.getBoolean("r_highChair") + ", " +
+                            "r_tableID=" + rs.getString("r_tableID") + ", " +
+                            "r_numberChairs=" + rs.getInt("r_numberChairs"));
+
                     ReservationObject reservation = new ReservationObject(
                             rs.getString("r_id"),
                             rs.getString("r_firstname"),
@@ -192,7 +206,7 @@ public class DatabaseService {
                 }
             }
         } catch (SQLException e) {
-            loggingService.log("1", "Error getting confirmations by name");
+            loggingService.log("1", "Error getting confirmations by name: " + e.getMessage());
         }
         loggingService.log("1", "Confirmations retrieved by name with count: " + confirmations.size());
         loggingService.log("1", "Confirmations: " + confirmations);

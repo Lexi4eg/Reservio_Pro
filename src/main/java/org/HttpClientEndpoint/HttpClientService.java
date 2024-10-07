@@ -77,11 +77,11 @@ public class HttpClientService{
             String firstname = request.queryParams("firstname");
             String lastname = request.queryParams("lastname");
             DatabaseService dbService = new DatabaseService();
-            List<ConfirmationObject> reservations;
+            List<ConfirmationObject> confirmations;
 
-            reservations = dbService.getConfirmationsByName(firstname, lastname);
+            confirmations = dbService.getConfirmationsByName(firstname, lastname);
             ObjectMapper objectMapper = new ObjectMapper();
-            String jsonResponse = objectMapper.writeValueAsString(reservations);
+            String jsonResponse = objectMapper.writeValueAsString(confirmations);
             response.type("application/json");
             response.status(200);
             return jsonResponse;

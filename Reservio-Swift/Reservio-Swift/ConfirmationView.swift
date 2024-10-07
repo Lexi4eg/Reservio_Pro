@@ -19,7 +19,7 @@ struct ConfirmationView: View {
             if confirmations.isEmpty {
                 Text("No Confirmations")
             } else {
-                List($confirmations) { $confirmation in
+                List(confirmations) { confirmation in
                     Section {
                         HStack {
                             Text("Reservation ID:")

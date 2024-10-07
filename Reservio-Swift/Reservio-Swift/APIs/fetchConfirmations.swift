@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-func fetchConfirmations(firstname: String, lastname: String, ip:String) async -> [Confirmation] {
+func fetchConfirmations(firstname: String, lastname: String, ip: String) async -> [Confirmation] {
     guard var urlComponents = URLComponents(string: "http://\(ip):4567/getConfirmationsByName") else {
         print("Error: Invalid URL")
         return []
@@ -33,9 +32,10 @@ func fetchConfirmations(firstname: String, lastname: String, ip:String) async ->
 
         if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
             print("Available Confirmations received successfully")
+            print("JSON Response: \(String(data: data, encoding: .utf8) ?? "Invalid JSON")")
             let decoder = JSONDecoder()
             if let confirmations = try? decoder.decode([Confirmation].self, from: data) {
-                return confirmations
+                return Array(confirmations.prefix(20))
             } else {
                 print("Error parsing JSON response")
                 return []
