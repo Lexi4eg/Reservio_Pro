@@ -31,9 +31,9 @@ public class DatabaseService {
             statement.setString(6, reservation.getEmail());
             statement.setString(7, reservation.getPhoneNumber());
             statement.setString(8, reservation.getSpecialRequests());
-            statement.setBoolean(9, reservation.getHighChair() != null ? reservation.getHighChair() : false);
+            statement.setBoolean(9, reservation.getHighChair());
             statement.setString(10, reservation.getTableID());
-            statement.setInt(11, reservation.getNumberChairs() != null ? reservation.getNumberChairs() : 0);
+            statement.setInt(11, reservation.getNumberChairs());
             statement.executeUpdate();
         }
         loggingService.log("1", "Reservation saved with ID: " + reservation.getId());

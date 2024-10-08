@@ -82,7 +82,7 @@ struct ConfirmationView: View {
                 }
             }
         }
-        .padding()
+        
         .onAppear {
             Task {
                 await loadConfirmations()

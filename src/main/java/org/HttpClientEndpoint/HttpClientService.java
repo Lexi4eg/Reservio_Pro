@@ -147,7 +147,6 @@ public class HttpClientService{
         get("/getTablesByTime", (request, response) -> {
             String dateString = request.queryParams("date");
 
-            // Print the date
             System.out.println("Date: " + dateString);
             if (dateString == null || dateString.isEmpty()) {
                 response.status(400);

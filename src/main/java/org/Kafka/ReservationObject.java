@@ -1,45 +1,18 @@
 package org.Kafka;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.sql.Timestamp;
-import java.util.Date;
 
 public class ReservationObject {
-    @JsonProperty("id")
     private String id;
-
-    @JsonProperty("firstname")
     private String firstname;
-
-    @JsonProperty("lastname")
     private String lastname;
-
-    @JsonProperty("date")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
-    private  Timestamp date;
-
-    @JsonProperty("peopleCount")
+    private Timestamp date;
     private int peopleCount;
-
-    @JsonProperty("email")
     private String email;
-
-    @JsonProperty("phoneNumber")
     private String phoneNumber;
-
-    @JsonProperty("specialRequests")
     private String specialRequests;
-
-    @JsonProperty("highChair")
     private Boolean highChair;
-
-    @JsonProperty("tableID")
     private String tableID;
-
-    @JsonProperty("numberChairs")
     private Integer numberChairs;
 
     // Default constructor
@@ -47,26 +20,33 @@ public class ReservationObject {
     }
 
     // Parameterized constructor
-    @JsonCreator
     public ReservationObject(
-            @JsonProperty("id") String id,
-            @JsonProperty("firstname") String firstname,
-            @JsonProperty("lastname") String lastname,
-            @JsonProperty("date")  Timestamp date,
-            @JsonProperty("peopleCount") int peopleCount,
-            @JsonProperty("email") String email,
-            @JsonProperty("phoneNumber") String phoneNumber,
-            @JsonProperty("specialRequests") String specialRequests,
-            @JsonProperty("highChair") Boolean highChair,
-            @JsonProperty("tableID") String tableID,
-            @JsonProperty("numberChairs") Integer numberChairs
+            String id,
+            String firstname,
+            String lastname,
+            Timestamp date,
+            int peopleCount,
+            String email,
+            String phoneNumber,
+            String specialRequests,
+            Boolean highChair,
+            String tableID,
+            Integer numberChairs
     ) {
-      
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.date = date;
+        this.peopleCount = peopleCount;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.specialRequests = specialRequests;
+        this.highChair = highChair;
+        this.tableID = tableID;
+        this.numberChairs = numberChairs;
     }
 
-    public ReservationObject(String key, String john, String doe, Date date, int i, String mail, String s, String none, boolean b, String a1) {
-    }
-
+    // Getters and setters
     public String getId() {
         return id;
     }
@@ -92,10 +72,10 @@ public class ReservationObject {
     }
 
     public Timestamp getDate() {
-        return  date;
+        return date;
     }
 
-    public void setDate( Timestamp date) {
+    public void setDate(Timestamp date) {
         this.date = date;
     }
 
@@ -143,6 +123,10 @@ public class ReservationObject {
         return tableID;
     }
 
+    public void setTableID(String tableID) {
+        this.tableID = tableID;
+    }
+
     public Integer getNumberChairs() {
         return numberChairs;
     }
@@ -166,9 +150,5 @@ public class ReservationObject {
                 ", tableID='" + tableID + '\'' +
                 ", numberChairs=" + numberChairs +
                 '}';
-    }
-
-    public void setTableID(String tableID) {
-        this.tableID = tableID;
     }
 }

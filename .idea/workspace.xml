@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="Bug fixing and PatchProcessingService added">
+    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="Fixed confirmation Service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAnalyticsPipeline/PatchProcessingService.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataAnalyticsPipeline/PatchProcessingService.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ConfirmationService/ConfirmationObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ConfirmationService/ConfirmationObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/ConfirmationView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/ConfirmationView.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/HttpClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/HttpClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Kafka/ReservationObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Kafka/ReservationObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Logging/LoggingOutputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Logging/LoggingOutputService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +158,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HttpClientService">
+  <component name="RunManager" selected="Application.KafkaMain">
     <configuration name="HttpClientService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.HttpClientEndpoint.HttpClientService" />
       <module name="Reservio_Backend.main" />
@@ -312,7 +311,7 @@
       <workItem from="1728233746409" duration="3333000" />
       <workItem from="1728375234937" duration="441000" />
       <workItem from="1728375699652" duration="1002000" />
-      <workItem from="1728381711931" duration="2453000" />
+      <workItem from="1728381711931" duration="3927000" />
     </task>
     <task id="LOCAL-00001" summary="New Construktor for the new Scema">
       <option name="closed" value="true" />
@@ -474,7 +473,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728232263353</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Fixed confirmation Service">
+      <option name="closed" value="true" />
+      <created>1728384223969</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1728384223969</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +519,8 @@
     <MESSAGE value="gralde config change" />
     <MESSAGE value="New Mac App" />
     <MESSAGE value="Bug fixing and PatchProcessingService added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fixing and PatchProcessingService added" />
+    <MESSAGE value="Fixed confirmation Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed confirmation Service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
