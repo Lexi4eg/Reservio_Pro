@@ -151,6 +151,23 @@ public class ReservationObject {
         this.numberChairs = numberChairs;
     }
 
+    @Override
+    public String toString() {
+        return "ReservationObject{" +
+                "id='" + id + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", date=" + date +
+                ", peopleCount=" + peopleCount +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", specialRequests='" + specialRequests + '\'' +
+                ", highChair=" + highChair +
+                ", tableID='" + tableID + '\'' +
+                ", numberChairs=" + numberChairs +
+                '}';
+    }
+
     public void setTableID(String tableID) {
         this.tableID = tableID;
     }

@@ -6,10 +6,6 @@ from sqlalchemy import create_engine
 from kafka import KafkaProducer
 engine = create_engine('postgresql+psycopg2://postgres:password@localhost/postgres')
 
-
-
-
-
 class PatchProcessingService ():
     def __init__(self):
         query = 'SELECT * FROM reservations'

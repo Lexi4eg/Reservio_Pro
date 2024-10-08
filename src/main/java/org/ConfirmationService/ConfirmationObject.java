@@ -54,6 +54,16 @@ public class ConfirmationObject {
         this.confirmationNumber = confirmationNumber;
     }
 
+    @Override
+    public String toString() {
+        return "ConfirmationObject{" +
+                "id='" + id + '\'' +
+                ", confirmationDate=" + confirmationDate +
+                ", confirmationNumber='" + confirmationNumber + '\'' +
+                ", reservation=" + reservation +
+                '}';
+    }
+
     public ReservationObject getReservation() {
         return reservation;
     }
