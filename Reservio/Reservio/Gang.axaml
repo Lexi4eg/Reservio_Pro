@@ -20,7 +20,7 @@
                       Height="500" 
                       Stretch="Uniform"/>
            </StackPanel>
-        <Button Content="Weiter"
+        <Button Content="Weiter 2"
                 Width="120"
                 Height="40"
                 HorizontalAlignment="Center"
