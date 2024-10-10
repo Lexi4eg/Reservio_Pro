@@ -32,7 +32,6 @@ func fetchConfirmations(firstname: String, lastname: String, ip: String) async -
                 let container = try decoder.singleValueContainer()
                 let timestamp = try container.decode(Int.self)
                 
-                // Convert the timestamp from milliseconds to seconds
                 let date = Date(timeIntervalSince1970: TimeInterval(timestamp) / 1000)
                 return date
             }
@@ -42,7 +41,6 @@ func fetchConfirmations(firstname: String, lastname: String, ip: String) async -
                 formatter.dateStyle = .medium
                 formatter.timeStyle = .short
                 
-                // Format the date for each confirmation
                 confirmations = confirmations.map { confirmation in
                     var updatedConfirmation = confirmation
                     updatedConfirmation.reservation.dateString = formatter.string(from: updatedConfirmation.reservation.date)
