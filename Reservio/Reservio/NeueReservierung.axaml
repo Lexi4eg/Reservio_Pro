@@ -1,0 +1,180 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Reservio.NeueReservierungen">
+    <Grid>
+        <TextBlock Text="Neue Reservierung"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Top"
+                   FontWeight="Bold"
+                   FontSize="30"
+                   Foreground="CadetBlue"
+                   Margin="0,20,0,0"/>
+        
+        <TextBlock x:Name="KellnerNameTextBlock"
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top"
+                   FontWeight="Bold"
+                   FontSize="20"
+                   Foreground="CadetBlue"
+                   Margin="10,20,0,0" />
+    
+        <StackPanel 
+            Orientation="Vertical"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="0,100,0,0"> <!-- Abstand von überschrift zu text(100) -->
+            
+            <StackPanel 
+                Orientation="Horizontal"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="40,50,0,0"
+                Spacing="10">
+                <TextBlock Text="Tischnummer:"
+                           VerticalAlignment="Center"
+                           FontSize="24"
+                           Foreground="CadetBlue"/>
+            
+                <StackPanel
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,60,60"
+                    HorizontalAlignment="Right">
+                
+               
+                   <Button Content="Terrasse"
+                            Width="200"
+                            Height="40"
+                            Background="CadetBlue"
+                            VerticalContentAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            Margin="0,10,0,0"
+                            Click="Terrasse_Click"/> 
+                </StackPanel>
+                <StackPanel
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,60,60"
+                    HorizontalAlignment="Right">
+                
+               
+                    <Button Content="Freibereich"
+                            Width="200"
+                            Height="40"
+                            Background="CadetBlue"
+                            VerticalContentAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            Margin="0,10,0,0"
+                            Click="Freibereich_Click"/> 
+                </StackPanel>
+                <StackPanel
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,60,60"
+                    HorizontalAlignment="Right">
+                
+               
+                    <Button Content="Lounge"
+                            Width="200"
+                            Height="40"
+                            Background="CadetBlue"
+                            VerticalContentAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            Margin="0,10,0,0"
+                            Click="Lounge_Click"/> 
+                </StackPanel>
+                <StackPanel
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,60,60"
+                    HorizontalAlignment="Right">
+                
+               
+                    <Button Content="Gang"
+                            Width="200"
+                            Height="40"
+                            Background="CadetBlue"
+                            VerticalContentAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            Margin="0,10,0,0"
+                            Click="Gang_Click"/> 
+                </StackPanel>
+                <StackPanel
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,60,60"
+                    HorizontalAlignment="Right">
+                
+               
+                    <Button Content="Saal"
+                            Width="200"
+                            Height="40"
+                            Background="CadetBlue"
+                            VerticalContentAlignment="Center"
+                            HorizontalContentAlignment="Center"
+                            Margin="0,10,0,0"
+                            Click="Saal_Click"/> 
+                </StackPanel>
+            </StackPanel>
+            
+            <StackPanel 
+                Orientation="Horizontal"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="40,40,0,0"
+                Spacing="10">
+                <TextBlock Text="Tag:"
+                           VerticalAlignment="Center"
+                           FontSize="24"
+                           Foreground="CadetBlue"/>
+                
+                <DatePicker 
+                    x:Name="datePicker"
+                    Width="320"
+                    Height="45"
+                    HorizontalAlignment="Center"
+                    BorderBrush="Indigo"
+                    BorderThickness="1"
+                    VerticalAlignment="Center"
+                    FontSize="20"/>
+            </StackPanel>
+           <!-- StackPanel für "Uhrzeit" und ComboBoxen -->
+            <StackPanel 
+                Orientation="Horizontal"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="40,50,0,0"
+                Spacing="10">
+    
+                <TextBlock Text="Uhrzeit:"
+                           VerticalAlignment="Center"
+                           FontSize="24"
+                           Foreground="CadetBlue"/>
+
+                <ComboBox x:Name="hoursComboBox"
+                          Width="100"
+                          Height="45"
+                          VerticalAlignment="Center"
+                          FontSize="20">
+                    <!-- Stunden von 00 bis 23 -->
+                </ComboBox>
+
+                <TextBlock Text=":" 
+                           VerticalAlignment="Center" 
+                           FontSize="24" 
+                           Foreground="CadetBlue" />
+
+                <ComboBox x:Name="minutesComboBox"
+                          Width="100"
+                          Height="45"
+                          VerticalAlignment="Center"
+                          FontSize="20">
+                    <!-- Minuten von 00 bis 59 -->
+                </ComboBox>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center"
+                        Margin="0,10,0,0">
+                
+               
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

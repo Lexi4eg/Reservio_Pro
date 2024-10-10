@@ -1,0 +1,61 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Reservio.MainWindow"
+        Title="Reservio">
+    <Grid>
+        <TextBlock Text="Willkommen!"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Top"
+                   FontWeight="Bold"
+                   FontSize="30"
+                   Foreground="CadetBlue"
+                   Margin="0,20,0,0"/>
+    
+        <StackPanel 
+            Orientation="Vertical"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="0,100,0,0"> <!-- Abstand von überschrift zu text(100) -->
+            
+            
+            <TextBlock Text="Benutzer:"
+                       VerticalAlignment="Center"
+                       Margin="0,0,10,0"/>
+            
+            <TextBox x:Name="UsernameTextBox" Width="200"
+                     Height="30"
+                     BorderBrush="Indigo"
+                     BorderThickness="2"
+                     Watermark="Hier eingeben..."/>
+            <StackPanel 
+                VerticalAlignment="Top"
+                Margin="0,20,0,0">
+                 
+                <TextBlock Text="Passwort:"
+                           VerticalAlignment="Center"
+                           Margin="0,0,10,0"/> 
+            
+                <TextBox Width="200"
+                         Height="30"
+                         BorderBrush="Indigo"
+                         BorderThickness="2"
+                         Watermark="Hier eingeben..."/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center"
+                        Margin="0,10,0,0">
+                
+                <Button Content="Login"
+                        Width="200"
+                        Height="40"
+                        Background="CadetBlue"
+                        VerticalContentAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        Margin="0,10,0,0"
+                        Click="OnLoginButtonClick"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
