@@ -20,6 +20,8 @@ struct HomeView: View {
     @State private var bookedTableIDs: [String] = []
     @State private var isFetchingTimes = false
     @State private var errorMessage = ""
+    @State private var showError: Bool = false
+
     @ObservedObject var userData: UserData
 
 
@@ -92,8 +94,11 @@ struct HomeView: View {
                         TextField("Enter Number", text: Binding(
                             get: { String(personen) },
                             set: { newValue in
-                                if let value = Int(newValue) {
+                                if let value = Int(newValue), value > 0, value <= 20 {
                                     personen = value
+                                    showError = false
+                                } else {
+                                    showError = true
                                 }
                             }
                         ))
@@ -104,6 +109,13 @@ struct HomeView: View {
                         .frame(width: 100)
                     }
                     .padding(.horizontal, 30)
+
+                    if showError {
+                        Text("Please choose a number between 1 and 20.")
+                            .font(.footnote)
+                            .foregroundColor(.red)
+                            .padding(.top, 5)
+                    }
 
                     Toggle("Child’s Chair Required", isOn: $kinderStuhl)
                         .padding(.horizontal, 30)

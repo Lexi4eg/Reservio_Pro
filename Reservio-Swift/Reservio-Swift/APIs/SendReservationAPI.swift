@@ -5,7 +5,8 @@ struct Reservation: Identifiable, Codable {
     let id: String
     let firstname: String
     let lastname: String
-    let date: String
+    let date: Date
+    var dateString: String?
     let peopleCount: Int
     let email: String
     let phoneNumber: String
@@ -21,7 +22,7 @@ struct Reservation: Identifiable, Codable {
         self.lastname = lastname
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        self.date = dateFormatter.string(from: date) // Format date to string
+        self.date = date
         self.peopleCount = peopleCount
         self.email = email
         self.phoneNumber = phoneNumber

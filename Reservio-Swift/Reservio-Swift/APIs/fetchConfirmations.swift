@@ -1,10 +1,3 @@
-//
-//  fetchConfirmations.swift
-//  Reservio-Swift
-//
-//  Created by Felix Prattes on 27.09.24.
-//
-
 import Foundation
 
 func fetchConfirmations(firstname: String, lastname: String, ip: String) async -> [Confirmation] {
@@ -33,8 +26,29 @@ func fetchConfirmations(firstname: String, lastname: String, ip: String) async -
         if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
             print("Available Confirmations received successfully")
             print("JSON Response: \(String(data: data, encoding: .utf8) ?? "Invalid JSON")")
+
             let decoder = JSONDecoder()
-            if let confirmations = try? decoder.decode([Confirmation].self, from: data) {
+            decoder.dateDecodingStrategy = .custom { decoder in
+                let container = try decoder.singleValueContainer()
+                let timestamp = try container.decode(Int.self)
+                
+                // Convert the timestamp from milliseconds to seconds
+                let date = Date(timeIntervalSince1970: TimeInterval(timestamp) / 1000)
+                return date
+            }
+
+            if var confirmations = try? decoder.decode([Confirmation].self, from: data) {
+                let formatter = DateFormatter()
+                formatter.dateStyle = .medium
+                formatter.timeStyle = .short
+                
+                // Format the date for each confirmation
+                confirmations = confirmations.map { confirmation in
+                    var updatedConfirmation = confirmation
+                    updatedConfirmation.reservation.dateString = formatter.string(from: updatedConfirmation.reservation.date)
+                    return updatedConfirmation
+                }
+
                 return Array(confirmations.prefix(20))
             } else {
                 print("Error parsing JSON response")

@@ -24,7 +24,7 @@ struct ContentView: View {
                     Tab("Profile", systemImage: "gear"){
                         SettingsView()
                     }
-                    Tab("Confirmation", systemImage: "gear"){
+                    Tab("Confirmation", systemImage: "tray"){
                         ConfirmationView(userData: userData)
                     }
                 }
