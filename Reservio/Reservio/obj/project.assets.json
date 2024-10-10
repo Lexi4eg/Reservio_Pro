@@ -4374,11 +4374,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\julia\\RiderProjects\\Reservio\\Reservio\\Reservio.csproj",
+      "projectUniqueName": "C:\\Users\\julia\\Documents\\5BHWII\\SWP\\Reservio_Pro\\Reservio\\Reservio\\Reservio.csproj",
       "projectName": "Reservio",
-      "projectPath": "C:\\Users\\julia\\RiderProjects\\Reservio\\Reservio\\Reservio.csproj",
+      "projectPath": "C:\\Users\\julia\\Documents\\5BHWII\\SWP\\Reservio_Pro\\Reservio\\Reservio\\Reservio.csproj",
       "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\julia\\RiderProjects\\Reservio\\Reservio\\obj\\",
+      "outputPath": "C:\\Users\\julia\\Documents\\5BHWII\\SWP\\Reservio_Pro\\Reservio\\Reservio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
