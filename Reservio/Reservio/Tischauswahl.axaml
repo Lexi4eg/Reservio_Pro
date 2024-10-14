@@ -1,0 +1,63 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Reservio.ThirdPage">
+    <UserControl.Styles>
+        <Style Selector="Button:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="Indigo"> </Setter>
+        </Style>
+    </UserControl.Styles>
+    
+    <Grid>
+        <!-- Bild -->
+        <Image Source="C:\Users\julia\OneDrive\Dokumente\Schule\SPL\4. Klasse\Projekt\Reservio\Reservio\pics\tisch.jpg" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Top" 
+               Margin="0,50,0,0"/>    
+
+        <!-- ComboBox für die Auswahl des Bereichs -->
+        <ComboBox x:Name="areaComboBox"
+                  Width="300" 
+                  Height="70" 
+                  Name="ComboBox"
+                  HorizontalAlignment="Right" 
+                  VerticalAlignment="Bottom" 
+                  Margin="0,0,400,55"
+                  FontSize="25">
+            <ComboBoxItem Name="Lounge" Content="Lounge" Foreground="Pink"/>
+            <ComboBoxItem Name="Gang" Content="Gang" Foreground="CornflowerBlue"/>
+            <ComboBoxItem Name="Saal" Content="Saal" Foreground="Gold"/>
+            <ComboBoxItem Name="Terrasse" Content="Terrasse" Foreground="IndianRed"/>
+            <ComboBoxItem Name="Freibereich" Content="Freibereich" Foreground="Green"/>
+        </ComboBox>
+
+        <!-- Button weiter zur Tischauswahl -->
+        <Button Content="Weiter" 
+                Width="250" 
+                Height="70"  
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Bottom" 
+                Margin="0,0,55,55"
+                Background="CadetBlue" 
+                FontSize="25"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Click="OnWeiterButtonClick2"/>
+
+        <!-- Button zurück zu ReservierungsDaten -->
+        <Button Content="Zurück" 
+                Width="250" 
+                Height="70"  
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Bottom" 
+                Margin="55,0,0,55"
+                Background="CadetBlue" 
+                FontSize="25"
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Center"
+                Click="OnZurückButtonClick"/>
+        
+    </Grid>
+</UserControl>

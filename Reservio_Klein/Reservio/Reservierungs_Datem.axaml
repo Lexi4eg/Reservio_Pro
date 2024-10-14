@@ -1,0 +1,186 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Reservio.SecondPage">
+    
+    <UserControl.Styles>
+        <Style Selector="Button:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="Indigo"> </Setter>
+        </Style>
+    </UserControl.Styles>
+
+    <Grid>
+        <!-- Text Willkommen bei Reservio -->
+        <TextBlock Text="Willkommen bei Reservio!" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Top" 
+                   Margin="0,80,0,0"
+                   FontSize="50" 
+                   Foreground="CadetBlue" 
+                   FontWeight="Bold"/>
+        
+        <!-- Oberer Strich -->
+        <Border Background="CadetBlue" 
+                Height="5" HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top"
+                Margin="0,150,0,0"/>
+        
+        <!-- Bild -->
+        <Image Source="C:\Users\julia\OneDrive\Dokumente\Schule\SWP1\5.Klasse\Reservio_Pro\Reservio_Klein\Reservio\pics\food1.jpg" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Top" 
+               Margin="0,155,0,0"/>
+        
+        <!-- Unterer Strich -->
+        <Border Background="CadetBlue" 
+                Height="5" 
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Top"
+                Margin="0,285,0,0"/>
+        
+        <!-- Box -->
+        <Border BorderBrush="Indigo" 
+                BorderThickness="2" 
+                CornerRadius="16" 
+                Width="600" 
+                Height="450"
+                Background="Wheat"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                Margin="0,100,0,0">
+            
+            <!-- Grid innerhalb der Border als Container -->
+            <Grid>
+                <!-- TextBlock in der Box -->
+                <TextBlock Text="Geben Sie Ihre Daten an" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Top" 
+                           Margin="0,50,0,0"
+                           FontSize="30" 
+                           FontWeight="Bold"
+                           Foreground="CadetBlue"/>
+                
+                <!-- StackPanel für "Tag" und DatePicker -->
+                <StackPanel 
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="40,120,0,0"
+                    Spacing="10">
+                    <TextBlock Text="Tag:"
+                               VerticalAlignment="Center"
+                               FontSize="24"
+                               Foreground="CadetBlue"/>
+                
+                    <DatePicker 
+                            x:Name="datePicker"
+                            Width="320"
+                            Height="45"
+                            HorizontalAlignment="Center"
+                            BorderThickness="1"
+                            VerticalAlignment="Center"
+                            FontSize="20"/>
+                </StackPanel>
+                
+                <!-- StackPanel für "Uhrzeit" und ComboBoxen -->
+                <StackPanel 
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="40,180,0,0"
+                    Spacing="10">
+                    <TextBlock Text="Uhrzeit:"
+                               VerticalAlignment="Center"
+                               FontSize="24"
+                               Foreground="CadetBlue"/>
+
+                    <ComboBox 
+                        x:Name="hoursComboBox"
+                        Width="100"
+                        Height="45"
+                        VerticalAlignment="Center"
+                        FontSize="20">
+                        <!-- Stunden von 0 bis 23 -->
+                        <ComboBoxItem Content="00" />
+                        <ComboBoxItem Content="01" />
+                        <ComboBoxItem Content="02" />
+                        <ComboBoxItem Content="03" />
+                        <ComboBoxItem Content="04" />
+                        <ComboBoxItem Content="05" />
+                        <ComboBoxItem Content="06" />
+                        <ComboBoxItem Content="07" />
+                        <ComboBoxItem Content="08" />
+                        <ComboBoxItem Content="09" />
+                        <ComboBoxItem Content="10" />
+                        <ComboBoxItem Content="11" />
+                        <ComboBoxItem Content="12" />
+                        <ComboBoxItem Content="13" />
+                        <ComboBoxItem Content="14" />
+                        <ComboBoxItem Content="15" />
+                        <ComboBoxItem Content="16" />
+                        <ComboBoxItem Content="17" />
+                        <ComboBoxItem Content="18" />
+                        <ComboBoxItem Content="19" />
+                        <ComboBoxItem Content="20" />
+                        <ComboBoxItem Content="21" />
+                        <ComboBoxItem Content="22" />
+                        <ComboBoxItem Content="23" />
+                    </ComboBox>
+
+                    <TextBlock Text=":" VerticalAlignment="Center" FontSize="24" Foreground="CadetBlue" />
+
+                    <ComboBox 
+                        x:Name="minutesComboBox"
+                        Width="100"
+                        Height="45"
+                        VerticalAlignment="Center"
+                        FontSize="20">
+                        <!-- Minuten von 00 bis 59 -->
+                        <ComboBoxItem Content="00" />
+                        <ComboBoxItem Content="15" />
+                        <ComboBoxItem Content="30" />
+                        <ComboBoxItem Content="45" />
+                    </ComboBox>
+                </StackPanel>
+                
+                <!-- StackPanel für "Anzahl Personen" und TextBox -->
+                <StackPanel 
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="40,240,0,0"
+                    Spacing="10">
+                    <TextBlock Text="Personenanzahl:"
+                               VerticalAlignment="Center"
+                               FontSize="24"
+                               Foreground="CadetBlue"/>
+                
+                    <TextBox Width="320"
+                             Height="45"
+                             Name="Personenanzahl"
+                             HorizontalAlignment="Center"
+                             BorderThickness="4"
+                             VerticalAlignment="Center"
+                             FontSize="20"
+                             Watermark="Anzahl eingeben"/>
+                </StackPanel>
+                
+                <!-- Button weiter zur Tischreservierung -->
+                <Button Content="Weiter" 
+                        Width="400" 
+                        Height="70"  
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" 
+                        Margin="0,300,0,0"
+                        Foreground="CadetBlue" 
+                        Background="White" 
+                        FontSize="25"
+                        HorizontalContentAlignment="Center" 
+                        VerticalContentAlignment="Center"
+                        Click="OnWeiterButtonClick1"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
