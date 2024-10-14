@@ -240,11 +240,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Reservio_Backend [build]" />
         <item itemvalue="Application.LogsTest" />
         <item itemvalue="Application.LoggingOutputService" />
-        <item itemvalue="Application.HttpClientService" />
         <item itemvalue="Application.KafkaMain" />
-        <item itemvalue="Gradle.Reservio_Backend [build]" />
+        <item itemvalue="Application.HttpClientService" />
       </list>
     </recent_temporary>
   </component>
