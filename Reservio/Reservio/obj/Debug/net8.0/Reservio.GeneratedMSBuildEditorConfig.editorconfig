@@ -23,10 +23,19 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Freibereich.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Freibereichauswahl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Gang.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Gangauswahl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Lounge.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Loungeauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/MainWindow.axaml]
@@ -35,11 +44,26 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/NeueReservierung.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Personendaten.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Reservierungen.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Reservierungs_Datem.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Saal.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Saalauswahl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Terrasse.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Terrassenauswahl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Tischauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
