@@ -48,6 +48,17 @@ public class DatabaseService {
         loggingService.log("1", "Reservation deleted with ID: " + id);
     }
 
+
+
+    public void deleteConfirmation(String id) throws SQLException {
+        String sql = "DELETE FROM confirmations WHERE reservationId = ?";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, id);
+            statement.executeUpdate();
+        }
+        loggingService.log("1", "Confirmation deleted with reservation ID: " + id);
+    }
+
     public void updateReservation(ReservationObject reservation) throws SQLException {
         String sql = "UPDATE reservations SET firstname = ?, lastname = ?, date = ?, peopleCount = ?, email = ?, phoneNumber = ?, specialRequests = ?, highChair = ?, tableID = ?, numberChairs = ? WHERE id = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {

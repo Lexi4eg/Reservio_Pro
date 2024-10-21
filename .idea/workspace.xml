@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="Fixed Reservation Object and saving method">
+    <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="Cleanup">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift.xcodeproj/project.xcworkspace/xcuserdata/felixprattes.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/APIs/fetchConfirmations.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/APIs/fetchConfirmations.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/ContentView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/ContentView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/HomeView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio-Swift/Reservio-Swift/HomeView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DatabaseService/DatabaseService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +60,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="face96162485259a6e0d4847fff99bfddc99badd" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -72,12 +75,12 @@
     &quot;assignee&quot;: &quot;Lexi4eg&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Lexi4eg/Reservio_Backend.git&quot;,
-    &quot;accountId&quot;: &quot;8b11da8e-36c2-4ffd-8903-1e062aaa37d0&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Lexi4eg/Reservio_Pro.git",
+    "accountId": "8b11da8e-36c2-4ffd-8903-1e062aaa37d0"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/9.4.31.v20200723/328e4562e0f30e01efea63efe4fc24b2b860d852/jetty-io-9.4.31.v20200723.jar!/org/eclipse/jetty/io/ManagedSelector.class" root0="SKIP_INSPECTION" />
   </component>
@@ -251,8 +254,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.36" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.36" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -313,6 +316,7 @@
       <workItem from="1728381711931" duration="5709000" />
       <workItem from="1728549468954" duration="699000" />
       <workItem from="1728550227202" duration="660000" />
+      <workItem from="1729524704306" duration="59000" />
     </task>
     <task id="LOCAL-00001" summary="New Construktor for the new Scema">
       <option name="closed" value="true" />
@@ -490,7 +494,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728385804732</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Cleanup">
+      <option name="closed" value="true" />
+      <created>1728909161060</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1728909161061</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +542,8 @@
     <MESSAGE value="Bug fixing and PatchProcessingService added" />
     <MESSAGE value="Fixed confirmation Service" />
     <MESSAGE value="Fixed Reservation Object and saving method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Reservation Object and saving method" />
+    <MESSAGE value="Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
