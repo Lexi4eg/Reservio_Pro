@@ -15,7 +15,7 @@
     
     <Grid>
         <!-- Bild -->
-        <Image Source="C:\Users\julia\OneDrive\Dokumente\Schule\SWP1\5.Klasse\Reservio_Pro\Reservio_Klein\Reservio\pics\gang.jpg" 
+        <Image Source=".\pics\gang.jpg" 
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" 
                Margin="0,50,0,0"/>    

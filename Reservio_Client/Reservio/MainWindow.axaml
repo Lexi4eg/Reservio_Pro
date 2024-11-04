@@ -6,68 +6,60 @@
         xmlns:local="clr-namespace:Reservio"
         x:Class="Reservio.MainWindow"
         Title="Rectangle Example" Width="400" Height="400" Background="White">
-    
+
     <Grid>
-        <!-- Text Willkommen bei Reservio -->
-        <TextBlock Text="Willkommen bei Reservio!" 
-                   HorizontalAlignment="Center" 
-                   VerticalAlignment="Top" 
+        <TextBlock Text="Willkommen bei Reservio!"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
                    Margin="0,80,0,0"
-                   FontSize="50" 
-                   Foreground="CadetBlue" 
+                   FontSize="50"
+                   Foreground="CadetBlue"
                    FontWeight="Bold"/>
-        
-        <!-- Oberer Strich -->
-        <Border Background="CadetBlue" 
-                Height="5" 
-                HorizontalAlignment="Stretch" 
+
+        <Border Background="CadetBlue"
+                Height="5"
+                HorizontalAlignment="Stretch"
                 VerticalAlignment="Top"
                 Margin="0,150,0,0"/>
 
-        <!-- Bild -->
-        <Image Source="C:\Users\julia\OneDrive\Dokumente\Schule\SWP1\5.Klasse\Reservio_Pro\Reservio_Klein\Reservio\pics\food1.jpg" 
-               HorizontalAlignment="Center" 
-               VerticalAlignment="Top" 
+        <Image Source="/pics/food1.jpg"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Top"
                Margin="0,155,0,0"/>
 
-        <!-- Unterer Strich -->
-        <Border Background="CadetBlue" 
-                Height="5" 
-                HorizontalAlignment="Stretch" 
+        <Border Background="CadetBlue"
+                Height="5"
+                HorizontalAlignment="Stretch"
                 VerticalAlignment="Top"
                 Margin="0,285,0,0"/>
-        
-        <!-- Box -->
-        <Border BorderBrush="CadetBlue" 
-                BorderThickness="4" 
-                CornerRadius="16" 
-                Width="600" 
-                Height="450" 
+
+        <Border BorderBrush="CadetBlue"
+                BorderThickness="4"
+                CornerRadius="16"
+                Width="600"
+                Height="450"
                 Background="Wheat"
-                HorizontalAlignment="Center" 
+                HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="0,100,0,0">
-            
-            <!-- Grid innerhalb der Border als Container -->
+
             <Grid>
-                <!-- TextBlock in der Box -->
-                <TextBlock Text="Hier kommen sie zur Tischreservierung" 
-                           HorizontalAlignment="Center" 
-                           VerticalAlignment="Center" 
+                <TextBlock Text="Hier kommen sie zur Tischreservierung"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
                            Margin="0,0,0,125"
-                           FontSize="28" 
+                           FontSize="28"
                            FontWeight="DemiBold"
                            Foreground="CadetBlue"/>
-                
-                <!-- Button weiter zur Tischreservierung -->
-                <Button Content="Weiter" Width="400" Height="70"  
-                        HorizontalAlignment="Center" 
-                        VerticalAlignment="Center" 
+
+                <Button Content="Weiter" Width="400" Height="70"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         Margin="0,125,0,0"
-                        Foreground="CadetBlue" 
-                        Background="White" 
+                        Foreground="CadetBlue"
+                        Background="White"
                         FontSize="25"
-                        HorizontalContentAlignment="Center" 
+                        HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Click="OnWeiterButtonClick"/>
             </Grid>

@@ -13,7 +13,7 @@
 
     <Grid>
         <!-- Bild -->
-        <Image Source="C:\Users\julia\OneDrive\Dokumente\Schule\SWP1\5.Klasse\Reservio_Pro\Reservio_Klein\Reservio\picssaal.jpg" 
+        <Image Source=".\picssaal.jpg" 
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" 
                Margin="0,50,0,0"/>    

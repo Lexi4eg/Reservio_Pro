@@ -28,7 +28,7 @@
                 Margin="0,150,0,0"/>
         
         <!-- Bild -->
-        <Image Source="C:\Users\julia\OneDrive\Dokumente\Schule\SWP1\5.Klasse\Reservio_Pro\Reservio_Klein\Reservio\pics\food1.jpg" 
+        <Image Source=".\pics\food1.jpg" 
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" 
                Margin="0,155,0,0"/>
