@@ -6,6 +6,7 @@ import org.ConfirmationService.ConfirmationObject;
 import org.DatabaseService.DatabaseService;
 import org.Kafka.ReservationObject;
 import org.Logging.LoggingService;
+import org.Observability.OpenTelemetryConfig;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -29,6 +30,7 @@ import java.util.Properties;
 public class HttpClientService{
     public static void main(String[] args) throws SQLException {
         LoggingService logger = new LoggingService();
+        OpenTelemetryConfig.initOpenTelemetry();
 
         port(4567);
         get("/getConfirmation", (request, response) -> {

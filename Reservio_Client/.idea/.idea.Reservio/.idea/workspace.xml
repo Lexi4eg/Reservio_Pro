@@ -7,7 +7,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65a0f1d9-822c-4565-8436-4f9cd5157bcf" name="Changes" comment="" />
+    <list default="true" id="65a0f1d9-822c-4565-8436-4f9cd5157bcf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Reservio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Reservio/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/original.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/original.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/original.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/original.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/original.ref.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/original.ref.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/references" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/references" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/resources" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Reservio.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/ref/Reservio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/ref/Reservio.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/refint/Reservio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/refint/Reservio.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Reservio.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Reservio.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Reservio.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Reservio.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/Reservio.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Reservio.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +51,38 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Lexi4eg&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lexi4eg/Reservio_Pro.git&quot;,
+    &quot;accountId&quot;: &quot;0c8b279c-effe-49a8-8a2f-c5c6b8a6a066&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Freibereichauswahl.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Gangauswahl.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Gangauswahl.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Gangauswahl.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Loungeauswahl.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Loungeauswahl.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Loungeauswahl.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Loungeauswahl.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/MainWindow.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/MainWindow.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/MainWindow.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Personendaten.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Reservierungs_Datem.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Saalauswahl.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Terrassenauswahl.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Tischauswahl.axaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/obj/Debug/net8.0/Reservio.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/obj/Debug/net8.0/Reservio.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -35,9 +98,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Project.Reservio.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,9 +112,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\julia\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\julia\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\julia\\AppData\\Local\\Symbols\\src"
+      "/Users/felixprattes/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
+      "/Users/felixprattes/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
+      "/Users/felixprattes/Library/Application Support/Symbols/src"
     ]
   }
 }]]></component>
@@ -89,6 +154,8 @@
       <workItem from="1728544768797" duration="2732000" />
       <workItem from="1728905661043" duration="1412000" />
       <workItem from="1728908010845" duration="1487000" />
+      <workItem from="1730732716104" duration="197000" />
+      <workItem from="1730733142687" duration="1558000" />
     </task>
     <task id="LOCAL-00001" summary="aas.kjre">
       <option name="closed" value="true" />
@@ -106,13 +173,22 @@
       <option name="project" value="LOCAL" />
       <updated>1728910620924</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed image bug">
+      <option name="closed" value="true" />
+      <created>1730734176605</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730734176605</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -129,6 +205,7 @@
     <MESSAGE value="gscheide commit message" />
     <MESSAGE value="aas.kjre" />
     <MESSAGE value="ghjklö" />
-    <option name="LAST_COMMIT_MESSAGE" value="ghjklö" />
+    <MESSAGE value="Fixed image bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed image bug" />
   </component>
 </project>

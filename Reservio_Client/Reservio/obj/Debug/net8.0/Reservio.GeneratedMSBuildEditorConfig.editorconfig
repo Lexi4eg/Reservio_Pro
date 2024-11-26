@@ -13,36 +13,36 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Reservio
-build_property.ProjectDir = C:\Users\julia\OneDrive\Dokumente\Schule\SWP1\5.Klasse\Reservio_Pro\Reservio_Klein\Reservio\
+build_property.ProjectDir = /Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio_Klein/Reservio/App.axaml]
+[/Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio_Klein/Reservio/Freibereichauswahl.axaml]
+[/Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Freibereichauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio_Klein/Reservio/Gangauswahl.axaml]
+[/Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Gangauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio_Klein/Reservio/Loungeauswahl.axaml]
+[/Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Loungeauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio_Klein/Reservio/MainWindow.axaml]
+[/Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio_Klein/Reservio/Personendaten.axaml]
+[/Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Personendaten.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio_Klein/Reservio/Reservierungs_Datem.axaml]
+[/Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Reservierungs_Datem.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio_Klein/Reservio/Saalauswahl.axaml]
+[/Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Saalauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio_Klein/Reservio/Terrassenauswahl.axaml]
+[/Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Terrassenauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio_Klein/Reservio/Tischauswahl.axaml]
+[/Users/felixprattes/Programming/Reservio_Backend/Reservio_Client/Reservio/Tischauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

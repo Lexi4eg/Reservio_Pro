@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="IU-242.23339.11">
+  <component name="dataSourceStorageLocal" created-in="IU-243.21565.193">
     <data-source name="postgres@localhost [2]" uuid="b9a677ba-e2b9-4aa5-88b4-bad89e8d99c2">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
       <secret-storage>master_key</secret-storage>
@@ -8,7 +8,7 @@
       <schema-mapping />
     </data-source>
     <data-source name="postgres@localhost" uuid="8374a47d-845d-4253-8eb0-3023e9389a9e">
-      <database-info product="PostgreSQL" version="17.0 (Debian 17.0-1.pgdg120+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="17.0" exact-driver-version="42.6">
+      <database-info product="PostgreSQL" version="17.2 (Debian 17.2-1.pgdg120+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="17.2" exact-driver-version="42.6">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
