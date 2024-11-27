@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47259d5e-9848-462c-87fd-9df80ee473ab" name="Changes" comment="Cleanup">
-      <change afterPath="$PROJECT_DIR$/docker-compose-dev-linux-grafana.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opentelemetry-javaagent.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8374a47d-845d-4253-8eb0-3023e9389a9e.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose-dev-linux.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-dev-linux.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/HttpClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/HttpClientEndpoint/HttpClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Observability/OpenTelemetryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Observability/OpenTelemetryConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +36,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Reservio_Backend" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Reservio_Backend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Reservio_Backend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -108,6 +115,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Batch.gradlew.executor": "Run",
     "DefaultPlantUmlFileTemplate": "UML Sequence",
     "Docker.Dockerfile.executor": "Run",
     "Docker.docker-compose-dev-linux.yaml.db: Compose Deployment.executor": "Run",
@@ -119,6 +127,7 @@
     "Docker.tempo-dev.yaml: Compose Deployment.executor": "Run",
     "Docker.tempo.yaml.tempo: Compose Deployment.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Build Reservio_Backend.executor": "Run",
     "Gradle.Reservio_Backend [:org.Application.DebugCleanerApp.main()].executor": "Run",
     "Gradle.Reservio_Backend [:org.HttpClientEndpoint.HttpClientService.main()].executor": "Run",
     "Gradle.Reservio_Backend [:org.HttpClientEndpoint.Main.main()].executor": "Run",
@@ -157,8 +166,7 @@
     "DatabaseDriversLRU": [
       "postgresql"
     ],
-    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": [
-    ]
+    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": []
   }
 }]]></component>
   <component name="RecentsManager">
@@ -168,13 +176,13 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Reservio_Pro [runAll]">
-    <configuration name="HttpClientService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.HttpClientEndpoint.HttpClientService" />
+  <component name="RunManager" selected="Application.KafkaMain">
+    <configuration name="KafkaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.Kafka.KafkaMain" />
       <module name="Reservio_Backend.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.HttpClientEndpoint.*" />
+          <option name="PATTERN" value="org.Kafka.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -212,7 +220,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="Reservio_Pro [runAll]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -234,7 +242,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="gradlew" type="ShConfigurationType" temporary="true">
@@ -260,11 +268,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Reservio_Pro [runAll]" />
+        <item itemvalue="Application.KafkaMain" />
         <item itemvalue="Batch.gradlew" />
+        <item itemvalue="Gradle.Reservio_Pro [runAll]" />
         <item itemvalue="Gradle.Reservio_Pro [jar]" />
         <item itemvalue="Shell Script.gradlew" />
-        <item itemvalue="Application.HttpClientService" />
       </list>
     </recent_temporary>
   </component>

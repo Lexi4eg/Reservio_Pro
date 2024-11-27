@@ -4,8 +4,8 @@ plugins {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'com.Kafka.KafkaMain'
-        attributes 'Http-Server': 'com.HttpClientEndpoint.HttpClientService'
+        attributes 'Main-Class': 'org.Kafka.KafkaMain'
+        attributes 'Http-Server': 'org.HttpClientEndpoint.HttpClientService'
     }
 }
 
@@ -36,12 +36,12 @@ tasks.test {
 }
 
 task runKafkaMain(type: JavaExec) {
-    main = 'com.Kafka.KafkaMain'
+    mainClass = 'org.Kafka.KafkaMain'
     classpath = sourceSets.main.runtimeClasspath
 }
 
 task runHttpClientService(type: JavaExec) {
-    main = 'com.HttpClientEndpoint.HttpClientService'
+    mainClass = 'org.HttpClientEndpoint.HttpClientService'
     classpath = sourceSets.main.runtimeClasspath
 }
 

@@ -2,6 +2,7 @@ package org.HttpClientEndpoint;
 
 import static spark.Spark.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.opentelemetry.api.trace.Tracer;
 import org.ConfirmationService.ConfirmationObject;
 import org.DatabaseService.DatabaseService;
 import org.Kafka.ReservationObject;
@@ -31,6 +32,7 @@ public class HttpClientService{
     public static void main(String[] args) throws SQLException {
         LoggingService logger = new LoggingService();
         OpenTelemetryConfig.initOpenTelemetry();
+        Tracer tracer = OpenTelemetryConfig.getTracer();
 
         port(4567);
         get("/getConfirmation", (request, response) -> {
