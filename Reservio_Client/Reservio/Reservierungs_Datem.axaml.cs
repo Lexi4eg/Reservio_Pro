@@ -1,3 +1,4 @@
+using System;
 using System.Numerics;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -10,20 +11,22 @@ namespace Reservio
         {
             InitializeComponent();
         }
-
-        // Event handler for Weiter button click
-        private void OnWeiterButtonClick1(object sender, RoutedEventArgs e)
+        
+        private void OnWeiterButtonClick(object sender, RoutedEventArgs e)
         {
-            // Eingabewerte validieren
-            if (IsInputValid())
+            // Überprüfen, ob ein Tisch ausgewählt wurde
+            if (Personenanzahl != null)
             {
-                // Navigieren zur nächsten Seite
-                this.Content = new ThirdPage(); // Ersetzen Sie 'NextPage' durch die entsprechende Seite
+                // Den ausgewählten Tisch holen (z.B. "F1", "F2", etc.)
+                string personenanzahl = Personenanzahl.Text;
+
+                // Navigiere zur Personendaten-Seite und übergebe den ausgewählten Tisch
+                this.Content = new ThirdPage(personenanzahl);
             }
             else
             {
-                // Fehlernachricht anzeigen
-                ShowErrorMessage("Bitte füllen Sie alle erforderlichen Felder aus.");
+                // Fehlermeldung anzeigen, wenn kein Tisch ausgewählt wurde
+                ShowErrorMessage("Bitte wählen Sie einen Tisch aus.");
             }
         }
 

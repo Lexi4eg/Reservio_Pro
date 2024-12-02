@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Reservio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+face96162485259a6e0d4847fff99bfddc99badd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80d8116422fb90c799e3d0cae0ff670f666197a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Reservio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Reservio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

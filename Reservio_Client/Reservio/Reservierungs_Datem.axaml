@@ -179,7 +179,7 @@
                         FontSize="25"
                         HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center"
-                        Click="OnWeiterButtonClick1"/>
+                        Click="OnWeiterButtonClick"/>
             </Grid>
         </Border>
     </Grid>

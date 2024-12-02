@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ulvSViE+7MI=",
+  "dgSpecHash": "FXW6OisQkr4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\julia\\OneDrive\\Dokumente\\Schule\\SWP1\\5.Klasse\\Reservio_Pro\\Reservio_Klein\\Reservio\\Reservio.csproj",
+  "projectFilePath": "C:\\Users\\julia\\Documents\\SWP_Projekt_Reservio\\Reservio_Pro\\Reservio_Client\\Reservio\\Reservio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julia\\.nuget\\packages\\avalonia\\11.0.10\\avalonia.11.0.10.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.0.2023020321\\avalonia.angle.windows.natives.2.1.0.2023020321.nupkg.sha512",

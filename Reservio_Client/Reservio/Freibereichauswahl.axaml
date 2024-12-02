@@ -64,5 +64,13 @@
                 HorizontalContentAlignment="Center" 
                 VerticalContentAlignment="Center"
                 Click="OnZurückButtonClick"/>
+        
+        <TextBlock x:Name="Personenanzahl_"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Bottom" 
+                   Margin="0,50,0,0"
+                   FontSize="24" 
+                   FontWeight="Bold"
+                   Foreground="CadetBlue"/>
     </Grid>
 </UserControl>

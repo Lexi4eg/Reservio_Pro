@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\julia\\OneDrive\\Dokumente\\Schule\\SWP1\\5.Klasse\\Reservio_Pro\\Reservio_Klein\\Reservio\\Reservio.csproj": {}
+    "C:\\Users\\julia\\Documents\\SWP_Projekt_Reservio\\Reservio_Pro\\Reservio_Client\\Reservio\\Reservio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\julia\\OneDrive\\Dokumente\\Schule\\SWP1\\5.Klasse\\Reservio_Pro\\Reservio_Klein\\Reservio\\Reservio.csproj": {
+    "C:\\Users\\julia\\Documents\\SWP_Projekt_Reservio\\Reservio_Pro\\Reservio_Client\\Reservio\\Reservio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julia\\OneDrive\\Dokumente\\Schule\\SWP1\\5.Klasse\\Reservio_Pro\\Reservio_Klein\\Reservio\\Reservio.csproj",
+        "projectUniqueName": "C:\\Users\\julia\\Documents\\SWP_Projekt_Reservio\\Reservio_Pro\\Reservio_Client\\Reservio\\Reservio.csproj",
         "projectName": "Reservio",
-        "projectPath": "C:\\Users\\julia\\OneDrive\\Dokumente\\Schule\\SWP1\\5.Klasse\\Reservio_Pro\\Reservio_Klein\\Reservio\\Reservio.csproj",
+        "projectPath": "C:\\Users\\julia\\Documents\\SWP_Projekt_Reservio\\Reservio_Pro\\Reservio_Client\\Reservio\\Reservio.csproj",
         "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julia\\OneDrive\\Dokumente\\Schule\\SWP1\\5.Klasse\\Reservio_Pro\\Reservio_Klein\\Reservio\\obj\\",
+        "outputPath": "C:\\Users\\julia\\Documents\\SWP_Projekt_Reservio\\Reservio_Pro\\Reservio_Client\\Reservio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

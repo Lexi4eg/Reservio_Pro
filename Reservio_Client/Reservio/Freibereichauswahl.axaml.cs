@@ -5,11 +5,13 @@ namespace Reservio
 {
     public partial class FreibereichPage : UserControl
     {
-        public FreibereichPage()
+        private string Personenanzahl { get; }
+
+        public FreibereichPage(string personenanzahl)
         {
             InitializeComponent();
+            Personenanzahl = personenanzahl;
         }
-
         // Event handler für Weiter-Button
         private void OnWeiterButtonClick(object sender, RoutedEventArgs e)
         {
@@ -20,7 +22,7 @@ namespace Reservio
                 string selectedTable = (areaComboBox.SelectedItem as ComboBoxItem).Content.ToString();
 
                 // Navigiere zur Personendaten-Seite und übergebe den ausgewählten Tisch
-                this.Content = new Personendaten(selectedTable);
+                this.Content = new Personendaten(selectedTable, Personenanzahl);
             }
             else
             {
@@ -37,7 +39,7 @@ namespace Reservio
 
         private void OnZurückButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Content = new ThirdPage();        
+            this.Content = new ThirdPage(Personenanzahl);        
         }
     }
 }

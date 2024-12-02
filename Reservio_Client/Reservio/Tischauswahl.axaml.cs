@@ -5,16 +5,20 @@ namespace Reservio
 {
     public partial class ThirdPage : UserControl
     {
-        public ThirdPage()
+        private string Personenanzahl { get; }
+
+        public ThirdPage(string personenanzahl)
         {
             InitializeComponent();
+            Personenanzahl = personenanzahl;
         }
-
+        
         // Event handler for Weiter button click
         private void OnWeiterButtonClick2(object sender, RoutedEventArgs e)
         {
             // Get the selected item from the ComboBox
             var selectedItem = this.FindControl<ComboBox>("areaComboBox").SelectedItem as ComboBoxItem;
+            
 
             if (selectedItem != null)
             {
@@ -24,23 +28,23 @@ namespace Reservio
                 if (selectedArea == "Lounge")
                 {
                     // Navigate to the LoungePage
-                    this.Content = new LoungePage();
+                    this.Content = new LoungePage(Personenanzahl);
                 }
                 else if (selectedArea == "Gang")
                 {
-                    this.Content = new GangPage();
+                    this.Content = new GangPage(Personenanzahl);
                 }
                 else if (selectedArea == "Saal")
                 {
-                    this.Content = new SaalPage();
+                    this.Content = new SaalPage(Personenanzahl);
                 }
                 else if (selectedArea == "Terrasse")
                 {
-                    this.Content = new TerrassenPage();
+                    this.Content = new TerrassenPage(Personenanzahl);
                 }
                 else if (selectedArea == "Freibereich")
                 {
-                    this.Content = new FreibereichPage();
+                    this.Content = new FreibereichPage(Personenanzahl);
                 }
             }
         }

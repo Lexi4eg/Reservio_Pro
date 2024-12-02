@@ -16,7 +16,7 @@ public class DatabaseService {
     private final LoggingService loggingService;
 
     public DatabaseService() throws SQLException {
-        this.connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "password");
+        this.connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/reservio", "postgres", "password");
         this.loggingService = new LoggingService();
     }
 

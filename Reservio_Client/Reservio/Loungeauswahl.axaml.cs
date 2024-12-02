@@ -5,9 +5,12 @@ namespace Reservio
 {
     public partial class LoungePage : UserControl
     {
-        public LoungePage()
+        private string Personenanzahl { get; }
+
+        public LoungePage(string personenanzahl)
         {
             InitializeComponent();
+            Personenanzahl = personenanzahl;
         }
         
         // Event handler für Weiter-Button
@@ -20,7 +23,7 @@ namespace Reservio
                 string selectedTable = (areaComboBox.SelectedItem as ComboBoxItem).Content.ToString();
 
                 // Navigiere zur Personendaten-Seite und übergebe den ausgewählten Tisch
-                this.Content = new Personendaten(selectedTable);
+                this.Content = new Personendaten(selectedTable, Personenanzahl);
             }
             else
             {
@@ -37,7 +40,7 @@ namespace Reservio
 
         private void OnZurückButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Content = new ThirdPage();        
+            this.Content = new ThirdPage(Personenanzahl);        
         }
     }
 }

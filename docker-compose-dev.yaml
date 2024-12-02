@@ -15,7 +15,6 @@ services:
 
   zookeeper:
     image: arm64v8/zookeeper:latest
-    platform: linux/amd64
     container_name: zookeeper-dev
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
@@ -23,7 +22,6 @@ services:
 
   broker:
     image: bitnami/kafka:latest
-    platform: linux/amd64
     container_name: broker-dev
     restart: always
     ports:

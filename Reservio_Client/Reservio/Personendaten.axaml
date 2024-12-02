@@ -78,6 +78,7 @@
                 
                     <TextBox Width="320"
                              Height="45"
+                             x:Name="Vorname"
                              HorizontalAlignment="Center"
                              BorderBrush="Indigo"
                              BorderThickness="1"
@@ -100,6 +101,7 @@
                 
                     <TextBox Width="320"
                              Height="45"
+                             x:Name="Nachname"
                              HorizontalAlignment="Center"
                              BorderBrush="Indigo"
                              BorderThickness="1"
@@ -122,7 +124,7 @@
                 
                     <TextBox Width="320"
                              Height="45"
-                             Name="Telefonnummer"
+                             x:Name="Telefonnummer"
                              HorizontalAlignment="Center"
                              BorderBrush="Indigo"
                              BorderThickness="1"
@@ -147,6 +149,7 @@
                     <TextBox Width="320"
                              Height="45"
                              HorizontalAlignment="Center"
+                             x:Name="Email"
                              BorderBrush="Indigo"
                              BorderThickness="1"
                              VerticalAlignment="Center"
@@ -172,7 +175,8 @@
                         Background="White" 
                         FontSize="25"
                         HorizontalContentAlignment="Center" 
-                        VerticalContentAlignment="Center"/>
+                        VerticalContentAlignment="Center"
+                        Click="OnWeiterButtonClick"/>
                 
            <!-- Button zurück zur Bereichsauswahl -->
                     <Button Content="Zurück" 
@@ -186,8 +190,6 @@
                         HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center"
                         Click="OnZurückButtonClick"/>
-                
-                
                 
             </Grid>
         </Border>
