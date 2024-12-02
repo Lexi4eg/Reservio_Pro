@@ -1,3 +1,4 @@
+using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 
@@ -6,11 +7,13 @@ namespace Reservio
     public partial class ThirdPage : UserControl
     {
         private string Personenanzahl { get; }
+        private DateTime Datum { get; }
 
-        public ThirdPage(string personenanzahl)
+        public ThirdPage(string personenanzahl, DateTime datum)
         {
             InitializeComponent();
             Personenanzahl = personenanzahl;
+            Datum = datum;
         }
         
         // Event handler for Weiter button click
@@ -28,23 +31,23 @@ namespace Reservio
                 if (selectedArea == "Lounge")
                 {
                     // Navigate to the LoungePage
-                    this.Content = new LoungePage(Personenanzahl);
+                    this.Content = new LoungePage(Personenanzahl, Datum);
                 }
                 else if (selectedArea == "Gang")
                 {
-                    this.Content = new GangPage(Personenanzahl);
+                    this.Content = new GangPage(Personenanzahl, Datum);
                 }
                 else if (selectedArea == "Saal")
                 {
-                    this.Content = new SaalPage(Personenanzahl);
+                    this.Content = new SaalPage(Personenanzahl, Datum);
                 }
                 else if (selectedArea == "Terrasse")
                 {
-                    this.Content = new TerrassenPage(Personenanzahl);
+                    this.Content = new TerrassenPage(Personenanzahl, Datum);
                 }
                 else if (selectedArea == "Freibereich")
                 {
-                    this.Content = new FreibereichPage(Personenanzahl);
+                    this.Content = new FreibereichPage(Personenanzahl, Datum);
                 }
             }
         }

@@ -12,14 +12,15 @@ namespace Reservio
     {
         private string SelectedTable { get; }
         private string Personenanzahl { get; }
-        
+        private DateTime Datum { get; }
         
 
-        public Personendaten(string selectedTable, string personenanzahl)
+        public Personendaten(string selectedTable, string personenanzahl, DateTime datum)
         {
             InitializeComponent();
             SelectedTable = selectedTable;
             Personenanzahl = personenanzahl;
+            Datum = datum;
 
             // Den ausgewählten Tisch in einem TextBlock anzeigen
             DisplaySelectedTable();
@@ -32,7 +33,7 @@ namespace Reservio
 
         private void OnZurückButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Content = new ThirdPage(Personenanzahl);        
+            this.Content = new ThirdPage(Personenanzahl, Datum);        
         }
         
         private async void OnWeiterButtonClick(object sender, RoutedEventArgs e)
@@ -42,7 +43,7 @@ namespace Reservio
                 id = "74678468",
                 firstname = Vorname.Text,
                 lastname = Nachname.Text,
-                date = DateTime.UtcNow,
+                date = Datum,
                 peopleCount = int.Parse(Personenanzahl),
                 email = Email.Text,
                 phoneNumber = Telefonnummer.Text,
@@ -52,12 +53,10 @@ namespace Reservio
                 numberChairs = 0
             };
 
-            string apiUrl = "http://localhost:4567/sendReservation"; // Replace with your actual API endpoint
+            string apiUrl = "http://localhost:4567/sendReservation"; 
             var client = new ApiClient();
 
             await client.SendPostRequestAsync(apiUrl, reservation);
-            
         }
-        
     }
 }

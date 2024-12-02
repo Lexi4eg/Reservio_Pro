@@ -14,20 +14,18 @@ namespace Reservio
         
         private void OnWeiterButtonClick(object sender, RoutedEventArgs e)
         {
-            // Überprüfen, ob ein Tisch ausgewählt wurde
-            if (Personenanzahl != null)
-            {
-                // Den ausgewählten Tisch holen (z.B. "F1", "F2", etc.)
-                string personenanzahl = Personenanzahl.Text;
+            string personenanzahl = Personenanzahl.Text;
+            var selectedDate = datePicker.SelectedDate.HasValue ? datePicker.SelectedDate.Value.DateTime : (DateTime?)null;
+            var selectedHour = hoursComboBox.SelectedItem as ComboBoxItem;
+            var selectedMinute = minutesComboBox.SelectedItem as ComboBoxItem;
 
-                // Navigiere zur Personendaten-Seite und übergebe den ausgewählten Tisch
-                this.Content = new ThirdPage(personenanzahl);
-            }
-            else
-            {
-                // Fehlermeldung anzeigen, wenn kein Tisch ausgewählt wurde
-                ShowErrorMessage("Bitte wählen Sie einen Tisch aus.");
-            }
+            // Zusammenstellen der Uhrzeit
+            var time = TimeSpan.Parse($"{selectedHour.Content}:{selectedMinute.Content}");
+
+            // Daten an die nächste Seite weitergeben
+            var reservierungsDatum = selectedDate.Value.Date + time;
+            
+            this.Content = new ThirdPage(personenanzahl, reservierungsDatum);
         }
 
         private bool IsInputValid()

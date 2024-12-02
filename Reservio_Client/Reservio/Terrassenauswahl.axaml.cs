@@ -1,3 +1,4 @@
+using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 
@@ -6,11 +7,13 @@ namespace Reservio
     public partial class TerrassenPage : UserControl
     {
         private string Personenanzahl { get; }
+        private DateTime Datum { get; }
 
-        public TerrassenPage(string personenanzahl)
+        public TerrassenPage(string personenanzahl, DateTime datum)
         {
             InitializeComponent();
             Personenanzahl = personenanzahl;
+            Datum = datum;
         }
         
         // Event handler für Weiter-Button
@@ -23,7 +26,7 @@ namespace Reservio
                 string selectedTable = (areaComboBox.SelectedItem as ComboBoxItem).Content.ToString();
 
                 // Navigiere zur Personendaten-Seite und übergebe den ausgewählten Tisch
-                this.Content = new Personendaten(selectedTable, Personenanzahl);
+                this.Content = new Personendaten(selectedTable, Personenanzahl, Datum);;
             }
             else
             {
@@ -40,7 +43,7 @@ namespace Reservio
 
         private void OnZurückButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Content = new ThirdPage(Personenanzahl);        
+            this.Content = new ThirdPage(Personenanzahl, Datum);        
         }
     }
 }
