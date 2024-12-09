@@ -44,7 +44,7 @@
                 FontSize="25"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
-                Click="OnWeiterButtonClick2"/>
+                Click="OnWeiterButtonClick"/>
 
         <!-- Button zurück zu ReservierungsDaten -->
         <Button Content="Zurück" 
@@ -58,6 +58,5 @@
                 HorizontalContentAlignment="Center" 
                 VerticalContentAlignment="Center"
                 Click="OnZurückButtonClick"/>
-        
     </Grid>
 </UserControl>

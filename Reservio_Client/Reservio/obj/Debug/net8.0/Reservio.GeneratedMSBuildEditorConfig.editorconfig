@@ -26,6 +26,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/Gangauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/LastPage.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/Loungeauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

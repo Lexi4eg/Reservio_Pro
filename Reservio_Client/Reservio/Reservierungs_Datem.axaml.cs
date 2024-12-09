@@ -1,5 +1,4 @@
 using System;
-using System.Numerics;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 
@@ -11,50 +10,65 @@ namespace Reservio
         {
             InitializeComponent();
         }
-        
+
         private void OnWeiterButtonClick(object sender, RoutedEventArgs e)
         {
+            if (!IsInputValid())
+            {
+                ShowErrorMessage("Bitte füllen Sie alle Felder aus, bevor Sie fortfahren!");
+                return;
+            }
+
             string personenanzahl = Personenanzahl.Text;
-            var selectedDate = datePicker.SelectedDate.HasValue ? datePicker.SelectedDate.Value.DateTime : (DateTime?)null;
-            var selectedHour = hoursComboBox.SelectedItem as ComboBoxItem;
-            var selectedMinute = minutesComboBox.SelectedItem as ComboBoxItem;
+            var selectedDate = datePicker.SelectedDate.HasValue ? datePicker.SelectedDate.Value.DateTime : DateTime.MinValue;
+            var selectedHour = (hoursComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+            var selectedMinute = (minutesComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
 
-            // Zusammenstellen der Uhrzeit
-            var time = TimeSpan.Parse($"{selectedHour.Content}:{selectedMinute.Content}");
+            var time = TimeSpan.Parse($"{selectedHour}:{selectedMinute}");
+            var reservierungsDatum = selectedDate.Date + time;
 
-            // Daten an die nächste Seite weitergeben
-            var reservierungsDatum = selectedDate.Value.Date + time;
-            
             this.Content = new ThirdPage(personenanzahl, reservierungsDatum);
         }
 
         private bool IsInputValid()
         {
-            // Überprüfen, ob das Datum ausgewählt ist
-            if (datePicker.SelectedDate == null)
+            if (!datePicker.SelectedDate.HasValue)
                 return false;
 
-            // Überprüfen, ob eine Stunde ausgewählt ist
             if (hoursComboBox.SelectedItem == null)
                 return false;
 
-            // Überprüfen, ob eine Minute ausgewählt ist
             if (minutesComboBox.SelectedItem == null)
                 return false;
 
-            // Überprüfen, ob die Anzahl der Personen eingegeben wurde
-            if (Personenanzahl.Text == null)
-            {
+            if (string.IsNullOrWhiteSpace(Personenanzahl.Text))
                 return false;
-            }
-            
-            // Alle Eingaben sind gültig
+
             return true;
         }
 
         private void ShowErrorMessage(string message)
         {
-            // Hier können Sie eine MessageBox oder einen anderen Mechanismus zur Anzeige der Fehlermeldung verwenden
+            var errorWindow = new Window
+            {
+                Width = 300,
+                Height = 150,
+                Content = new TextBlock
+                {
+                    Text = message,
+                    HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
+                    VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center,
+                    TextWrapping = Avalonia.Media.TextWrapping.Wrap,
+                    FontSize = 16
+                }
+            };
+
+            errorWindow.ShowDialog((Window)this.VisualRoot);
+        }
+
+        private void OnHauptseiteClick(object? sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

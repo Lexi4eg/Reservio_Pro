@@ -55,5 +55,9 @@
             <DependentUpon>Personendaten.axaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
+        <Compile Update="LastPage.axaml.cs">
+          <DependentUpon>LastPage.axaml</DependentUpon>
+          <SubType>Code</SubType>
+        </Compile>
     </ItemGroup>
 </Project>

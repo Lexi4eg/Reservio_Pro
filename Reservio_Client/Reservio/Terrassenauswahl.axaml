@@ -28,14 +28,6 @@
                   VerticalAlignment="Bottom" 
                   Margin="0,0,400,55"
                   FontSize="25">
-            <ComboBoxItem Name="T1" Content="T1" />
-            <ComboBoxItem Name="T2" Content="T2" />
-            <ComboBoxItem Name="T3" Content="T3" />
-            <ComboBoxItem Name="T4" Content="T4" />
-            <ComboBoxItem Name="T5" Content="T5" />
-            <ComboBoxItem Name="T6" Content="T6" />
-            <ComboBoxItem Name="T7" Content="T7" />
-            <ComboBoxItem Name="T8" Content="T8" />
         </ComboBox>
 
         <!-- Button weiter zur Buchungsbestätigung -->

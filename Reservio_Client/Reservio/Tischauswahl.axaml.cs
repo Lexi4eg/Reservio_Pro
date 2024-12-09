@@ -15,46 +15,70 @@ namespace Reservio
             Personenanzahl = personenanzahl;
             Datum = datum;
         }
-        
+
         // Event handler for Weiter button click
-        private void OnWeiterButtonClick2(object sender, RoutedEventArgs e)
+        private void OnWeiterButtonClick(object sender, RoutedEventArgs e)
         {
-            // Get the selected item from the ComboBox
-            var selectedItem = this.FindControl<ComboBox>("areaComboBox").SelectedItem as ComboBoxItem;
-            
+            // Überprüfen, ob ein Bereich ausgewählt ist
+            var comboBox = this.FindControl<ComboBox>("areaComboBox");
+            var selectedItem = comboBox.SelectedItem as ComboBoxItem;
 
-            if (selectedItem != null)
+            if (selectedItem == null)
             {
-                string selectedArea = selectedItem.Content.ToString();
+                ShowErrorMessage("Bitte wählen Sie einen Bereich aus, bevor Sie fortfahren!");
+                return;
+            }
 
-                // Check if the selected area is "Lounge"
-                if (selectedArea == "Lounge")
-                {
-                    // Navigate to the LoungePage
+            string selectedArea = selectedItem.Content.ToString();
+
+            // Navigation basierend auf dem ausgewählten Bereich
+            switch (selectedArea)
+            {
+                case "Lounge":
                     this.Content = new LoungePage(Personenanzahl, Datum);
-                }
-                else if (selectedArea == "Gang")
-                {
+                    break;
+                case "Gang":
                     this.Content = new GangPage(Personenanzahl, Datum);
-                }
-                else if (selectedArea == "Saal")
-                {
+                    break;
+                case "Saal":
                     this.Content = new SaalPage(Personenanzahl, Datum);
-                }
-                else if (selectedArea == "Terrasse")
-                {
+                    break;
+                case "Terrasse":
                     this.Content = new TerrassenPage(Personenanzahl, Datum);
-                }
-                else if (selectedArea == "Freibereich")
-                {
+                    break;
+                case "Freibereich":
                     this.Content = new FreibereichPage(Personenanzahl, Datum);
-                }
+                    break;
+                default:
+                    ShowErrorMessage("Ungültiger Bereich ausgewählt.");
+                    break;
             }
         }
+
         private void OnZurückButtonClick(object sender, RoutedEventArgs e)
         {
-            // Lade die neue Seite in das ContentControl (hier kannst du eine andere Seite laden)
-            this.Content = new SecondPage();  // `SecondPage` muss ein UserControl sein
+            // Zurück zur SecondPage
+            this.Content = new SecondPage();
+        }
+
+        private void ShowErrorMessage(string message)
+        {
+            // Beispiel für eine einfache Fehlermeldung
+            var errorWindow = new Window
+            {
+                Width = 300,
+                Height = 150,
+                Content = new TextBlock
+                {
+                    Text = message,
+                    HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
+                    VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center,
+                    TextWrapping = Avalonia.Media.TextWrapping.Wrap,
+                    FontSize = 16
+                }
+            };
+
+            errorWindow.ShowDialog((Window)this.VisualRoot);
         }
     }
 }

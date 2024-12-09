@@ -27,16 +27,6 @@
                   VerticalAlignment="Bottom" 
                   Margin="0,0,400,55"
                   FontSize="25">
-            <ComboBoxItem Name="F1" Content="F1"/>
-            <ComboBoxItem Name="F2" Content="F2"/>
-            <ComboBoxItem Name="F3" Content="F3"/>
-            <ComboBoxItem Name="F4" Content="F4"/>
-            <ComboBoxItem Name="F5" Content="F5"/>
-            <ComboBoxItem Name="F6" Content="F6"/>
-            <ComboBoxItem Name="F7" Content="F7"/>
-            <ComboBoxItem Name="F8" Content="F8"/>
-            <ComboBoxItem Name="F9" Content="F9"/>
-            <ComboBoxItem Name="F10" Content="F10"/>
         </ComboBox>
 
         <!-- Button weiter zur Buchungsbestätigung -->

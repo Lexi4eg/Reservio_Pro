@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 
@@ -6,43 +8,68 @@ namespace Reservio
 {
     public partial class GangPage : UserControl
     {
-        private string Personenanzahl { get; }
+   private string Personenanzahl { get; }
         private DateTime Datum { get; }
+
+        // Kapazitäten der Tische
+        private readonly Dictionary<string, int> tischKapazitäten = new Dictionary<string, int>
+        {
+            { "G1", 8 },
+            { "G2", 8 }
+        };
 
         public GangPage(string personenanzahl, DateTime datum)
         {
             InitializeComponent();
-            Personenanzahl = personenanzahl;
+            int personenanzahl_ = int.Parse(personenanzahl);
             Datum = datum;
+            
+            var erlaubteTische = tischKapazitäten
+                .Where(kv => kv.Value >= personenanzahl_)
+                .Select(kv => kv.Key);
+
+            foreach (var tisch in erlaubteTische)
+            {
+                areaComboBox.Items.Add(new ComboBoxItem { Content = tisch });
+            }
         }
-        
-        // Event handler für Weiter-Button
+
         private void OnWeiterButtonClick(object sender, RoutedEventArgs e)
         {
-            // Überprüfen, ob ein Tisch ausgewählt wurde
             if (areaComboBox.SelectedItem != null)
             {
-                // Den ausgewählten Tisch holen (z.B. "F1", "F2", etc.)
-                string selectedTable = (areaComboBox.SelectedItem as ComboBoxItem).Content.ToString();
+                string selectedTable = (areaComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString();
 
-                // Navigiere zur Personendaten-Seite und übergebe den ausgewählten Tisch
-                this.Content = new Personendaten(selectedTable, Personenanzahl, Datum);;            }
+                this.Content = new Personendaten(selectedTable, Personenanzahl, Datum);
+            }
             else
             {
-                // Fehlermeldung anzeigen, wenn kein Tisch ausgewählt wurde
                 ShowErrorMessage("Bitte wählen Sie einen Tisch aus.");
             }
         }
 
-        // Methode zur Anzeige einer Fehlermeldung (optional)
         private void ShowErrorMessage(string message)
         {
-            // Hier könntest du eine MessageBox oder ein anderes UI-Element zur Fehleranzeige implementieren
+            var errorWindow = new Window
+            {
+                Width = 300,
+                Height = 150,
+                Content = new TextBlock
+                {
+                    Text = message,
+                    HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
+                    VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center,
+                    TextWrapping = Avalonia.Media.TextWrapping.Wrap,
+                    FontSize = 16
+                }
+            };
+
+            errorWindow.ShowDialog((Window)this.VisualRoot);
         }
 
         private void OnZurückButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Content = new ThirdPage(Personenanzahl, Datum);        
+            this.Content = new ThirdPage(Personenanzahl, Datum);
         }
     }
 }
