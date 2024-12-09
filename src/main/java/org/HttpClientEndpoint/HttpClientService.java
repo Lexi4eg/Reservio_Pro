@@ -2,12 +2,14 @@ package org.HttpClientEndpoint;
 
 import static spark.Spark.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.opentelemetry.api.metrics.LongCounter;
+import io.opentelemetry.api.metrics.Meter;
 import io.opentelemetry.api.trace.Tracer;
 import org.ConfirmationService.ConfirmationObject;
+import org.ConfirmationService.TableEntry;
 import org.DatabaseService.DatabaseService;
 import org.Kafka.ReservationObject;
 import org.Logging.LoggingService;
-import org.Observability.OpenTelemetryConfig;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -31,8 +33,7 @@ import java.util.Properties;
 public class HttpClientService{
     public static void main(String[] args) throws SQLException {
         LoggingService logger = new LoggingService();
-        OpenTelemetryConfig.initOpenTelemetry();
-        Tracer tracer = OpenTelemetryConfig.getTracer();
+
 
         port(4567);
         get("/getConfirmation", (request, response) -> {
@@ -148,6 +149,18 @@ public class HttpClientService{
         });
 
 
+        get("/getAllTableEntries", (request, response) -> {
+            DatabaseService dbService = new DatabaseService();
+            List<TableEntry> tableIds;
+            tableIds = dbService.getAllTableEntries();
+            ObjectMapper objectMapper = new ObjectMapper();
+            String jsonResponse = objectMapper.writeValueAsString(tableIds);
+            response.type("application/json");
+            response.status(200);
+            return jsonResponse;
+        });
+
+
         get("/getTablesByTime", (request, response) -> {
             String dateString = request.queryParams("date");
 
@@ -189,4 +202,6 @@ public class HttpClientService{
             return jsonResponse;
         });
     }
+
+
 }
