@@ -76,6 +76,8 @@
                 
                     <DatePicker 
                             x:Name="datePicker"
+                            Name="datePicker" 
+                            SelectedDateChanged="DatePicker_OnSelectedDateChanged"
                             Width="320"
                             Height="45"
                             HorizontalAlignment="Center"

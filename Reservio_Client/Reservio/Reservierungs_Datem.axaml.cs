@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices.JavaScript;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 
@@ -45,6 +46,23 @@ namespace Reservio
                 return false;
 
             return true;
+        }
+        
+        private void DatePicker_OnSelectedDateChanged(object? sender, DatePickerSelectedValueChangedEventArgs datePickerSelectedValueChangedEventArgs)
+        {
+            var datePicker = sender as DatePicker;
+            if (datePicker?.SelectedDate != null)
+            {
+                DateTimeOffset selectedDate = datePicker.SelectedDate.Value;
+
+                // Überprüfen, ob das Datum in der Vergangenheit liegt
+                if (selectedDate < DateTime.Now.Date)
+                {
+                    // Setze das Datum auf den heutigen Tag zurück oder zeige eine Fehlermeldung
+                    datePicker.SelectedDate = DateTime.Now.Date;
+                    ShowErrorMessage("Bitte wählen Sie ein zukünftiges Datum aus.");
+                }
+            }
         }
 
         private void ShowErrorMessage(string message)

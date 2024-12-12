@@ -27,6 +27,7 @@ namespace Reservio
             InitializeComponent();
             int personenanzahl_ = int.Parse(personenanzahl);
             Datum = datum;
+            Personenanzahl = personenanzahl;
             
             var erlaubteTische = tischKapazitäten
                 .Where(kv => kv.Value >= personenanzahl_)

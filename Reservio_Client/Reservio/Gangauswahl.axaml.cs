@@ -8,7 +8,7 @@ namespace Reservio
 {
     public partial class GangPage : UserControl
     {
-   private string Personenanzahl { get; }
+        private string Personenanzahl { get; }
         private DateTime Datum { get; }
 
         // Kapazitäten der Tische
@@ -23,6 +23,7 @@ namespace Reservio
             InitializeComponent();
             int personenanzahl_ = int.Parse(personenanzahl);
             Datum = datum;
+            Personenanzahl = personenanzahl;
             
             var erlaubteTische = tischKapazitäten
                 .Where(kv => kv.Value >= personenanzahl_)
