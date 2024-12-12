@@ -32,7 +32,7 @@ namespace Reservio
 
         private void OnZurückButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Content = new ThirdPage(Personenanzahl, Datum);
+            this.Content = new Tischauswahl(Personenanzahl, Datum);
         }
 
         private async void OnWeiterButtonClick(object sender, RoutedEventArgs e)

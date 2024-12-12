@@ -13,7 +13,7 @@ namespace Reservio
 
         private void OnHauptseiteClick(object? sender, RoutedEventArgs e)
         {
-            this.Content = new SecondPage();
+            this.Content = new Reservierungsdaten();
         }
     }
 }

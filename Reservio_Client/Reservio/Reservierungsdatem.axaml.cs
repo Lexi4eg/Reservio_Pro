@@ -5,9 +5,9 @@ using Avalonia.Interactivity;
 
 namespace Reservio
 {
-    public partial class SecondPage : UserControl
+    public partial class Reservierungsdaten : UserControl
     {
-        public SecondPage()
+        public Reservierungsdaten()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace Reservio
             var time = TimeSpan.Parse($"{selectedHour}:{selectedMinute}");
             var reservierungsDatum = selectedDate.Date + time;
 
-            this.Content = new ThirdPage(personenanzahl, reservierungsDatum);
+            this.Content = new Tischauswahl(personenanzahl, reservierungsDatum);
         }
 
         private bool IsInputValid()

@@ -23,7 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Update="Reservierungs_Datem.axaml.cs">
+        <Compile Update="Reservierungsdatem.axaml.cs">
             <DependentUpon>Reservierungs_Datem.axaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>

@@ -4,12 +4,12 @@ using Avalonia.Interactivity;
 
 namespace Reservio
 {
-    public partial class ThirdPage : UserControl
+    public partial class Tischauswahl : UserControl
     {
         private string Personenanzahl { get; }
         private DateTime Datum { get; }
 
-        public ThirdPage(string personenanzahl, DateTime datum)
+        public Tischauswahl(string personenanzahl, DateTime datum)
         {
             InitializeComponent();
             Personenanzahl = personenanzahl;
@@ -58,7 +58,7 @@ namespace Reservio
         private void OnZurückButtonClick(object sender, RoutedEventArgs e)
         {
             // Zurück zur SecondPage
-            this.Content = new SecondPage();
+            this.Content = new Reservierungsdaten();
         }
 
         private void ShowErrorMessage(string message)
