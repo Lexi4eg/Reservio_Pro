@@ -5,7 +5,7 @@ public class ReservationRequest
     public string id { get; set; }
     public string firstname { get; set; }
     public string lastname { get; set; }
-    public DateTime date { get; set; } // Using DateTime instead of Timestamp
+    public DateTime date { get; set; } 
     public int peopleCount { get; set; }
     public string email { get; set; }
     public string phoneNumber { get; set; }

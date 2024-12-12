@@ -13,33 +13,57 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Reservio
-build_property.ProjectDir = C:\Users\julia\OneDrive\Dokumente\Schule\SWP1\5.Klasse\Reservio_Pro\Reservio\Reservio\
+build_property.ProjectDir = C:\Users\Sabine Kollegger\OneDrive\Dokumente\GitHub\Reservio_Pro\Reservio_Admin\Reservio\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/App.axaml]
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Freibereich.axaml]
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/Freibereich.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Gang.axaml]
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/Freibereichauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Lounge.axaml]
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/Gang.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/MainWindow.axaml]
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/Gangauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/NeueReservierung.axaml]
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/Lounge.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Reservierungen.axaml]
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/Loungeauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Saal.axaml]
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/julia/OneDrive/Dokumente/Schule/SWP1/5.Klasse/Reservio_Pro/Reservio/Reservio/Terrasse.axaml]
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/NeueReservierung.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/Personendaten.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/Reservierungen.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/Reservierungs_Datem.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/Saal.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/Saalauswahl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/Terrasse.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/Terrassenauswahl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Sabine Kollegger/OneDrive/Dokumente/GitHub/Reservio_Pro/Reservio_Admin/Reservio/Tischauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

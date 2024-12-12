@@ -15,11 +15,9 @@ public class ReservationObject {
     private String tableID;
     private Integer numberChairs;
 
-    // Default constructor
     public ReservationObject() {
     }
 
-    // Parameterized constructor
     public ReservationObject(
             String id,
             String firstname,
@@ -46,7 +44,6 @@ public class ReservationObject {
         this.numberChairs = numberChairs;
     }
 
-    // Getters and setters
     public String getId() {
         return id;
     }

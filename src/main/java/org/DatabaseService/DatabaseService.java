@@ -1,6 +1,7 @@
 package org.DatabaseService;
 
 import org.ConfirmationService.ConfirmationObject;
+import org.ConfirmationService.TableEntry;
 import org.Kafka.ReservationObject;
 import org.Logging.LoggingService;
 import org.slf4j.Logger;
@@ -13,7 +14,7 @@ import java.util.List;
 public class DatabaseService {
     private static final Logger log = LoggerFactory.getLogger(DatabaseService.class);
     private final Connection connection;
-    private final LoggingService loggingService;
+    private LoggingService loggingService = null;
 
     public DatabaseService() throws SQLException {
         this.connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/reservio", "postgres", "password");
@@ -241,5 +242,26 @@ public class DatabaseService {
         } catch (SQLException e) {
             loggingService.log("1", "Error saving confirmation");
         }
+    }
+
+    public List<TableEntry> getAllTableEntries() {
+        List<TableEntry> entries = new ArrayList<>();
+        String query = "SELECT * FROM tables";
+        try (PreparedStatement stmt = connection.prepareStatement(query);
+             ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                TableEntry entry = new TableEntry(
+                        rs.getString("id"),
+                        rs.getInt("numberofseatingpositions"), // Corrected column name
+                        rs.getString("section"),
+                        rs.getString("tableID")
+                );
+                entries.add(entry);
+            }
+        } catch (SQLException e) {
+            loggingService.log("1", "Error getting all table entries: " + e.getMessage());
+        }
+        loggingService.log("1", "All table entries retrieved with count: " + entries.size());
+        return entries;
     }
 }
