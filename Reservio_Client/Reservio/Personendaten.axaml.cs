@@ -87,7 +87,6 @@ namespace Reservio
                     FontSize = 16
                 }
             };
-
             errorWindow.ShowDialog((Window)this.VisualRoot);
         }
     }
