@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Reservio
 {
-    public partial class Personendaten : UserControl
+    public partial class Kontaktdaten : UserControl
     {
         private string SelectedTable { get; }
         private string Personenanzahl { get; }
         private DateTime Datum { get; }
 
-        public Personendaten(string selectedTable, string personenanzahl, DateTime datum)
+        public Kontaktdaten(string selectedTable, string personenanzahl, DateTime datum)
         {
             InitializeComponent();
             SelectedTable = selectedTable;
@@ -38,7 +38,8 @@ namespace Reservio
         {
             if (!IsInputValid())
             {
-                ShowErrorMessage("Bitte füllen Sie alle Felder aus, bevor Sie fortfahren.");
+                Fehlermeldung.Text = "Bitte füllen Sie alle Felder aus, \n" +
+                                     "bevor Sie fortfahren.";
                 return;
             }
 
@@ -71,24 +72,7 @@ namespace Reservio
                    !string.IsNullOrWhiteSpace(Email.Text) &&
                    !string.IsNullOrWhiteSpace(Telefonnummer.Text);
         }
-
-        private void ShowErrorMessage(string message)
-        {
-            var errorWindow = new Window
-            {
-                Width = 300,
-                Height = 150,
-                Content = new TextBlock
-                {
-                    Text = message,
-                    HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
-                    VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center,
-                    TextWrapping = Avalonia.Media.TextWrapping.Wrap,
-                    FontSize = 16
-                }
-            };
-            errorWindow.ShowDialog((Window)this.VisualRoot);
-        }
+        
     }
 
     public class ReservationRequest

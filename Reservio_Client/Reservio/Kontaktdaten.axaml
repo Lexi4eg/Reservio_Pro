@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Reservio.Personendaten">
+             x:Class="Reservio.Kontaktdaten">
 
     
     <UserControl.Styles>
@@ -23,53 +23,25 @@
                    Foreground="CadetBlue" 
                    FontWeight="Bold"/>
         
-        <!-- Oberer Strich -->
-        <Border Background="CadetBlue" 
-                Height="5" HorizontalAlignment="Stretch" 
-                VerticalAlignment="Top"
-                Margin="0,150,0,0"/>
-        
-        <!-- Bild -->
-        <Image Source=".\pics\food1.jpg" 
-               HorizontalAlignment="Center" 
-               VerticalAlignment="Top" 
-               Margin="0,155,0,0"/>
-        
-        <!-- Unterer Strich -->
-        <Border Background="CadetBlue" 
-                Height="5" 
-                HorizontalAlignment="Stretch" 
-                VerticalAlignment="Top"
-                Margin="0,415,0,0"/>
-        
         <!-- Box -->
         <Border BorderBrush="Indigo" 
                 BorderThickness="2" 
                 CornerRadius="16" 
                 Width="600" 
-                Height="600"
+                Height="750"
                 Background="Wheat"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center"
-                Margin="0,300,0,0">
+                Margin="0,100,0,0">
             
             <!-- Grid innerhalb der Border als Container -->
             <Grid>
-                <!-- TextBlock in der Box -->
-                <TextBlock Text="Geben Sie Ihre persönlichen Daten an" 
-                           HorizontalAlignment="Center" 
-                           VerticalAlignment="Top" 
-                           Margin="0,50,0,0"
-                           FontSize="30" 
-                           FontWeight="Bold"
-                           Foreground="CadetBlue"/>
-                
                 <!-- StackPanel für "Vorname" und Textbox -->
                 <StackPanel 
                     Orientation="Horizontal"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Margin="40,120,0,0"
+                    Margin="40,50,0,0"
                     Spacing="10">
                     <TextBlock Text="Vorname:"
                                VerticalAlignment="Center"
@@ -92,7 +64,7 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Margin="40,180,0,0"
+                    Margin="40,110,0,0"
                     Spacing="10">
                     <TextBlock Text="Nachname:"
                                VerticalAlignment="Center"
@@ -115,7 +87,7 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Margin="40,240,0,0"
+                    Margin="40,170,0,0"
                     Spacing="10">
                     <TextBlock Text="Telefonnummer:"
                                VerticalAlignment="Center"
@@ -139,7 +111,7 @@
                     Orientation="Horizontal"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Margin="40,300,0,0"
+                    Margin="40,230,0,0"
                     Spacing="10">
                     <TextBlock Text="Email:"
                                VerticalAlignment="Center"
@@ -157,20 +129,14 @@
                              Watermark="Email eingeben"/>
                 </StackPanel>
                 
-                <TextBlock x:Name="selectedTableTextBlock"
-                           HorizontalAlignment="Center" 
-                           VerticalAlignment="Bottom" 
-                           Margin="0,50,0,0"
-                           FontSize="24" 
-                           FontWeight="Bold"
-                           Foreground="CadetBlue"/>
                 
                 <!-- Button weiter zur Tischreservierung -->
                 <Button Content="Weiter" 
                         Width="400" 
                         Height="70"  
                         HorizontalAlignment="Center" 
-                        Margin="0,240,0,0"
+                        VerticalAlignment="Top"
+                        Margin="0,330,0,0"
                         Foreground="CadetBlue" 
                         Background="White" 
                         FontSize="25"
@@ -183,13 +149,30 @@
                         Width="400" 
                         Height="70"  
                         HorizontalAlignment="Center" 
-                        Margin="0,420,0,0"
+                        VerticalAlignment="Top"
+                        Margin="0,430,0,0"
                         Foreground="CadetBlue" 
                         Background="White" 
                         FontSize="25"
                         HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center"
                         Click="OnZurückButtonClick"/>
+                
+                <TextBlock x:Name="selectedTableTextBlock"
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Top" 
+                           Margin="0,530,0,0"
+                           FontSize="24" 
+                           FontWeight="Bold"
+                           Foreground="CadetBlue"/>
+                
+                <TextBlock x:Name="Fehlermeldung"
+                           Margin="0,600,0,0"
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Top"                           
+                           Foreground="Red"
+                           FontSize="25"
+                           FontWeight="Bold"/>
                 
             </Grid>
         </Border>

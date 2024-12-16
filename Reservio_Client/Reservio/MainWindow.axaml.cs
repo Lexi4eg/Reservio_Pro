@@ -13,7 +13,7 @@ namespace Reservio
 
         private void OnWeiterButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Content = new Reservierungsdaten(); 
+            this.Content = new Datenerhebung(); 
         }
     }
 }

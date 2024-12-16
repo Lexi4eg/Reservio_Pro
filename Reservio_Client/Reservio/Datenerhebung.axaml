@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Reservio.Reservierungsdaten">
+             x:Class="Reservio.Datenerhebung">
     
 
     <Grid>
@@ -20,7 +20,7 @@
                 BorderThickness="2" 
                 CornerRadius="16" 
                 Width="600" 
-                Height="450"
+                Height="525"
                 Background="Bisque"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center"
@@ -116,14 +116,23 @@
                         Width="400" 
                         Height="70"  
                         HorizontalAlignment="Center" 
-                        VerticalAlignment="Center" 
-                        Margin="0,300,0,0"
+                        VerticalAlignment="Top" 
+                        Margin="0,350,0,0"
                         Foreground="White"
                         Background="CadetBlue"
                         FontSize="25"
                         HorizontalContentAlignment="Center" 
                         VerticalContentAlignment="Center"
                         Click="OnWeiterButtonClick"/>
+                
+                <TextBlock x:Name="Fehlermeldung"
+                           Margin="0,450,0,0"
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Top" 
+                           Foreground="Red"
+                           FontSize="25"
+                           FontWeight="Bold"/>
+                
             </Grid>
         </Border>
     </Grid>

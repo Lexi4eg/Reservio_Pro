@@ -23,10 +23,16 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/Bereichsauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/Datenerhebung.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/Freibereichauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/Gangauswahl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/Kontaktdaten.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/LastPage.axaml]
@@ -36,12 +42,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/MainWindow.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/Personendaten.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/Reservierungsdatem.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/Saalauswahl.axaml]

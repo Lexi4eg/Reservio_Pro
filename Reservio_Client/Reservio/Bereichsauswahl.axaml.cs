@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 
@@ -8,27 +10,45 @@ namespace Reservio
     {
         private string Personenanzahl { get; }
         private DateTime Datum { get; }
-
+        
+        private readonly Dictionary<string, int> tischKapazitäten = new Dictionary<string, int>
+        {
+            { "Lounge", 2 },
+            { "Saal", 8 },
+            { "Freibereich", 3 },
+            { "Gang", 8 },
+            { "Terrasse", 6 }
+        };
+        
         public Bereichsauswahl(string personenanzahl, DateTime datum)
         {
             InitializeComponent();
             Personenanzahl = personenanzahl;
             Datum = datum;
+            int max_personenanzahl = int.Parse(personenanzahl);
+            
+            var erlaubteBereiche = tischKapazitäten
+                .Where(kv => kv.Value >= max_personenanzahl)
+                .Select(kv => kv.Key);
+
+            foreach (var tisch in erlaubteBereiche)
+            {
+                areaComboBox.Items.Add(new ComboBoxItem { Content = tisch, Name = tisch});
+            }
         }
         
         private void OnWeiterButtonClick(object sender, RoutedEventArgs e)
         {
-            var comboBox = this.FindControl<ComboBox>("areaComboBox");
-            var selectedItem = comboBox.SelectedItem as ComboBoxItem;
+            var selectedItem = areaComboBox.SelectedItem as ComboBoxItem;
 
             if (selectedItem == null)
             {
-                ShowErrorMessage("Bitte wählen Sie einen Bereich aus, bevor Sie fortfahren!");
+                Fehlermeldung.Text = "Bitte wählen Sie einen Bereich aus.";
                 return;
             }
 
             string selectedArea = selectedItem.Content.ToString();
-            
+
             switch (selectedArea)
             {
                 case "Lounge":
@@ -47,33 +67,13 @@ namespace Reservio
                     this.Content = new FreibereichPage(Personenanzahl, Datum);
                     break;
                 default:
-                    ShowErrorMessage("Ungültiger Bereich ausgewählt.");
+                    Fehlermeldung.Text = "Ungültiger Bereich ausgewählt.";
                     break;
             }
         }
-
         private void OnZurückButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Content = new Reservierungsdaten();
-        }
-
-        private void ShowErrorMessage(string message)
-        {
-            var errorWindow = new Window
-            {
-                Width = 300,
-                Height = 150,
-                Content = new TextBlock
-                {
-                    Text = message,
-                    HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
-                    VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center,
-                    TextWrapping = Avalonia.Media.TextWrapping.Wrap,
-                    FontSize = 16
-                }
-            };
-
-            errorWindow.ShowDialog((Window)this.VisualRoot);
+            this.Content = new Datenerhebung();
         }
     }
 }

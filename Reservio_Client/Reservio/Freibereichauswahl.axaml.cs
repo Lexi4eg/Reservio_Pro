@@ -53,30 +53,12 @@ namespace Reservio
             {
                 string selectedTable = (areaComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString();
 
-                this.Content = new Personendaten(selectedTable, Personenanzahl, Datum);
+                this.Content = new Kontaktdaten(selectedTable, Personenanzahl, Datum);
             }
             else
             {
-                ShowErrorMessage("Bitte wählen Sie einen Tisch aus.");
+                Fehlermeldung.Text = "Bitte wählen Sie einen Tisch aus.";
             }
-        }
-
-        private void ShowErrorMessage(string message)
-        {
-            var errorWindow = new Window
-            {
-                Width = 300,
-                Height = 150,
-                Content = new TextBlock
-                {
-                    Text = message,
-                    HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
-                    VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center,
-                    TextWrapping = Avalonia.Media.TextWrapping.Wrap,
-                    FontSize = 16
-                }
-            };
-            errorWindow.ShowDialog((Window)this.VisualRoot);
         }
 
         private void OnZurückButtonClick(object sender, RoutedEventArgs e)

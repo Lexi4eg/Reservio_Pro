@@ -23,7 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Update="Reservierungsdatem.axaml.cs">
+        <Compile Update="Datenerhebung.axaml.cs">
             <DependentUpon>Reservierungs_Datem.axaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
@@ -51,7 +51,7 @@
             <DependentUpon>Freibereichauswahl.axaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
-        <Compile Update="Personendaten.axaml.cs">
+        <Compile Update="Kontaktdaten.axaml.cs">
             <DependentUpon>Personendaten.axaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>

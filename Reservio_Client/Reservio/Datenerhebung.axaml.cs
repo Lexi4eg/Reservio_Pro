@@ -1,13 +1,15 @@
 using System;
 using System.Runtime.InteropServices.JavaScript;
 using Avalonia.Controls;
+using Avalonia.Controls.Documents;
 using Avalonia.Interactivity;
+using LineBreak = Avalonia.Media.TextFormatting.Unicode.LineBreak;
 
 namespace Reservio
 {
-    public partial class Reservierungsdaten : UserControl
+    public partial class Datenerhebung : UserControl
     {
-        public Reservierungsdaten()
+        public Datenerhebung()
         {
             InitializeComponent();
             InitializeHours();
@@ -16,7 +18,6 @@ namespace Reservio
 
         private void InitializeHours()
         {
-
             // Startwert für die Stunden
             for (int stunde = 10; stunde < 22; stunde++) // Füge insgesamt 22 Stunden hinzu
             {
@@ -31,7 +32,6 @@ namespace Reservio
             {
                 minutesComboBox.Items.Add(minute);
                 minute = minute + 15;
-
             }
         }
 
@@ -39,7 +39,8 @@ namespace Reservio
         {
             if (!IsInputValid())
             {
-                ShowErrorMessage("Bitte füllen Sie alle Felder aus, bevor Sie fortfahren!");
+                Fehlermeldung.Text = "Bitte füllen Sie alle Felder aus, \n" +
+                                     "bevor Sie fortfahren!";
                 return;
             }
 
@@ -88,30 +89,11 @@ namespace Reservio
                     // Setzt das Datum auf den heutigen Tag zurück & zeigt Fehlermeldung
                     datePicker.SelectedDate = DateTime.Now.Date;
                     datePicker.SelectedDate = null;
-                    ShowErrorMessage("Bitte wählen Sie ein zukünftiges Datum aus.");
+                    Fehlermeldung.Text = "Bitte wählen Sie ein zukünftiges Datum aus.";
                 }
             }
         }
-
-        private void ShowErrorMessage(string message)
-        {
-            var errorWindow = new Window
-            {
-                Width = 300,
-                Height = 150,
-                Content = new TextBlock
-                {
-                    Text = message,
-                    HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
-                    VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center,
-                    TextWrapping = Avalonia.Media.TextWrapping.Wrap,
-                    FontSize = 16
-                }
-            };
-
-            errorWindow.ShowDialog((Window)this.VisualRoot);
-        }
-
+        
         private void OnHauptseiteClick(object? sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();

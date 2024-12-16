@@ -18,6 +18,14 @@
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" 
                Margin="0,50,0,0"/>    
+        
+        <TextBlock x:Name="Fehlermeldung"
+                   Margin="350,70,0,0"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Top" 
+                   Foreground="Red"
+                   FontSize="25"
+                   FontWeight="Bold"/>
 
         <!-- ComboBox für die Auswahl des Tisches -->
         <ComboBox x:Name="areaComboBox"
