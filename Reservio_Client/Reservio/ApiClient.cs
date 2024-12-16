@@ -12,14 +12,11 @@ public class ApiClient
     {
         try
         {
-            // Serialize the reservation object to JSON
             string jsonData = JsonSerializer.Serialize(reservation);
             var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-
-            // Send the POST request
+            
             HttpResponseMessage response = await client.PostAsync(url, content);
-
-            // Check the response status
+            
             if (response.IsSuccessStatusCode)
             {
                 Console.WriteLine("POST request successful.");

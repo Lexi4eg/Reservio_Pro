@@ -21,7 +21,6 @@ namespace Reservio
             Personenanzahl = personenanzahl;
             Datum = datum;
 
-            // Den ausgewählten Tisch in einem TextBlock anzeigen
             DisplaySelectedTable();
         }
 
@@ -32,7 +31,7 @@ namespace Reservio
 
         private void OnZurückButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Content = new Tischauswahl(Personenanzahl, Datum);
+            this.Content = new Bereichsauswahl(Personenanzahl, Datum);
         }
 
         private async void OnWeiterButtonClick(object sender, RoutedEventArgs e)
@@ -67,7 +66,6 @@ namespace Reservio
 
         private bool IsInputValid()
         {
-            // Überprüfen, ob alle erforderlichen Felder ausgefüllt sind
             return !string.IsNullOrWhiteSpace(Vorname.Text) &&
                    !string.IsNullOrWhiteSpace(Nachname.Text) &&
                    !string.IsNullOrWhiteSpace(Email.Text) &&
@@ -76,7 +74,6 @@ namespace Reservio
 
         private void ShowErrorMessage(string message)
         {
-            // Beispiel für eine einfache Fehlermeldung
             var errorWindow = new Window
             {
                 Width = 300,

@@ -27,7 +27,7 @@
             <DependentUpon>Reservierungs_Datem.axaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
-        <Compile Update="Tischauswahl.axaml.cs">
+        <Compile Update="Bereichsauswahl.axaml.cs">
             <DependentUpon>Tischauswahl.axaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>

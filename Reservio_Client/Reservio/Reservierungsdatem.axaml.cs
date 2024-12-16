@@ -28,7 +28,7 @@ namespace Reservio
             var time = TimeSpan.Parse($"{selectedHour}:{selectedMinute}");
             var reservierungsDatum = selectedDate.Date + time;
 
-            this.Content = new Tischauswahl(personenanzahl, reservierungsDatum);
+            this.Content = new Bereichsauswahl(personenanzahl, reservierungsDatum);
         }
 
         private bool IsInputValid()
@@ -55,10 +55,8 @@ namespace Reservio
             {
                 DateTimeOffset selectedDate = datePicker.SelectedDate.Value;
 
-                // Überprüfen, ob das Datum in der Vergangenheit liegt
                 if (selectedDate < DateTime.Now.Date)
                 {
-                    // Setze das Datum auf den heutigen Tag zurück oder zeige eine Fehlermeldung
                     datePicker.SelectedDate = DateTime.Now.Date;
                     ShowErrorMessage("Bitte wählen Sie ein zukünftiges Datum aus.");
                 }

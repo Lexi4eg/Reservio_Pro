@@ -13,8 +13,7 @@ namespace Reservio
 
         private void OnWeiterButtonClick(object sender, RoutedEventArgs e)
         {
-            // Lade die neue Seite in das ContentControl (hier kannst du eine andere Seite laden)
-            this.Content = new Reservierungsdaten();  // `SecondPage` muss ein UserControl sein
+            this.Content = new Reservierungsdaten(); 
         }
     }
 }

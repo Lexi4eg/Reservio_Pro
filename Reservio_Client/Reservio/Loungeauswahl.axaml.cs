@@ -74,7 +74,7 @@ namespace Reservio
 
         private void OnZurückButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Content = new Tischauswahl(Personenanzahl, Datum);
+            this.Content = new Bereichsauswahl(Personenanzahl, Datum);
         }
     }
 }

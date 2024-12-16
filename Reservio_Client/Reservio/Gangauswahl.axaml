@@ -31,7 +31,7 @@
                   FontSize="25">
         </ComboBox>
 
-        <!-- Button weiter zur Buchungsbestätigung -->
+        <!-- Button weiter zu Personendaten -->
         <Button Content="Weiter" 
                 Width="250" 
                 Height="70"  

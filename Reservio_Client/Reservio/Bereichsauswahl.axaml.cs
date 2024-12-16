@@ -4,22 +4,20 @@ using Avalonia.Interactivity;
 
 namespace Reservio
 {
-    public partial class Tischauswahl : UserControl
+    public partial class Bereichsauswahl : UserControl
     {
         private string Personenanzahl { get; }
         private DateTime Datum { get; }
 
-        public Tischauswahl(string personenanzahl, DateTime datum)
+        public Bereichsauswahl(string personenanzahl, DateTime datum)
         {
             InitializeComponent();
             Personenanzahl = personenanzahl;
             Datum = datum;
         }
-
-        // Event handler for Weiter button click
+        
         private void OnWeiterButtonClick(object sender, RoutedEventArgs e)
         {
-            // Überprüfen, ob ein Bereich ausgewählt ist
             var comboBox = this.FindControl<ComboBox>("areaComboBox");
             var selectedItem = comboBox.SelectedItem as ComboBoxItem;
 
@@ -30,8 +28,7 @@ namespace Reservio
             }
 
             string selectedArea = selectedItem.Content.ToString();
-
-            // Navigation basierend auf dem ausgewählten Bereich
+            
             switch (selectedArea)
             {
                 case "Lounge":
@@ -57,13 +54,11 @@ namespace Reservio
 
         private void OnZurückButtonClick(object sender, RoutedEventArgs e)
         {
-            // Zurück zur SecondPage
             this.Content = new Reservierungsdaten();
         }
 
         private void ShowErrorMessage(string message)
         {
-            // Beispiel für eine einfache Fehlermeldung
             var errorWindow = new Window
             {
                 Width = 300,

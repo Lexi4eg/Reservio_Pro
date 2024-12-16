@@ -8,7 +8,7 @@ namespace Reservio
 {
     public partial class TerrassenPage : UserControl
     {
-           private string Personenanzahl { get; }
+        private string Personenanzahl { get; }
         private DateTime Datum { get; }
 
         // Kapazitäten der Tische
@@ -76,7 +76,7 @@ namespace Reservio
 
         private void OnZurückButtonClick(object sender, RoutedEventArgs e)
         {
-            this.Content = new Tischauswahl(Personenanzahl, Datum);
+            this.Content = new Bereichsauswahl(Personenanzahl, Datum);
         }
     }
 }

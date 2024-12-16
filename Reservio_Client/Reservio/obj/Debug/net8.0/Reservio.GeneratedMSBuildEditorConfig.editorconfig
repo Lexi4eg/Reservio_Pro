@@ -20,6 +20,9 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 [C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/Bereichsauswahl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/Freibereichauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
@@ -45,7 +48,4 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/Terrassenauswahl.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[C:/Users/julia/Documents/SWP_Projekt_Reservio/Reservio_Pro/Reservio_Client/Reservio/Tischauswahl.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
