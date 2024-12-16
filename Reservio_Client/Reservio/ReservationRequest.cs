@@ -8,7 +8,7 @@ public class ReservationRequest
     public DateTime date { get; set; } 
     public int peopleCount { get; set; }
     public string email { get; set; }
-    public string phoneNumber { get; set; }
+    public string phoneNumber { get; set; } 
     public string specialRequests { get; set; }
     public bool highChair { get; set; }
     public string tableID { get; set; }

@@ -10,6 +10,29 @@ namespace Reservio
         public Reservierungsdaten()
         {
             InitializeComponent();
+            InitializeHours();
+            InitializeMinutes();
+        }
+
+        private void InitializeHours()
+        {
+
+            // Startwert für die Stunden
+            for (int stunde = 10; stunde < 22; stunde++) // Füge insgesamt 22 Stunden hinzu
+            {
+                hoursComboBox.Items.Add(stunde);
+            }
+        }
+
+        private void InitializeMinutes()
+        {
+            int minute = 0;
+            while (minute < 60)
+            {
+                minutesComboBox.Items.Add(minute);
+                minute = minute + 15;
+
+            }
         }
 
         private void OnWeiterButtonClick(object sender, RoutedEventArgs e)
@@ -21,18 +44,21 @@ namespace Reservio
             }
 
             string personenanzahl = Personenanzahl.Text;
-            var selectedDate = datePicker.SelectedDate.HasValue ? datePicker.SelectedDate.Value.DateTime : DateTime.MinValue;
-            var selectedHour = (hoursComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
-            var selectedMinute = (minutesComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
-
+            var selectedDate = datePicker.SelectedDate.HasValue
+                ? datePicker.SelectedDate.Value.DateTime
+                : DateTime.MinValue;
+            var selectedHour = hoursComboBox.SelectedItem.ToString();
+            var selectedMinute = minutesComboBox.SelectedItem.ToString();
+            
             var time = TimeSpan.Parse($"{selectedHour}:{selectedMinute}");
             var reservierungsDatum = selectedDate.Date + time;
-
-            this.Content = new Bereichsauswahl(personenanzahl, reservierungsDatum);
+            
+            this.Content = new Bereichsauswahl(personenanzahl, reservierungsDatum); // nächste Seite aufrufen
         }
 
         private bool IsInputValid()
         {
+            // überprüft, ob alle Daten ausgefüllt wurden, wenn nicht dann Fehlermeldung
             if (!datePicker.SelectedDate.HasValue)
                 return false;
 
@@ -47,17 +73,21 @@ namespace Reservio
 
             return true;
         }
-        
-        private void DatePicker_OnSelectedDateChanged(object? sender, DatePickerSelectedValueChangedEventArgs datePickerSelectedValueChangedEventArgs)
+
+        private void DatePicker_OnSelectedDateChanged(object? sender,
+            DatePickerSelectedValueChangedEventArgs datePickerSelectedValueChangedEventArgs)
         {
             var datePicker = sender as DatePicker;
             if (datePicker?.SelectedDate != null)
             {
                 DateTimeOffset selectedDate = datePicker.SelectedDate.Value;
 
+                // Überprüfen, ob das Datum in der Vergangenheit liegt
                 if (selectedDate < DateTime.Now.Date)
                 {
+                    // Setzt das Datum auf den heutigen Tag zurück & zeigt Fehlermeldung
                     datePicker.SelectedDate = DateTime.Now.Date;
+                    datePicker.SelectedDate = null;
                     ShowErrorMessage("Bitte wählen Sie ein zukünftiges Datum aus.");
                 }
             }
@@ -85,6 +115,7 @@ namespace Reservio
         private void OnHauptseiteClick(object? sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
+
         }
     }
 }

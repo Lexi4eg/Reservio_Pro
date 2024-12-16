@@ -7,14 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65a0f1d9-822c-4565-8436-4f9cd5157bcf" name="Changes" comment="">
+    <list default="true" id="65a0f1d9-822c-4565-8436-4f9cd5157bcf" name="Changes" comment="a'4hsyhsedsnhtrhtrshe">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Reservio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Reservio/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio/LastPage.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/LastPage.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/MainWindow.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio/Personendaten.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/Personendaten.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservio/Personendaten.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/Personendaten.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/ReservationRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/ReservationRequest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservio/Reservierungsdatem.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/Reservierungsdatem.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reservio/Reservierungsdatem.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/Reservierungsdatem.axaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/original.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/original.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/original.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/original.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/original.ref.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/Avalonia/original.ref.dll" afterDir="false" />
@@ -27,7 +25,6 @@
       <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/ref/Reservio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/ref/Reservio.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/refint/Reservio.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/obj/Debug/net8.0/refint/Reservio.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reservio/pics/food1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Reservio/pics/food1.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +122,7 @@
       <workItem from="1733994657666" duration="588000" />
       <workItem from="1734332175885" duration="2491000" />
       <workItem from="1734346471038" duration="85000" />
-      <workItem from="1734349518456" duration="2680000" />
+      <workItem from="1734349518456" duration="6373000" />
     </task>
     <task id="LOCAL-00001" summary="aas.kjre">
       <option name="closed" value="true" />
@@ -183,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734332278203</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="a'4hsyhsedsnhtrhtrshe">
+      <option name="closed" value="true" />
+      <created>1734352812430</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1734352812430</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +217,7 @@
     <MESSAGE value="efaw" />
     <MESSAGE value="gawg" />
     <MESSAGE value="Joa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Joa" />
+    <MESSAGE value="a'4hsyhsedsnhtrhtrshe" />
+    <option name="LAST_COMMIT_MESSAGE" value="a'4hsyhsedsnhtrhtrshe" />
   </component>
 </project>

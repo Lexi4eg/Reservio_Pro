@@ -20,7 +20,7 @@ namespace Reservio
             SelectedTable = selectedTable;
             Personenanzahl = personenanzahl;
             Datum = datum;
-
+            
             DisplaySelectedTable();
         }
 
@@ -56,7 +56,7 @@ namespace Reservio
                 tableID = SelectedTable,
                 numberChairs = 0
             };
-
+            
             string apiUrl = "http://localhost:4567/sendReservation"; 
             var client = new ApiClient();
 
